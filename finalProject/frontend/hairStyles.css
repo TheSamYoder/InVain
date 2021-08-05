@@ -105,6 +105,8 @@ color: (0,0,0,.7);
 
 .content-cards_cta:hover{
   background-image: linear-gradient(to right,#00f2fe  0%, #4facfe 100%);
+  color: white;
+  text-decoration: underline;
 }
 
 
@@ -130,9 +132,13 @@ header {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 50px;
-  height: 1rem;
+  width: 150px;
+  height: 5rem;
   background-color: gray;
+  border-radius: 10px;
+    /* height: 200px;
+    margin: 10px; */
+
 }
 
 /* Navigation Bar */
@@ -189,7 +195,7 @@ header {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #81d1df;
+  background-color: #00f2fe;
   color: black;
   text-decoration: underline;
 }
