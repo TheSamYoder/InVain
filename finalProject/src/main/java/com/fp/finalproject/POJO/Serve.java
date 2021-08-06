@@ -4,38 +4,38 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
-public class Service {
+public class Serve {
     
 
     @Id
     @GeneratedValue
     private Long id;
 
-    private String serviceName;
-    private String serviceDescription;
+    private String serveName;
+    private String serveDescription;
     private Double price;
 
     @ManyToOne
     private Professional professional;
 
 
-    public Service(String serviceName, String serviceDescription, Double price){
-        this.serviceName = serviceName;
-        this.serviceDescription = serviceDescription;
+    public Serve(String serveName, String serveDescription, Double price){
+        this.serveName = serveName;
+        this.serveDescription = serveDescription;
         this.price = price;
     }
 
 
-    protected Service(){}
+    protected Serve(){}
 
 
 
-    public String getServiceName(){
-        return serviceName;
+    public String getServeName(){
+        return serveName;
     }
 
-    public String getServiceDescription(){
-        return serviceDescription;
+    public String getServeDescription(){
+        return serveDescription;
     }
 
     public Double getPrice(){
