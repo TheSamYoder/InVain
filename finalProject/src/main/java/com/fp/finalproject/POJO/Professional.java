@@ -109,4 +109,33 @@ public class Professional {
     public void addPhoto(String photo){
         photos.add(photo);
     }
+
+
+    public void updateProName(String name) {
+        this.name = name;
+    }
+
+    public void updateProDescription(String description) {
+        this.description= description;
+    }
+
+    public void updateProLocation(String location) {
+        this.location = location;
+    }
+
+    public void updateProOnline(Boolean online) {
+        this.online = online;
+    }
+
+    public void updateProPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void updateProDaysOfOperation(String daysOfOperation) {
+        this.daysOfOperation = daysOfOperation;
+    }
+
+    public void updateProPayment(String payment) {
+        this.payment = payment;
+    }
 }

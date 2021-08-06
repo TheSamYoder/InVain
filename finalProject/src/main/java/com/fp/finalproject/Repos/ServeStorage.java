@@ -20,4 +20,8 @@ public class ServeStorage {
         return serveRepo.findById(id).get();
     }
 
+    public Iterable<Serve> retrieveAllServe(){
+        return serveRepo.findAll();
+    }
+
 }
