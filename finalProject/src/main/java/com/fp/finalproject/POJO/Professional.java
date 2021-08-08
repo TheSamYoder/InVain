@@ -16,17 +16,19 @@ public class Professional {
 
     private String name;
     private String description;
-    private int rating;
+    private Double rating;
     private String location;
     private boolean online;
     private String specialty;
 
-    @ManyToMany
+    @OneToMany(mappedBy = "professional")
     private Collection<Serve> serves;
 
     private String phoneNumber;
     private String payment;
     private String daysOfOperation;
+    private int ratingCounter = 1;
+    private Double ratingTotal;
 
     @ElementCollection
     private Collection<String> reviews = new ArrayList<String>();
@@ -34,7 +36,7 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, int rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
+    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
         this.name = name;
         this.description = description;
         this.rating = rating;
@@ -66,7 +68,7 @@ public class Professional {
         return description;
     }
 
-    public int getRating(){
+    public Double getRating(){
         return rating;
     }
 
@@ -100,6 +102,14 @@ public class Professional {
 
     public String getSpecialty() {
         return specialty;
+    }
+
+    public int getRatingCounter(){
+        return ratingCounter;
+    }
+
+    public Double getRatingTotal() {
+        return ratingTotal;
     }
 
     public void addReview(String review){
@@ -136,5 +146,16 @@ public class Professional {
 
     public void updateProPayment(String payment) {
         this.payment = payment;
+    }
+
+    public void addServe (Serve serveToAdd){
+        serves.add(serveToAdd);
+    }
+
+    public void updateRatingProperties(Double ratingToChange){
+        this.ratingCounter = this.ratingCounter++;
+        this.ratingTotal = (ratingToChange + this.ratingTotal);
+        ratingToChange = this.ratingTotal / this.ratingCounter;
+        this.rating = ratingToChange;
     }
 }

@@ -17,7 +17,7 @@ public class Serve {
     private String serveDescription;
     private Double price;
 
-    @ManyToMany
+    @ManyToOne
     @JsonIgnore
     private Collection<Professional> professionals;
 
@@ -28,10 +28,7 @@ public class Serve {
         this.price = price;
     }
 
-
     protected Serve(){}
-
-
 
     public String getServeName(){
         return serveName;
@@ -52,4 +49,6 @@ public class Serve {
     public Collection<Professional> getProfessionals() {
         return professionals;
     }
+
+
 }

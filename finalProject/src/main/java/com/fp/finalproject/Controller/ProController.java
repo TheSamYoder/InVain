@@ -1,6 +1,7 @@
 package com.fp.finalproject.Controller;
 
 import com.fp.finalproject.POJO.Professional;
+import com.fp.finalproject.POJO.Serve;
 import com.fp.finalproject.Repos.ProStorage;
 import com.fp.finalproject.Repos.ServeStorage;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +15,7 @@ public class ProController {
         this.proStorage = proStorage;
         this.serveStorage= serveStorage;
     }
+
     @GetMapping("/api/professionals")
     public Iterable<Professional> retrieveAllPros(){
         return proStorage.retrieveAllPros();
@@ -48,12 +50,15 @@ public class ProController {
         proToChange.updateProPayment(proToModify.getPayment());
         return proToChange;
     }
-    // ON HOLD UNTIL I WORK OUT HOW TO DO RATINGS BETTER
-//    @PutMapping("/api/professionals/{id}/rating")
-//    public Professional changeRating(@PathVariable Long id, @RequestBody int ratingToChange){
-//        Professional proToChange = proStorage.retrieveProById(id);
-//        proToChange.
-//    }
+
+    //Needs fixed
+    @PutMapping("/api/professionals/{id}/rating")
+    public Professional changeRating(@PathVariable Long id, @RequestBody Double ratingToChange){
+        Professional proToChange = proStorage.retrieveProById(id);
+        proToChange.updateRatingProperties(ratingToChange);
+        proStorage.savePro(proToChange);
+        return proToChange;
+    }
 
     @PatchMapping("/api/professionals/{id}/reviews")
     public Professional addReviewToPro(@PathVariable Long id, @RequestBody String reviewToAdd){
@@ -67,6 +72,15 @@ public class ProController {
     public Professional addPhotoToPro(@PathVariable Long id, @RequestBody String photoToAdd){
         Professional proToChange = proStorage.retrieveProById(id);
         proToChange.addPhoto(photoToAdd);
+        proStorage.savePro(proToChange);
+        return proToChange;
+    }
+
+    @PatchMapping("/api/professionals/{id}/serves")
+    public Professional addServeToPro (@PathVariable Long id, @RequestBody Serve serveToAdd){
+        Professional proToChange = proStorage.retrieveProById(id);
+        proToChange.addServe(serveToAdd);
+        serveStorage.saveServe(serveToAdd);
         proStorage.savePro(proToChange);
         return proToChange;
     }
