@@ -187,17 +187,9 @@ h1,h2{
   max-width: 40vw;
 }
 
-.content-cards_title{
-  display: block;
-  color: (0,0,0,.5);
-  font-size: 1.6vw;
-  font-weight: 600;
-  margin: .5rem 0; 
-
-}
-
 .content-cards_info span{
   font-size: 1.5vw;
+  font-weight: 600;
 }
 
 .content-cards_info p{
