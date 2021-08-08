@@ -51,7 +51,6 @@ background: linear-gradient(75deg, rgba(28,28,28,1) 75%, rgba(120,120,120,1) 100
 }
 
 .dropbtn {
-
   color: rgb(255, 255, 255);
   padding: 1rem;
   font-size: 1rem;
@@ -193,9 +192,16 @@ h1,h2{
   color: (0,0,0,.5);
   font-size: 1.6vw;
   font-weight: 600;
-  margin: .5rem 0;
-  
+  margin: .5rem 0; 
 
+}
+
+.content-cards_info span{
+  font-size: 1.5vw;
+}
+
+.content-cards_info p{
+  font-size: .75vw;
 }
 
 /* .content-cards_title{
