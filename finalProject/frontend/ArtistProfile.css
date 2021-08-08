@@ -112,7 +112,7 @@ body{
   padding: 0 1.5rem;
 }
 
-h1{
+h1,h2{
   text-align: center;
   margin-bottom: 2rem;
   filter: drop-shadow(4px 2px 2px gray);
@@ -193,11 +193,11 @@ color: (0,0,0,.7);
 .modal-container{
   display: flex;
   flex-direction: row;
-  /* background-color: #4facfe; */
+  justify-content: center;
   flex-wrap: wrap;
   row-gap: 1rem;
   column-gap: 1rem;
-  max-width: 40vw;
+  max-width: 30vw;
 }
 
 .content-cards_cta{
@@ -219,12 +219,16 @@ color: (0,0,0,.7);
 }
 
 .map-container{
-  background-color: blueviolet;
+  background-color: black;
   text-align: center;
+  color: whitesmoke;
+  border-radius: .8rem;
+  padding: 2px;
+  /* box-shadow: .5rem .5rem .3rem 1px rgba(0, 0, 0, 0.2); */
 }
 
 .map{
-  background-color: #4facfe;
+  /* background-color: #4facfe; */
   max-height: 50vw;
 }
 
@@ -232,7 +236,66 @@ color: (0,0,0,.7);
   width: 30rem;
   height: 18rem;
   border: none;
-  box-shadow: .5rem .5rem .3rem 1px rgba(0, 0, 0, 0.2);
+  /* box-shadow: .5rem .5rem .3rem 1px rgba(0, 0, 0, 0.2); */
+}
 
+
+.scroll-bar{
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  max-width: 80vw;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  border-radius: .8rem;
+  margin-left: 5vw;
+
+}
+
+.services{
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+  column-gap: 1rem;
+  padding: 1rem;
+  width: fit-content;
+  min-height: min-content;
+}
+
+.service-content{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/* .service-content p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  
+} */
+
+/* width */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px darkgray;
+  border-radius: .8rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%); */
+  background: rgb(28,28,28);
+background: linear-gradient(75deg, rgba(28,28,28,1) 75%, rgba(120,120,120,1) 100%);
+  border-radius: 10px;
 }
 
