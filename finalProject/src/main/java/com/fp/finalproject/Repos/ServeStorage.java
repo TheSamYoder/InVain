@@ -12,7 +12,7 @@ public class ServeStorage {
         this.serveRepo = serveRepo;
     }
 
-    public void saveService(Serve serveToSave){
+    public void saveServe(Serve serveToSave){
         serveRepo.save(serveToSave);
     }
 

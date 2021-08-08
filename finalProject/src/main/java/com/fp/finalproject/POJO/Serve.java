@@ -1,9 +1,11 @@
 package com.fp.finalproject.POJO;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+import java.util.Collection;
+
+@Entity
 public class Serve {
     
 
@@ -15,8 +17,9 @@ public class Serve {
     private String serveDescription;
     private Double price;
 
-    @ManyToOne
-    private Professional professional;
+    @ManyToMany
+    @JsonIgnore
+    private Collection<Professional> professionals;
 
 
     public Serve(String serveName, String serveDescription, Double price){
@@ -46,8 +49,7 @@ public class Serve {
         return id;
     }
 
-    public Professional getProfessional(){
-        return professional;
+    public Collection<Professional> getProfessionals() {
+        return professionals;
     }
-
 }

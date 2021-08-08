@@ -2,12 +2,7 @@ package com.fp.finalproject.POJO;
 
 import java.util.Set;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.ArrayList;
 
@@ -24,27 +19,28 @@ public class Professional {
     private int rating;
     private String location;
     private boolean online;
+    private String specialty;
 
-    @OneToMany(mappedBy = "professional")
-    private Collection<Serve> serves;   //object?
+    @ManyToMany
+    private Collection<Serve> serves;
+
     private String phoneNumber;
     private String payment;
     private String daysOfOperation;
-    
-    @Lob
+
     @ElementCollection
     private Collection<String> reviews = new ArrayList<String>();
-    
-    @Lob
+
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, int rating, String location, boolean online, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
+    public Professional(String name, String description, int rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.location = location;
         this.online = online;
+        this.specialty = specialty;
         this.serves = Set.of(serves);
         this.phoneNumber = phoneNumber;
         this.payment = payment;
@@ -78,10 +74,6 @@ public class Professional {
         return location;
     }
 
-    public Boolean getOnline(){
-        return online;
-    }
-
     public String getPayment(){
         return payment;
     }
@@ -102,6 +94,14 @@ public class Professional {
         return photos;
     }
 
+    public boolean isOnline() {
+        return online;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
     public void addReview(String review){
         reviews.add(review);
     }
@@ -109,7 +109,6 @@ public class Professional {
     public void addPhoto(String photo){
         photos.add(photo);
     }
-
 
     public void updateProName(String name) {
         this.name = name;
