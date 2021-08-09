@@ -287,6 +287,10 @@ h2 {
 
 /* Login Page minus the nav bar */
 
+.account-titles h2{
+margin-top: -2rem;
+}
+
 .create-container{
   display: flex;
   padding: 1rem;
