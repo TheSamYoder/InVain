@@ -1,3 +1,8 @@
+
+
+/*NOTE: CSS FOR ArtistProfile.html, CreateAcctPage.html & LoginPage.html */
+/* ----------------------------------------------------- */
+
 /* Global variables */
 *,
 *::before,
@@ -285,7 +290,7 @@ h2 {
 
 /* ---------------------------------------------------- */
 
-/* Login Page minus the nav bar */
+/* NOTE: CSS FOR CreateAcctPage.html & LoginPage.html */
 
 .account-titles h2{
 margin-top: -2rem;
