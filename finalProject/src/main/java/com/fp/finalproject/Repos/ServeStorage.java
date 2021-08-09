@@ -24,4 +24,8 @@ public class ServeStorage {
         return serveRepo.findAll();
     }
 
+    public void deleteServeById(Long id){
+        serveRepo.deleteById(id);
+    }
+
 }

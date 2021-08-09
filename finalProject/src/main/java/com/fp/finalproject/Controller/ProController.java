@@ -76,13 +76,37 @@ public class ProController {
         return proToChange;
     }
 
-    @PatchMapping("/api/professionals/{id}/serves")
+
+    @GetMapping("/api/professionals/{id}/serves")
+    public Iterable<Serve> retrieveServesByPro(@PathVariable Long id){
+        Professional proToChange = proStorage.retrieveProById(id);
+        return proToChange.getServes();
+    }
+
+    @GetMapping("/api/professionals/{proId}/serves/{serveId}")
+        public Serve retrieveServeById(@PathVariable Long proId, @PathVariable Long serveId){
+        Serve serveToChange = serveStorage.retrieveServeById(serveId);
+        return serveToChange;
+    }
+
+
+    @PostMapping("/api/professionals/{id}/serves")
     public Professional addServeToPro (@PathVariable Long id, @RequestBody Serve serveToAdd){
         Professional proToChange = proStorage.retrieveProById(id);
-        proToChange.addServe(serveToAdd);
+        serveToAdd.assignPro(proToChange);
         serveStorage.saveServe(serveToAdd);
+        proToChange.addServe(serveToAdd);
         proStorage.savePro(proToChange);
         return proToChange;
     }
 
+    @DeleteMapping("/api/professionals/{proId}/serves/{serveId}")
+    public Professional deleteServeFromPro(@PathVariable Long proId, @PathVariable Long serveId){
+        Professional proToChange = proStorage.retrieveProById(proId);
+        Serve serveToRemove = serveStorage.retrieveServeById(serveId);
+        proToChange.removeServe(serveToRemove);
+        serveStorage.deleteServeById(serveId);
+        proStorage.savePro(proToChange);
+        return proToChange;
+    }
 }

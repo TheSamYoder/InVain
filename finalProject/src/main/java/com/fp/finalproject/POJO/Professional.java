@@ -36,14 +36,13 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
+    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation){
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.location = location;
         this.online = online;
         this.specialty = specialty;
-        this.serves = Set.of(serves);
         this.phoneNumber = phoneNumber;
         this.payment = payment;
         this.daysOfOperation = daysOfOperation;
@@ -152,10 +151,17 @@ public class Professional {
         serves.add(serveToAdd);
     }
 
+    public void removeServe (Serve serveToRemove){
+        serves.remove(serveToRemove);
+    }
+
     public void updateRatingProperties(Double ratingToChange){
-        this.ratingCounter = this.ratingCounter++;
-        this.ratingTotal = (ratingToChange + this.ratingTotal);
-        ratingToChange = this.ratingTotal / this.ratingCounter;
-        this.rating = ratingToChange;
+        if(ratingTotal == null) {
+            ratingTotal = rating;
+        }
+        ratingCounter = ratingCounter+1;
+        ratingTotal = (ratingToChange + ratingTotal);
+        ratingToChange = ratingTotal / ratingCounter;
+        rating = ratingToChange;
     }
 }

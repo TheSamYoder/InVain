@@ -15,14 +15,15 @@ public class Serve {
 
     private String serveName;
     private String serveDescription;
-    private Double price;
+    private String price;
 
     @ManyToOne
     @JsonIgnore
-    private Collection<Professional> professionals;
+    private Professional professional;
 
 
-    public Serve(String serveName, String serveDescription, Double price){
+    public Serve(Professional professional, String serveName, String serveDescription, String price){
+        this.professional = professional;
         this.serveName = serveName;
         this.serveDescription = serveDescription;
         this.price = price;
@@ -38,7 +39,7 @@ public class Serve {
         return serveDescription;
     }
 
-    public Double getPrice(){
+    public String getPrice(){
         return price;
     }
 
@@ -46,9 +47,11 @@ public class Serve {
         return id;
     }
 
-    public Collection<Professional> getProfessionals() {
-        return professionals;
+    public Professional getProfessional() {
+        return professional;
     }
 
-
+    public void assignPro(Professional proToChange){
+        this.professional = proToChange;
+    }
 }
