@@ -8,8 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link href="ArtistProfile.css" rel="stylesheet" />
-    
-    <title>Login Page</title>
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <title>Create Account Page</title>
 </head>
 
 <body>
@@ -54,21 +54,31 @@
         </nav>
         
         <div class="account-titles">        
-        <h1>Welcome Back</h1>
-        <h2>Please Login</h2>
-    </div>
-
+            <h1>Welcome to inVain</h1>
+            <h2>Sign-up with a free account</h2>
+        </div>
         <div class="create-container">
 
         <div class="account-container">
-            <h3>User Login</h3>
-            <div class="user-login">
-                <form action="#">                   
+            <h3>Create User Account</h3>
+            <div class="user-create">
+                <form action="#">
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+
+                    <label for="cellNumber">Cell Phone:</label>
+                    <input type="text" id="cellNumber" name="cellNumber"><br>
+
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email"><br>
 
-                    <label for="password">Password:</label>
+                    <label for="password">Password: </label>
                     <input type="password" id="password" name="password"><br>
+                    <label for="password2">Retype Password: </label>
+                    <input type="password" id="password2" name="password2"><br>
                     <br>
                     <input class="submit-btn" type="submit" value="Submit">
                 </form>
@@ -77,15 +87,36 @@
         <div class="vl"></div>
 
         <div class="account-container">
-            <h3>Artist Login</h3>
-            <div class="artist-login">
-                <form action="#">                    
+            <h3>Create Artist Account</h3>
+            <div class="artist-create">
+                <form action="#">
+                    <label for="profession">Choose a Profession:</label>
+                    <select name="profession" id="profession">
+                        <option>--Choose Here--</option>
+                        <option value="barber">Barber</option>
+                        <option value="hairStylist">Hair Stylist</option>
+                        <option value="nailTech">Nail Technician</option>
+                        <option value="manicurist">Manicurist</option>
+                        <option value="pedicurist">Pedicurist</option>
+                        <option value="tattoo">Tattoo Artist</option>
+                    </select><br>
+
+                    <label for="fname">First name:</label>
+                    <input type="text" id="fname" name="fname"><br>
+
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname"><br>
+
+                    <label for="cellNumber">Cell Phone:</label>
+                    <input type="text" id="cellNumber" name="cellNumber"><br>
+
                     <label for="email">Email:</label>
                     <input type="text" id="email" name="email"><br>
 
                     <label for="password">Password: </label>
                     <input type="password" id="password" name="password"><br>
-                   
+                    <label for="password2">Retype Password: </label>
+                    <input type="password" id="password2" name="password2"><br>
                     <br>
                     <input class="submit-btn" type="submit" value="Submit">
                 </form>
@@ -95,3 +126,21 @@
 </body>
 
 </html>
+
+
+<!-- this is the JS for making a password hidden
+<p>Click the radio button to toggle between password visibility:</p>
+
+Password: <input type="password" value="FakePSW" id="myInput"><br><br>
+<input type="checkbox" onclick="myFunction()">Show Password
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script> -->
