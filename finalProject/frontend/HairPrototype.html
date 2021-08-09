@@ -58,8 +58,22 @@
     <h1>Hair Care Facilities Near You</h1>
 
     <!-- <div class="filter-container"> -->
-      <h2>Filters</h2>
-      <div class="filter-box">Filter Box</div>
+      <h2 class="filter-h2">Filters</h2>
+      <div class="filter-box">
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('cars')">Online Scheduling</button>
+            <button class="btn" onclick="filterSelection('animals')">Open on weekdays</button>
+            <button class="btn" onclick="filterSelection('fruits')">Open on weekends</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Cashapp</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Cash</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Debit/Credit</button>
+            <button class="btn" onclick="filterSelection('colors')">Lowest Price</button>
+            <button class="btn" onclick="filterSelection('colors')">Highest Price</button>
+            
+          </div>
+      </div>
+      <br>
         <!-- <div class="filter">
           <h3>Search By:</h3>
           <div class="filter-content">
@@ -89,7 +103,7 @@
           </div>
         </div> -->
 
-        <div class="filter">
+        <!-- <div class="filter">
           <h3>Online Scheduling</h3>
           <div class="filter-content">
             <label class="container">Yes
@@ -101,7 +115,7 @@
               <span class="checkmark"></span>
             </label>
           </div>
-        </div>
+        </div> -->
 
         <!-- <div class="filter">
           <h3>Days of Operation</h3>
@@ -366,7 +380,7 @@
         </div>
         <div class="content-cards_info">
           <div class="content-cards_ratingAndLocation">
-            <span>Rose Garcia</span>
+            <span>Sydney Ikes</span>
             <br>
             <span>Rating : 5 Stars</span>
             <br>
