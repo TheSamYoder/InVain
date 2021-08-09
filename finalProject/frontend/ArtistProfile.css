@@ -290,14 +290,22 @@ h2 {
 .create-container{
   display: flex;
   padding: 1rem;
-  width: fit-content;
+  min-width: fit-content;
   max-width: 50vw;
   padding: 1rem;
   background-color: white;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   border-radius: .8rem;
-  margin-left: 25vw;
+  margin-left: 20vw;
   margin-bottom: 3rem;
-  gap: 10vw;
+  gap: 5vw;
   justify-content: space-around;
+  
+}
+
+/* vertical line css */
+.vl {
+  border-left: 8px solid darkgray;
+  min-height: min-content;
+  border-radius: 100%;
 }
