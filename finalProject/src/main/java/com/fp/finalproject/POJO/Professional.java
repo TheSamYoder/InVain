@@ -2,12 +2,7 @@ package com.fp.finalproject.POJO;
 
 import java.util.Set;
 
-import javax.persistence.ElementCollection;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Lob;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.util.Collection;
 import java.util.ArrayList;
 
@@ -21,31 +16,33 @@ public class Professional {
 
     private String name;
     private String description;
-    private int rating;
+    private Double rating;
     private String location;
     private boolean online;
+    private String specialty;
 
     @OneToMany(mappedBy = "professional")
-    private Collection<Serve> serves;   //object?
+    private Collection<Serve> serves;
+
     private String phoneNumber;
     private String payment;
     private String daysOfOperation;
-    
-    @Lob
+    private int ratingCounter = 1;
+    private Double ratingTotal;
+
     @ElementCollection
     private Collection<String> reviews = new ArrayList<String>();
-    
-    @Lob
+
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, int rating, String location, boolean online, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
+    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation){
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.location = location;
         this.online = online;
-        this.serves = Set.of(serves);
+        this.specialty = specialty;
         this.phoneNumber = phoneNumber;
         this.payment = payment;
         this.daysOfOperation = daysOfOperation;
@@ -70,16 +67,12 @@ public class Professional {
         return description;
     }
 
-    public int getRating(){
+    public Double getRating(){
         return rating;
     }
 
     public String getLocation(){
         return location;
-    }
-
-    public Boolean getOnline(){
-        return online;
     }
 
     public String getPayment(){
@@ -102,6 +95,22 @@ public class Professional {
         return photos;
     }
 
+    public boolean isOnline() {
+        return online;
+    }
+
+    public String getSpecialty() {
+        return specialty;
+    }
+
+    public int getRatingCounter(){
+        return ratingCounter;
+    }
+
+    public Double getRatingTotal() {
+        return ratingTotal;
+    }
+
     public void addReview(String review){
         reviews.add(review);
     }
@@ -109,7 +118,6 @@ public class Professional {
     public void addPhoto(String photo){
         photos.add(photo);
     }
-
 
     public void updateProName(String name) {
         this.name = name;
@@ -137,5 +145,23 @@ public class Professional {
 
     public void updateProPayment(String payment) {
         this.payment = payment;
+    }
+
+    public void addServe (Serve serveToAdd){
+        serves.add(serveToAdd);
+    }
+
+    public void removeServe (Serve serveToRemove){
+        serves.remove(serveToRemove);
+    }
+
+    public void updateRatingProperties(Double ratingToChange){
+        if(ratingTotal == null) {
+            ratingTotal = rating;
+        }
+        ratingCounter = ratingCounter+1;
+        ratingTotal = (ratingToChange + ratingTotal);
+        ratingToChange = ratingTotal / ratingCounter;
+        rating = ratingToChange;
     }
 }
