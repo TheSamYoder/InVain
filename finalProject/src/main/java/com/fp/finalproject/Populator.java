@@ -3,7 +3,6 @@ package com.fp.finalproject;
 import com.fp.finalproject.POJO.Professional;
 import com.fp.finalproject.POJO.Serve;
 import com.fp.finalproject.Repos.ProStorage;
-import com.fp.finalproject.Repos.ServeRepo;
 import com.fp.finalproject.Repos.ServeStorage;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
