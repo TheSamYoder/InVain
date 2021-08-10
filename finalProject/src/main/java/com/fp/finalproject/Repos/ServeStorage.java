@@ -12,7 +12,7 @@ public class ServeStorage {
         this.serveRepo = serveRepo;
     }
 
-    public void saveService(Serve serveToSave){
+    public void saveServe(Serve serveToSave){
         serveRepo.save(serveToSave);
     }
 
@@ -22,6 +22,10 @@ public class ServeStorage {
 
     public Iterable<Serve> retrieveAllServe(){
         return serveRepo.findAll();
+    }
+
+    public void deleteServeById(Long id){
+        serveRepo.deleteById(id);
     }
 
 }
