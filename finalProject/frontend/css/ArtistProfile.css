@@ -1,0 +1,351 @@
+
+
+/*NOTE: CSS FOR ArtistProfile.html, CreateAcctPage.html & LoginPage.html */
+/* ----------------------------------------------------- */
+
+/* Global variables */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+
+}
+
+/* Scroll Bar */
+/* width & height */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px darkgray;
+  border-radius: .8rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%); */
+  background: rgb(28, 28, 28);
+  background: linear-gradient(75deg, rgba(28, 28, 28, 1) 75%, rgba(120, 120, 120, 1) 100%);
+  border-radius: 10px;
+}
+
+/* img{
+  width: 100%;
+} */
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  width: 90vw;
+  justify-content: space-around;
+  background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%);
+  padding: 30px, 10%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  /* filter: drop-shadow(2px 2px 2px black); */
+  z-index: 2;
+
+}
+
+.dropbtn {
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  background-color: inherit;
+  font-size: 1vw;
+  z-index: 2;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 2px black);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  filter: drop-shadow(1px 1px 2px gray);
+  z-index: 2;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  display: block;
+  background-color: #ddd;
+  z-index: 2;
+
+}
+
+.dropdown-content a:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #00f2fe;
+  color: black;
+  text-decoration: underline;
+  transition-duration: .55s;
+}
+
+
+.loginBtn {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+}
+
+.dropdown:hover .loginBtn {
+  color: rgb(255, 255, 255);
+  background-color: inherit;
+  text-decoration: underline;
+  transition-duration: .55s;
+}
+
+/* End of nav */
+
+body {
+  width: 100%;
+  /* height: 50vw; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  padding: 0 1.5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  filter: drop-shadow(4px 2px 2px gray);
+  z-index: 1;
+}
+
+.content-cards {
+  width: 100%;
+  max-width: 90vw;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  border-radius: .8rem;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.content-cards_img {
+  min-width: 30vw;
+  max-width: 600px;
+  height: auto;
+  transform: translateX(-3rem);
+  position: relative;
+}
+
+.content-cards_img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: .8rem;
+  box-shadow: .5rem .5rem .3rem 1px rgba(0, 0, 0, 0.2);
+}
+
+.content-cards_info {
+  max-width: 40vw;
+}
+
+.content-cards_info span {
+  font-size: 1.5vw;
+  font-weight: 600;
+}
+
+.content-cards_info p {
+  font-size: .75vw;
+  margin-bottom: 1rem;
+}
+
+
+.modal-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 1rem;
+  column-gap: 1rem;
+  max-width: 30vw;
+}
+
+.content-cards_cta {
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-radius: .8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.content-cards_cta:hover {
+  background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+  color: white;
+  text-decoration: underline;
+  transition-duration: .25s;
+}
+
+.map-container {
+  background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%);
+  text-align: center;
+  color: whitesmoke;
+  border-radius: .8rem;
+  padding: 2px;
+  /* box-shadow: .5rem .5rem .3rem 1px rgba(0, 0, 0, 0.2); */
+}
+
+.map {
+  max-height: 50vw;
+}
+
+.map iframe {
+  width: 30rem;
+  height: 18rem;
+  border: none;
+
+}
+
+
+.services-container {
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  max-width: 80vw;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  border-radius: .8rem;
+  margin-left: 5vw;
+  margin-bottom: 3rem;
+
+}
+
+.services {
+  display: flex;
+  flex-direction: row;
+  overflow: auto;
+  white-space: nowrap;
+  column-gap: 1rem;
+  width: fit-content;
+  min-height: min-content;
+}
+
+.service-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1rem;
+  border-right-style: groove;
+  margin: .5rem;
+}
+
+
+  /* .service-content p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: white;
+  
+} */
+
+/* end of Artist Page */
+
+/* ---------------------------------------------------- */
+
+/* NOTE: CSS FOR CreateAcctPage.html & LoginPage.html */
+
+.account-titles h2{
+margin-top: -2rem;
+}
+
+.create-container{
+  display: flex;
+  padding: 1rem;
+  min-width: fit-content;
+  max-width: 50vw;
+  padding: 2rem;
+  background-color: white;
+  box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+  border-radius: .8rem;
+  margin-left: 20vw;
+  margin-bottom: 3rem;
+  gap: 5vw;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* vertical line css */
+.vl {
+  border-left: 8px solid darkgray;
+  min-height: min-content;
+  border-radius: 100%;
+}
+
+.account-container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.account-container h3{
+  margin-bottom: 1rem;
+  text-align: center;
+}
+.submit-btn{
+  display: inline-block;
+  padding: .75rem 1.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: black;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  border-radius: .8rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* this isn't working---FIX FIX FIX--- */
+.submit-btn :hover{
+  background-image: linear-gradient(to right, #00f2fe 0%, #4facfe 100%);
+  color: white;
+  text-decoration: underline;
+  transition-duration: .25s;
+}

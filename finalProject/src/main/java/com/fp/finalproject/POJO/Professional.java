@@ -26,7 +26,7 @@ public class Professional {
     private boolean online;
 
     @OneToMany(mappedBy = "professional")
-    private Collection<Service> services;   //object?
+    private Collection<Serve> serves;   //object?
     private String phoneNumber;
     private String payment;
     private String daysOfOperation;
@@ -39,13 +39,13 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, int rating, String location, boolean online, String phoneNumber, String payment, String daysOfOperation, Service... services){
+    public Professional(String name, String description, int rating, String location, boolean online, String phoneNumber, String payment, String daysOfOperation, Serve... serves){
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.location = location;
         this.online = online;
-        this.services = Set.of(services);
+        this.serves = Set.of(serves);
         this.phoneNumber = phoneNumber;
         this.payment = payment;
         this.daysOfOperation = daysOfOperation;
@@ -58,8 +58,8 @@ public class Professional {
         return id;
     }
 
-    public Collection<Service> getServices(){
-        return services;
+    public Collection<Serve> getServes(){
+        return serves;
     }
 
     public String getName(){
@@ -74,7 +74,7 @@ public class Professional {
         return rating;
     }
 
-    public String getlocation(){
+    public String getLocation(){
         return location;
     }
 
@@ -108,5 +108,34 @@ public class Professional {
 
     public void addPhoto(String photo){
         photos.add(photo);
+    }
+
+
+    public void updateProName(String name) {
+        this.name = name;
+    }
+
+    public void updateProDescription(String description) {
+        this.description= description;
+    }
+
+    public void updateProLocation(String location) {
+        this.location = location;
+    }
+
+    public void updateProOnline(Boolean online) {
+        this.online = online;
+    }
+
+    public void updateProPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+
+    public void updateProDaysOfOperation(String daysOfOperation) {
+        this.daysOfOperation = daysOfOperation;
+    }
+
+    public void updateProPayment(String payment) {
+        this.payment = payment;
     }
 }

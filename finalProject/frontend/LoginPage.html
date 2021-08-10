@@ -1,40 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./css/ArtistProfile.css" rel="stylesheet" />
+
     <title>Login Page</title>
 </head>
+
 <body>
-    <h1>Login here</h1>
-    <form action="#">
-        <label for="fname">First name:</label>
-        <input type="text" id="fname" name="fname"><br><br>
-        <label for="lname">Last name:</label>
-        <input type="text" id="cellNumber" name="cellNumber"><br><br>
-        <label for="email">Email:</label>
-        <input type="text" id="lname" name="lname"><br><br>       
-        <label for="password" >Password: </label>
-        <input type="password" id="lname" name="lname"><br><br> 
-    </form>
+    <div class="container">
+
+        <nav class="nav-bar">
+            <img class="logo" src="images/Logo1-2.png">
+            <div class="dropdown">
+                <button class="dropbtn">Hair</button>
+                <div class="dropdown-content">
+                    <a href="HairPrototype.html">Both</a>
+                    <a href="#">Barber</a>
+                    <a href="#">Hair Stylists</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Nails</button>
+                <div class="dropdown-content">
+                    <a href="HairPrototype.html">Both</a>
+                    <a href="#">Pedicure</a>
+                    <a href="#">Manicure</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Tattoos</button>
+                <div class="dropdown-content">
+                    <a href="HairPrototype.html">Both</a>
+                    <a href="#">Colored Ink</a>
+                    <a href="#">Black Ink Only</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="loginBtn">Login / Join</button>
+                <div class="dropdown-content">
+                    <a href="LoginPage.html">Login</a>
+                    <a href="CreateAcctPage.html">Join</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="account-titles">
+            <h1>Welcome Back</h1>
+            <h2>Please Login</h2>
+        </div>
+
+        <div class="create-container">
+
+            <div class="account-container">
+                <h3>User Login</h3>
+                <div class="user-login">
+                    <form action="#">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email"><br>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br>
+                        <br>
+                        <input class="submit-btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+            <div class="vl"></div>
+
+            <div class="account-container">
+                <h3>Artist Login</h3>
+                <div class="artist-login">
+                    <form action="#">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email"><br>
+
+                        <label for="password">Password: </label>
+                        <input type="password" id="password" name="password"><br>
+
+                        <br>
+                        <input class="submit-btn" type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
 </body>
+
 </html>
-
-
-<!-- this is the JS for making a password hidden
-<p>Click the radio button to toggle between password visibility:</p>
-
-Password: <input type="password" value="FakePSW" id="myInput"><br><br>
-<input type="checkbox" onclick="myFunction()">Show Password
-
-<script>
-function myFunction() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script> -->
