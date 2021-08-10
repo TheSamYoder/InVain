@@ -36,30 +36,25 @@
   
 }
 
-.account{
-
-}
-
-
-.landcontainer {
+.land-container {
   display: flex;
 }
-.secHair {
+.sec-hair {
   width: fit-content;
   height: fit-content;
 }
-.hairInfo {
+.hair-info {
   position: relative;
 }
 
-.hairImg {
+.hair-img {
   display: block;
   width: 6%;
   height: 800px;
   width: fit-content;
 }
 
-.hairWords {
+.hair-words {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -71,11 +66,11 @@
   transition: 0.5s ease;
 }
 
-.hairInfo:hover .hairWords {
+.hair-info:hover .hair-words {
   width: 100%;
 }
 
-.salonText {
+.salon-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -87,7 +82,7 @@
   text-align: center;
 }
 
-.barberText {
+.barber-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -99,7 +94,7 @@
   text-align: center;
 }
 
-.bothText {
+.both-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -111,24 +106,24 @@
   text-align: center;
 }
 
-.secHair {
+.sec-hair {
   height: fit-content;
   width: fit-content;
 }
 
-.nailsInfo {
+.nails-info {
   position: relative;
   height: fit-content;
 }
 
-.nailsImg {
+.nails-img {
   display: block;
   width: 16%;
   height: 800px;
   width: fit-content;
 }
 
-.nailWords {
+.nail-words {
   position: absolute;
   bottom: 100%;
   left: 0;
@@ -140,12 +135,12 @@
   transition: 0.5s ease;
 }
 
-.nailsInfo:hover .nailWords {
+.nails-info:hover .nail-words {
   bottom: 0;
   height: 100%;
 }
 
-.pedText {
+.ped-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -157,7 +152,7 @@
   white-space: nowrap;
 }
 
-.medText {
+.man-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -169,7 +164,7 @@
   white-space: nowrap;
 }
 
-.styText {
+.sty-text {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -181,21 +176,21 @@
   white-space: nowrap;
 }
 
-.secTat {
+.sec-tat {
   height: fit-content;
   width: fit-content;
 }
 
-.tattooInfo {
+.tattoo-info {
   position: relative;
 }
 
-.tattooImg {
+.tattoo-img {
   width: fit-content;
   height: 800px;
 }
 
-.tattooWords {
+.tattoo-words {
   position: absolute;
   bottom: 0;
   left: 100%;
@@ -207,12 +202,12 @@
   transition: 0.5s ease;
 }
 
-.tattooInfo:hover .tattooWords {
+.tattoo-info:hover .tattoo-words {
   width: 100%;
   left: 0;
 }
 
-.newTat {
+.new-tat {
   color: white;
   font-size: 33px;
   position: absolute;
@@ -224,7 +219,7 @@
   white-space: nowrap;
 }
 
-.coverUps {
+.cover-ups {
   color: white;
   font-size: 33px;
   position: absolute;
