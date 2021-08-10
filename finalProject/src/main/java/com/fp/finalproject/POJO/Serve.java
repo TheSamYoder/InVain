@@ -2,7 +2,9 @@ package com.fp.finalproject.POJO;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import java.util.Collection;
 
 public class Serve {
     
@@ -13,13 +15,13 @@ public class Serve {
 
     private String serveName;
     private String serveDescription;
-    private Double price;
+    private String price;
 
-    @ManyToOne
-    private Professional professional;
+    @ManyToMany
+    private Collection<Professional> professionals;
 
 
-    public Serve(String serveName, String serveDescription, Double price){
+    public Serve(String serveName, String serveDescription, String price){
         this.serveName = serveName;
         this.serveDescription = serveDescription;
         this.price = price;
@@ -38,7 +40,7 @@ public class Serve {
         return serveDescription;
     }
 
-    public Double getPrice(){
+    public String getPrice(){
         return price;
     }
 
@@ -46,8 +48,8 @@ public class Serve {
         return id;
     }
 
-    public Professional getProfessional(){
-        return professional;
+    public Collection<Professional> getProfessionals(){
+        return professionals;
     }
 
 }
