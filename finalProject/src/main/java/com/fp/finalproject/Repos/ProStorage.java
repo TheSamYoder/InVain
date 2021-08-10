@@ -27,4 +27,5 @@ public class ProStorage {
     public void  deleteProById(Long id){
         proRepo.deleteById(id);
     }
+
 }

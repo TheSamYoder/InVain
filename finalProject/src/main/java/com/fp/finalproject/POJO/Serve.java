@@ -1,9 +1,11 @@
 package com.fp.finalproject.POJO;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.persistence.*;
+import java.util.Collection;
+
+@Entity
 public class Serve {
     
 
@@ -13,22 +15,21 @@ public class Serve {
 
     private String serveName;
     private String serveDescription;
-    private Double price;
+    private String price;
 
     @ManyToOne
+    @JsonIgnore
     private Professional professional;
 
 
-    public Serve(String serveName, String serveDescription, Double price){
+    public Serve(Professional professional, String serveName, String serveDescription, String price){
+        this.professional = professional;
         this.serveName = serveName;
         this.serveDescription = serveDescription;
         this.price = price;
     }
 
-
     protected Serve(){}
-
-
 
     public String getServeName(){
         return serveName;
@@ -38,7 +39,7 @@ public class Serve {
         return serveDescription;
     }
 
-    public Double getPrice(){
+    public String getPrice(){
         return price;
     }
 
@@ -46,8 +47,11 @@ public class Serve {
         return id;
     }
 
-    public Professional getProfessional(){
+    public Professional getProfessional() {
         return professional;
     }
 
+    public void assignPro(Professional proToChange){
+        this.professional = proToChange;
+    }
 }
