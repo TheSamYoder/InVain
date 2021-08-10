@@ -5,17 +5,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <link href="hairStyles.css" rel="stylesheet" />
   <title>Hair Prototype</title>
 </head>
-<header>
+<!-- <header>
   <div class="logo">InVain</div>
-</header>
+</header> -->
 
 <body>
   <div class="container">
 
     <nav class="nav-bar">
+      <!-- <div class="logo">InVain</div> -->
+      <img class= "logo" src="images/3.png"/>
       <div class="dropdown">
         <button class="dropbtn">Hair</button>
         <div class="dropdown-content">
@@ -26,7 +29,7 @@
       </div>
 
       <div class="dropdown">
-        <button class="dropbtn">Nail</button>
+        <button class="dropbtn">Nails</button>
         <div class="dropdown-content">
           <a href="#">Manicure</a>
           <a href="#">Pedicure</a>
@@ -46,295 +49,232 @@
 
 
       <div class="loginBtn">
-        <button>Professional Login</button>
-        <button>Customer Login</button>
-        <button>Profile Creation</button>
+        <button>Login/Create Profile</button>
+        <!-- <button>Customer Login</button>
+        <button>Profile Creation</button> -->
       </div>
     </nav>
 
-    <h1>Hair Page</h1>
+    <h1>Hair Care Professionals Near You</h1>
 
-    <div class="filter-container">
-      <h2>Filters</h2>
-      <div class="content">
-        <div class="filter">
-          <h3>Online Scheduling</h3>
-          <div class="filter-content">
-            <label class="container">Yes
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">No
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
+    <!-- <div class="filter-container"> -->
+      <h2 class="filter-h2">Filters</h2>
+      <br>
+      <div class="filter-box">
+        <div id="myBtnContainer">
+          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('cars')">Online Scheduling</button>
+            <button class="btn" onclick="filterSelection('animals')">Open on weekdays</button>
+            <button class="btn" onclick="filterSelection('fruits')">Open on weekends</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Cashapp</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Cash</button>
+            <button class="btn" onclick="filterSelection('colors')">Accepts Debit/Credit</button>
+            <button class="btn" onclick="filterSelection('colors')">Lowest Price</button>
+            <button class="btn" onclick="filterSelection('colors')">Highest Price</button>
+            <button class="btn" onclick="filterSelection('colors')">Extra Filters</button>
+            <button class="btn" onclick="filterSelection('colors')">Extra</button>
           </div>
+      </div>
+      <br>
+      
+      <!-- Content cards -->
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="">
         </div>
-
-        <div class="filter">
-          <h3>Days of Operation</h3>
-          <div class="filter-content">
-            <label class="container">Monday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Tueday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Wednesday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Thursday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Friday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Saturday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Sunday
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Angelo Moore</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
           </div>
-        </div>
+        <h1 class="content-cards_title">Barber</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
+            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
+      </div>
 
-        <div class="filter">
-          <h3>Payment Method</h3>
-          <div class="filter-content">
-            <label class="container">Cash
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Credit Card
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Cashapp/Venmo/Paypal
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1592214534258-0067435006d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Julie Davis</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
           </div>
-        </div>
+        <h1 class="content-cards_title"> Hair Stylist</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
+            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
+      </div>
 
-        <div class="filter">
-          <h3>Additional Filters</h3>
-          <div class="filter-content">
-            <label class="container">Filter 1
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Filter 2
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Filter 3
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1519763421920-f2d769e01a37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Ruby Smith</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
           </div>
-        </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
+            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
+      </div>
 
-        <div class="filter">
-          <h3>Search By:</h3>
-          <div class="filter-content">
-            <label class="container">Price (Low to High)
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Price (High to Low)
-              <input type="checkbox">
-              <span class="checkmark"></span>
-            </label>
-            <label class="container">Rating (Low to High)
-              <input type="checkbox">
-              <span class="checkmark"></span>
-              <label class="container">Rating (High to Low)
-                <input type="checkbox">
-                <span class="checkmark"></span>
-              </label>
-              <label class="container">Name (A-Z)
-                <input type="checkbox">
-                <span class="checkmark"></span>
-                <label class="container">Name (Z-A)
-                  <input type="checkbox">
-                  <span class="checkmark"></span>
-                </label>
-            </label>
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1598193550133-5b1d183165de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Json Williams</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
           </div>
-        </div>
-
-      </div>
-    </div>
-
-    <div class=main-box>
-
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
+        <h1 class="content-cards_title">Barber</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
             name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
             commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-          <p class="rating">Rating: 5/5</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
       </div>
 
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Mia Connors</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
+          </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
             name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
             commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
       </div>
 
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Rose Garcia</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
+          </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
             name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
             commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
       </div>
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
       </div>
 
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Andre Weiss</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus/Cleveland</span>
+          </div>
+        <h1 class="content-cards_title">Barber</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
             name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
             commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
+      </div>
       </div>
 
-      <div class="main-content">
-        <div class="review">
-          <h5 class="review-title">Top Review</h5>
-          <p class="review-content">The studio has been a part of the neighborhood for more than five years, and its
+      <div class="content-cards">
+        <div class="content-cards_img">
+          <img src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
+        </div>
+        <div class="content-cards_info">
+          <div class="content-cards_ratingAndLocation">
+            <span>Sydney Ikes</span>
+            <br>
+            <span>Rating : 5 Stars</span>
+            <br>
+            <span>Location: Columbus</span>
+          </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+          <p class="content-cards_text">
+            The studio has been a part of the neighborhood for more than five years, and its
             name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
             commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering</p>
-        </div>
-        <div class="artist">
-          <h3 class="artist-title">Joe the Barber</h3>
-          <img src="https://blackbarbershopsnearme.files.wordpress.com/2016/08/bbb.jpg?w=720">
-        </div>
-        <div class="info">
-          <h5 class="info-title">Info</h5>
-          <ul class="info-list">
-            <li>Shop:<a
-                href="https://www.google.com/maps/place/Good+Life+Barber+Shop/@39.95554,-83.0664658,17z/data=!3m1!4b1!4m5!3m4!1s0x88388fe90dfbfd73:0xaa242594abd21a4b!8m2!3d39.9555444!4d-83.0642787"
-                target="blank"> Good life Barber</a></li>
-            <li>Beards</li>
-            <li>Haircuts</li>
-            <li>Wash & Condition</li>
-            <li> Overall Rating: 4/5</li>
-          </ul>
-        </div>
+            tapering          </p>
+          <a href="" class="content-cards_cta">Read more</a>
       </div>
-
+      </div>
     </div>
   </div>
 
 </body>
-<footer>Footer w/ IG </footer>
+<!-- <footer>Footer w/ IG </footer> -->
+<div class="footer">
+  <div id="button"></div>
+<div id="container">
+<div id="cont">
+<div class="footer_center">
+	   <h3 class="footer-title"><i>"Looking to look good"</i></h3>
+     <ul class="footer-content">
+       <li>About Us</li>
+       <li>About Us</li>
+       <li>About Us</li>
+     </ul>
+     <li class="copyright">InVain Copyright&#169; 2021</li>
+     
+</div>
+</div>
+</div>
+</div>
+<script></script>
 
 </html>
