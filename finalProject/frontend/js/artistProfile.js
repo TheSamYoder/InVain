@@ -1,46 +1,51 @@
 const artistName = document.createElement("h1");
 artistName.classList("artist-name");
+artistName.innerText = "";
 
 const contentCards = document.createElement("div");
 contentCards.classList("content-cards");
 
-const contentCardImg = document.createElement(:)
+const contentCardImg = document.createElement("div")
+contentCardImg.classList("content-card_img");
+contentCardImg.src = "https://bit.ly/3CDaeht"
+contentCardImg.alt = ""
+
+
+const contentCardInfo = document.createElement("div");
+contentCardInfo.classList("content-cards_info");
+
+const contentCardsTitle = document.createElement("div");
+contentCardsTitle.classList("content-card_title");
+
+const occupation = document.createElement("span");
+occupation.setAttribute("occupation");
+occupation.innerText= "Occupation";
+
+const experience = document.createElement("span");
+experience.setAttribute("years");
+experience.innerText = "Years";
+
+const overallRating = document.createElement("span");
+overallRating.setAttribute("overall-rating");
+overallRating.innerText = "Rating";
+
+const location = document.createElement("span");
+location.setAttribute("location");
+location.innerText = "Location of Shop";
+
+const aboutArtist = document.createElement("span");
+aboutArtist.setAttribute("about-artist");
+aboutArtist.innerText = `About Artist: `;
+
+
+const artistInfo = document.createElement("p");
+artistInfo.setAttribute("artist-info");
+artistInfo.innerText = "Artist Info...";
 
 
 
 
-
-
-
-{/* <h1 class="artist-name" >Angelo Moore</h1>
-
-        <div class="content-cards">
-            <div class="content-cards_img">
-                <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
-                    alt="">
-            </div>
-            <div class="content-cards_info">
-                <div class="content-cards_title">
-                    <span class="occupation">Occupation: Hair Stylist</span>
-                    <br>
-                    <span class="years">Years of Service: 7</span>
-                    <br>
-                    <span class="overall-rating">Overall Rating: 5 Stars</span>
-                    <br>
-                    <span class="location">Location: Good Life Barber Shop</span>
-                    <br>
-                    <span class="about-artist">About the Artist:</span>
-                    <p class="artist-info">Every day you walk into work, you will socialize. Barbershops are known as a place for folx to go
-                        hangout and socialize while getting a haircut. You have the opportunity to create a fun
-                        environment with your clients and create a social network with them.</p>
-                </div> */}
-
-
-
-
-
-
-// --------------------------------------------------
+// ------------------Modal Container----------------------------
 
 const modalContainer = document.createElement("div");
 modalContainer.classList.add("modal-container");
@@ -77,28 +82,20 @@ lastBtn.addEventListener("click", () =>{
 })
 
 
+// ------------------Map----------------------------
+
+const mapContainer = document.createElement("div");
+mapContainer.classList.add("map-container");
+const locationTitle = document.createElement("h3");
+locationTitle.innerText = "Location";
+const map = document.createElement("div");
+map.classList.add("map");
+let iframe = document.createElement("iframe");
+iframe.src= "#"
+iframe.setAttribute("loading", "lazy");
+iframe.setAttribute("allowfullscreen", "");
 
 
-
-
-{/* 
-                    
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Scheduling/Hours of Opp</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Reviews & Ratings</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Message Me</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Scheduling</button>
-                    </div>
-                </div> */}
 
 
 
