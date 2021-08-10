@@ -3,6 +3,7 @@
   margin: 0%;
 }
 .body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: gray;
 }
 
@@ -15,7 +16,7 @@
 .title{
   grid-column: 3 / span 2 ;
   font-size: 55px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
   justify-content: space-between;
 }
 .solgan{
@@ -27,7 +28,6 @@
 .account{
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   margin: 0 8% 0 50%;
   
 }
