@@ -50,8 +50,7 @@ public class ProController {
         proToChange.updateProPayment(proToModify.getPayment());
         return proToChange;
     }
-
-    //Needs fixed
+    
     @PutMapping("/api/professionals/{id}/rating")
     public Professional changeRating(@PathVariable Long id, @RequestBody Double ratingToChange){
         Professional proToChange = proStorage.retrieveProById(id);
