@@ -56,7 +56,24 @@ const contentCardElement = document.createElement("div");
 contentCardElement.classList.add("content-cards");
 const contentCardImg = document.createElement("div");
 contentCardImg.classList.add("content-cards_img");
-const 
+const cardImg = document.createElement("img");
+// cardImg.url = ASK SAM LOL
+const contentCardInfo = document.createElement("div");
+contentCardInfo.classList.add("content-cards_info");
+const contentCardRatingAndLoc = document.createElement("div");
+contentCardRatingAndLoc.classList.add("content-cards_ratingAndLocation"); 
+const cardSpan1 = document.createElement("span");
+// cardSpan1.classList.add(""); ADD SPAN TAGS??
+const cardTitle = document.createElement("h1");
+cardTitle.classList.add("content-cards_title");
+cardTitle.setAttribute("text");
+const cardText = document.createElement("p");
+cardText.classList.add("content-cards_text");
+cardText.setAttribute("text");
+const cardCta = document.createElement("p");
+cardCta.classList.add("content-cards_cta");
+
+
 
 
 
