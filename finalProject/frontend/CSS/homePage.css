@@ -7,10 +7,6 @@
   font-family: 'Poppins', sans-serif;
 
 }
-.body {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  background-color: gray;
-}
 
 .nav-bar {
   display: flex;
@@ -27,6 +23,26 @@
 
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px darkgray;
+  border-radius: .8rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  /* background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%); */
+  background: rgb(28, 28, 28);
+  background: linear-gradient(75deg, rgba(28, 28, 28, 1) 75%, rgba(120, 120, 120, 1) 100%);
+  border-radius: 10px;
+}
+
 .dropbtn {
   color: rgb(255, 255, 255);
   padding: 1rem;
@@ -36,7 +52,7 @@
   cursor: pointer;
   background-color: inherit;
   font-size: 1vw;
-  z-index: 2;
+  z-index: 5;
 }
 
 .dropdown {
@@ -47,7 +63,7 @@
 
 .dropdown-content {
   display: none;
-  position: absolute;
+  /* position: absolute; */
   background-color: #f1f1f1;
   min-width: 160px;
   filter: drop-shadow(1px 1px 2px gray);
@@ -57,6 +73,7 @@
 .dropdown-content a {
   color: black;
   padding: 1rem 1.1rem;
+  position: absolute;
   text-decoration: none;
   display: block;
   background-color: #ddd;
@@ -71,7 +88,8 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  z-index: 2;
+  /* z-index: 2; */
+  position:relative;
 }
 
 .dropdown:hover .dropbtn {
@@ -101,6 +119,23 @@
 }
 
 /* End of nav */
+
+body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  padding: 0 1.5rem;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  filter: drop-shadow(4px 2px 2px gray);
+  z-index: 10;
+}
 
 .coverWords{
   display: grid;
@@ -134,7 +169,8 @@
 .land-container {
   display: flex;
   justify-content: center;
-  z-index: 0;
+  /* z-index: -1; */
+ 
 }
 .sec-hair {
   width: fit-content;
@@ -143,7 +179,7 @@
 }
 .hair-info {
   position: relative;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .hair-img {
@@ -151,7 +187,7 @@
   width: 6%;
   height: 800px;
   width: fit-content;
-  z-index: 0;
+  /* z-index: 0; */
 }
 
 .hair-words {

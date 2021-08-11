@@ -6,6 +6,7 @@ const createNavbar = function () {
     logo.classList.add("logo");
     logo.src = "images/Logo1-2.png";
 
+    navbar.appendChild(logo);
 
     //-----------------Hair------------------
     const hairDropDown = document.createElement("div");
