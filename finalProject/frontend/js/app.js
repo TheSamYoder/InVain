@@ -3,6 +3,10 @@ import {
 } from "./navbar.js"
 
 import {
+    createFooter
+} from "./footer.js"
+
+import {
     displayLandingPage
 } from "./landPage.js"
 

@@ -1,0 +1,299 @@
+.user-container {
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr;
+    grid-auto-columns: 1fr 1fr;
+    gap: 5px 5px;
+    grid-auto-flow: row;
+    width: 100%;
+    height: 900px;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 75%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-self: stretch;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.f-and-a-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.favorites {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recent-activity {
+    border: 2px solid gray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.recent-activity-content-box {
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.recent-person-icon {
+    background-image: url("images/eve-icon.png");
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.recent-person-content {
+
+    justify-self: start;
+    align-self: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.recent-activity-header {
+    font-size: xx-large;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.favorites-header {
+    font-size: xx-large;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.favorites-content-box {
+    border: 2px solid gray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 20%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-content: stretch;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.favorite-content-box-items {
+
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.favorite-person-icon {
+    background-image: url("images/frank-icon.png");
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    margin-left: 60px;
+    border: 2px solid gray;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.favorite-person-info {
+
+    justify-self: start;
+    align-self: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.user-icon-and-name {
+    background-image: url("images/banner.jpg");
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.user-icon {
+    background-image: url("images/sam.jpg");
+    height: 125px;
+    width: 125px;
+    border-radius: 50%;
+    margin-top: 10px;
+    border: 2px solid gray;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.user-name {
+    font-size: xxx-large;
+    justify-self: center;
+    align-self: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.apts-and-calendar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 70%;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.appointments-box {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 20% 80%;
+    gap: 0px 10px;
+    grid-auto-flow: row;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.upcoming-apts-header {
+    font-size:xx-large;
+    display:flex;
+    align-items: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.past-apts-header {
+    font-size:xx-large;
+    display:flex;
+    align-items: center;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.upcoming-apts-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: start;
+    align-items: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.past-apts-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    justify-items: start;
+    align-items: center;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recs-box {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recs-header {
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.recs-content-box {
+    display: grid;
+    grid-template-columns: 20%;
+    grid-template-rows: 40% 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recs-icon {
+    background-image: url("images/frank-icon.png");
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.recs-info {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50% 50%;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recs-jobtitle {
+
+    justify-self: center;
+    align-self: center;
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.recs-name {
+
+    justify-self: center;
+    align-self: center;
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ua-box1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.ua-box2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.ua-box3 {
+    grid-area: 3 / 1 / 4 / 2;
+}
+
+.pa-box1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.pa-box2 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.pa-box3 {
+    
+    grid-area: 3 / 1 / 4 / 2;
+}
