@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
         rel="stylesheet">
     <link href="./css/ArtistProfile.css" rel="stylesheet" />
-    
+
     <title>Artist Profile Prototype</title>
 </head>
 
@@ -53,88 +53,94 @@
             </div>
         </nav>
 
-        <h1>Angelo Moore</h1>
+<h1 class="artist-name">Angelo Moore</h1>
 
-        <div class="content-cards">
-            <div class="content-cards_img">
-                <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
-                    alt="">
+<div class="content-cards">
+    <div class="content-cards_img">
+        <img class="artist-img" src="https://bit.ly/3CDaeht" alt="">
+    </div>
+    <div class="content-cards_info">
+        <div class="content-cards_title">
+            <span class="occupation">Occupation: Hair Stylist</span>
+            <br>
+            <span class="years">Years of Service: 7</span>
+            <br>
+            <span class="overall-rating">Overall Rating: 5 Stars</span>
+            <br>
+            <span class="location">Location: Good Life Barber Shop</span>
+            <br>
+            <span class="about-artist">About the Artist:</span>
+            <p class="artist-info">Every day you walk into work, you will socialize. Barbershops are known as a place
+                for folx to go
+                hangout and socialize while getting a haircut. You have the opportunity to create a fun
+                environment with your clients and create a social network with them.</p>
+        </div>
+
+        <div class="modal-container">
+            <div class="modals">
+                <button onclick="document.getElementById('id01').style.display='block'"
+                    class="content-cards_cta">Scheduling/Hours of Opp</button>
             </div>
-            <div class="content-cards_info">
-                <div class="content-cards_title">
-                    <span>Occupation: Hair Stylist</span>
-                    <br>
-                    <span>Years of Service: 7</span>
-                    <br>
-                    <span>Overall Rating: 5 Stars</span>
-                    <br>
-                    <span>Location: Good Life Barber Shop</span>
-                    <br>
-                    <span>About the Artist:</span>
-                    <p>Every day you walk into work, you will socialize. Barbershops are known as a place for folx to go
-                        hangout and socialize while getting a haircut. You have the opportunity to create a fun
-                        environment with your clients and create a social network with them.</p>
-                </div>
-                <div class="modal-container">
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Scheduling/Hours of Opp</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Reviews & Ratings</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Message Me</button>
-                    </div>
-                    <div class="modals">
-                        <button onclick="document.getElementById('id01').style.display='block'"
-                            class="content-cards_cta">Scheduling</button>
-                    </div>
-                </div>
+            <div class="modals">
+                <button onclick="document.getElementById('id01').style.display='block'"
+                    class="content-cards_cta">Reviews & Ratings</button>
             </div>
-            <div class="map-container">
-                <h3>Location</h3>
-                <div class="map">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12233.469928631035!2d-83.0642771!3d39.9555359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa242594abd21a4b!2sGood%20Life%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1628387633899!5m2!1sen!2sus"
-                        allowfullscreen="" loading="lazy"></iframe>
-                </div>
+            <div class="modals">
+                <button onclick="document.getElementById('id01').style.display='block'"
+                    class="content-cards_cta">Message Me</button>
+            </div>
+            <div class="modals">
+                <button onclick="document.getElementById('id01').style.display='block'"
+                    class="content-cards_cta">Scheduling</button>
             </div>
         </div>
-        <h2>Services & Prices</h2>
-        <div class="services-container">
-            <div class="services">
-                <div class="service-content">
-                    <h5><strong>Razor Shave (complete)</strong></h5>
-                    <p>Razor shave on head & facial hair</p>
-                    <h5><strong>$40</strong></h5>
-
-                </div>
-                <div class="service-content">
-                    <h5><strong>Kids Haircut</strong></h5>
-                    <p>Haircut for child (17 & below). $2 off with A's on report card</p>
-                    <h5><strong>$15</strong></h5>
-
-                </div>
-                <div class="service-content">
-                    <h5><strong>Wash, Trim, & Condition</strong></h5>
-                    <p>Wash and deep condition hair with trimming of the ends.</p>
-                    <h5><strong>$80</strong></h5>
-
-                </div>
-                <div class="service-content">
-                    <h5><strong>Wash & Condition</strong></h5>
-                    <p>Wash and deep condition hair. No trim.</p>
-                    <h5><strong>$60</strong></h5>
-
-                </div>
-                <div class="service-content">
-                    <h5><strong>Adult Haircut</strong></h5>
-                    <p>Adult haircut with hot towel and razor.</p>
-                    <h5><strong>$60</strong></h5>
-
-                </div>
-            </div>
+    </div>
+    <div class="map-container">
+        <h3 class="location-tile">Location</h3>
+        <div class="map">
+            <iframe class="iframe"
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12233.469928631035!2d-83.0642771!3d39.9555359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa242594abd21a4b!2sGood%20Life%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1628387633899!5m2!1sen!2sus"
+                allowfullscreen="" loading="lazy"></iframe>
         </div>
+    </div>
+</div>
+
+<h2 class="service-title">Services & Prices</h2>
+<div class="services-container">
+    <div class="services">
+        <div class="service-content">
+            <h5 class="service-name"><strong>Razor Shave (complete)</strong></h5>
+            <p class="service-description">Razor shave on head & facial hair</p>
+            <h5 class="service-price"><strong>$40</strong></h5>
+
+        </div>
+        <div class="service-content">
+            <h5><strong>Kids Haircut</strong></h5>
+            <p>Haircut for child (17 & below). $2 off with A's on report card</p>
+            <h5><strong>$15</strong></h5>
+
+        </div>
+        <div class="service-content">
+            <h5><strong>Wash, Trim, & Condition</strong></h5>
+            <p>Wash and deep condition hair with trimming of the ends.</p>
+            <h5><strong>$80</strong></h5>
+
+        </div>
+        <div class="service-content">
+            <h5><strong>Wash & Condition</strong></h5>
+            <p>Wash and deep condition hair. No trim.</p>
+            <h5><strong>$60</strong></h5>
+
+        </div>
+        <div class="service-content">
+            <h5><strong>Adult Haircut</strong></h5>
+            <p>Adult haircut with hot towel and razor.</p>
+            <h5><strong>$60</strong></h5>
+
+        </div>
+    </div>
+</div>
+</div>
+</body>
+
+</html>

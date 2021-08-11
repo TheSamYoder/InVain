@@ -1,0 +1,59 @@
+### Get all Professionals
+GET http://localhost:8080/api/professionals
+Accept: application/json
+
+### Get a professional by a given id.
+GET http://localhost:8080/api/professionals/1
+
+### Delete a professional by a given id.
+DELETE http://localhost:8080/api/professionals/1
+
+### Add a new professional to the database.
+POST http://localhost:8080/api/professionals
+Content-Type: application/json
+
+{"name":"Sammy","description": "Passionate about his work",
+  "rating": 8, "location": "Westerville", "online": false,
+  "specialty": "Barber", "phoneNumber": "5555555555", "payment": "cash",
+"daysOfOperation": "Weekdays"}
+
+### Update pro resource
+PUT http://localhost:8080/api/professionals/2
+Content-Type: application/json
+
+{"name":"Sammy","description": "Passionate about his work",
+  "rating": 8, "location": "Westerville", "online": false,
+  "specialty": "Barber", "phoneNumber": "5555555555", "payment": "cash",
+  "daysOfOperation": "Weekdays"}
+
+### Add a review to a professional
+PATCH http://localhost:8080/api/professionals/2/reviews
+
+Great style!
+
+### Add a photo to a professional
+PATCH http://localhost:8080/api/professionals/2/photos
+
+https://imgur.com/PqRtRuO
+
+### Update a rating properity of a professional. Still not working
+PUT http://localhost:8080/api/professionals/2/rating
+Content-Type: application/json
+
+8.2
+
+### Get services of a professional by a given id.
+GET http://localhost:8080/api/professionals/1/serves
+
+### Get one specific service from a professional.
+GET http://localhost:8080/api/professionals/1/serves/4
+
+### Add a new service to a professional.
+POST http://localhost:8080/api/professionals/1/serves
+Content-Type: application/json
+
+{ "serveName": "New Service","serveDescription": "New Service Description",
+  "price": "$$"}
+
+### Delete a service from a professional.
+DELETE http://localhost:8080/api/professionals/1/serves/5
