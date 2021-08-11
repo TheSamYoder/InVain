@@ -1,3 +1,8 @@
+const artistProfile = function() {
+
+const mainElement = document.createElement("div");
+mainElement.classList.add("container");
+
 const artistName = document.createElement("h1");
 artistName.classList("artist-name");
 artistName.innerText = "";
@@ -7,9 +12,10 @@ contentCards.classList("content-cards");
 
 const contentCardImg = document.createElement("div")
 contentCardImg.classList("content-card_img");
-contentCardImg.src = "https://bit.ly/3CDaeht"
-contentCardImg.alt = ""
 
+const artistImg = document.createElement("img");
+artistImg.src = "https://bit.ly/3CDaeht"
+artistImg.alt = ""
 
 const contentCardInfo = document.createElement("div");
 contentCardInfo.classList("content-cards_info");
@@ -95,12 +101,81 @@ iframe.src= "#"
 iframe.setAttribute("loading", "lazy");
 iframe.setAttribute("allowfullscreen", "");
 
+// ------------------Services----------------------------
+
+
+const serviceTitle = document.createElement("h2");
+serviceTitle.classList("service-title");
+
+const serviceContainer = document.createElement("div");
+serviceContainer.classList.add("service-container");
+
+const serviceContent = document.createElement("div");
+serviceContent.classList.add("service-content");
+
+let serviceName = document.createElement("h5");
+serviceName.innerText = "";
+
+let serviceDescription = document.createElement("p");
+serviceDescription.innerText = "";
+
+let servicePrice = document.createElement("h5");
+servicePrice.innerText = `$` + ``;
+
+const services = document.createElement("div");
+services.classList.add("services");
+
+
+// ------------------The Children----------------------------
 
 
 
+contentCardImg.appendChild(artistImg);
 
+contentCardsTitle.appendChild(occupation);
+contentCardsTitle.appendChild(experience);
+contentCardsTitle.appendChild(overallRating);
+contentCardsTitle.appendChild(location);
+contentCardsTitle.appendChild(aboutArtist);
+contentCardsTitle.appendChild(artistInfo);
 
+scheduleModal.appendChild(scheduleBtn);
+reviewModal.appendChild(reviewBtn);
+messageModal.appendChild(messageBtn);
+lastModal.appendChild(lastBtn);
 
+modalContainer.appendChild(scheduleModal);
+modalContainer.appendChild(reviewModal);
+modalContainer.appendChild(messageModal);
+modalContainer.appendChild(lastModal);
+
+contentCardInfo.appendChild(contentCardsTitle);
+contentCardInfo.appendChild(modalContainer);
+
+map.appendChild(iframe);
+mapContainer.appendChild(locationTitle);
+mapContainer.appendChild(map);
+
+contentCards.appendChild(contentCardImg);
+contentCards.appendChild(contentCardInfo);
+contentCards.appendChild(mapContainer);
+
+serviceContent.appendChild(serviceName);
+serviceContent.appendChild(serviceDescription);
+serviceContent.appendChild(servicePrice);
+services.appendChild(serviceContent);
+
+serviceContainer.appendChild(services);
+
+mainElement.appendChild(artistName);
+mainElement.appendChild(contentCards);
+mainElement.appendChild(serviceTitle);
+mainElement.appendChild(serviceContainer);
+
+    return mainElement;
+}
+
+export{artistProfile};
 
 
 
