@@ -30,6 +30,7 @@ h1{
   padding-bottom: 5px;
 }
 
+
 .content-cards{
   width: 100%;
   max-width: 90vw;
@@ -246,6 +247,20 @@ header {
   .filter-h2{
     text-align: center;
   }
+  .btn-active{
+    border: 2px solid gray;
+    background-color: white;
+    color: gray;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    padding-bottom: 10px;
+    border-radius: 5px;
+  }
+  .btn-active:hover{
+    border-color: #2196F3;
+    color: dodgerblue
+  }
   .btn{
   border: 2px solid gray;
   background-color: white;
@@ -269,7 +284,6 @@ header {
   align-items: center;
   justify-content: space-around;
   margin: 2rem;
-  border-style: groove;
   border-color: rgb(245, 239, 239);
   padding:10px;  
   padding-bottom: 50px;
