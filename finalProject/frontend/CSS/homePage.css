@@ -19,7 +19,7 @@
   font-size: 1rem;
   margin-bottom: 2rem;
   /* filter: drop-shadow(2px 2px 2px black); */
-  z-index: 2;
+  /* z-index: ; */
 
 }
 
@@ -59,11 +59,12 @@
   position: relative;
   display: inline-block;
   filter: drop-shadow(2px 2px 2px black);
+  z-index: 4;
 }
 
 .dropdown-content {
   display: none;
-  /* position: absolute; */
+  position: fixed;
   background-color: #f1f1f1;
   min-width: 160px;
   filter: drop-shadow(1px 1px 2px gray);
@@ -73,12 +74,10 @@
 .dropdown-content a {
   color: black;
   padding: 1rem 1.1rem;
-  position: absolute;
   text-decoration: none;
   display: block;
   background-color: #ddd;
   z-index: 2;
-
 }
 
 .dropdown-content a:hover {
@@ -88,8 +87,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  /* z-index: 2; */
-  position:relative;
+  z-index: 2;
 }
 
 .dropdown:hover .dropbtn {
@@ -109,6 +107,7 @@
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-size: 1vw;
+  position: absolute;
 }
 
 .dropdown:hover .loginBtn {
@@ -169,7 +168,7 @@ h2 {
 .land-container {
   display: flex;
   justify-content: center;
-  /* z-index: -1; */
+  z-index: -1;
  
 }
 .sec-hair {
