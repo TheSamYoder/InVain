@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
-  <link href="hairStyles.css" rel="stylesheet" />
+  <link href="./CSS/hairStyles.css" rel="stylesheet" />
   <title>Hair Prototype</title>
 </head>
 <!-- <header>
@@ -18,7 +18,7 @@
 
     <nav class="nav-bar">
       <!-- <div class="logo">InVain</div> -->
-      <img class= "logo" src="images/3.png"/>
+      <img class="logo" src="images/3.png" />
       <div class="dropdown">
         <button class="dropbtn">Hair</button>
         <div class="dropdown-content">
@@ -58,222 +58,238 @@
     <h1>Hair Care Professionals Near You</h1>
 
     <!-- <div class="filter-container"> -->
-      <h2 class="filter-h2">Filters</h2>
-      <br>
-      <div class="filter-box">
-        <div id="myBtnContainer">
-          <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-            <button class="btn" onclick="filterSelection('Scheduling')">Online Scheduling</button>
-            <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
-            <button class="btn" onclick="filterSelection('Scheduling')">Open on weekends</button>
-            <button class="btn" onclick="filterSelection('Payment')">Accepts Cashapp</button>
-            <button class="btn" onclick="filterSelection('Payment')">Accepts Cash</button>
-            <button class="btn" onclick="filterSelection('Payment')">Accepts Debit/Credit</button>
-            <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
-            <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
-            <button class="btn" onclick="filterSelection('Extra Filter')">Extra Filters</button>
-            <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button>
-          </div>
-      </div>
-      <br>
-      
-      <!-- Content cards -->
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Angelo Moore</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Barber</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1592214534258-0067435006d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Julie Davis</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title"> Hair Stylist</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1519763421920-f2d769e01a37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Ruby Smith</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Hair Stylist</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1598193550133-5b1d183165de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Json Williams</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Barber</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Mia Connors</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Hair Stylist</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Rose Garcia</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Hair Stylist</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Andre Weiss</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus/Cleveland</span>
-          </div>
-        <h1 class="content-cards_title">Barber</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
-      </div>
-
-      <div class="content-cards">
-        <div class="content-cards_img">
-          <img src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80" alt="">
-        </div>
-        <div class="content-cards_info">
-          <div class="content-cards_ratingAndLocation">
-            <span>Sydney Ikes</span>
-            <br>
-            <span>Rating : 5 Stars</span>
-            <br>
-            <span>Location: Columbus</span>
-          </div>
-        <h1 class="content-cards_title">Hair Stylist</h1>
-          <p class="content-cards_text">
-            The studio has been a part of the neighborhood for more than five years, and its
-            name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
-            commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
-            tapering          </p>
-          <a href="" class="content-cards_cta">Read more</a>
-      </div>
+    <h2 class="filter-h2">Filters</h2>
+    <br>
+    <div class="filter-box">
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Online Scheduling</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Open on weekends</button>
+        <button class="btn" onclick="filterSelection('Payment')">Accepts Cashapp</button>
+        <button class="btn" onclick="filterSelection('Payment')">Accepts Cash</button>
+        <button class="btn" onclick="filterSelection('Payment')">Accepts Debit/Credit</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+        <button class="btn" onclick="filterSelection('Extra Filter')">Extra Filters</button>
+        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button>
       </div>
     </div>
+    <br>
+
+    <!-- Content cards -->
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1051&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Angelo Moore</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Barber</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1592214534258-0067435006d8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Julie Davis</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title"> Hair Stylist</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1519763421920-f2d769e01a37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Ruby Smith</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1598193550133-5b1d183165de?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Json Williams</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Barber</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1573497019418-b400bb3ab074?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Mia Connors</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1592329347431-0943ca753471?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Rose Garcia</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1567894340315-735d7c361db0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=676&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Andre Weiss</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus/Cleveland</span>
+        </div>
+        <h1 class="content-cards_title">Barber</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+
+    <div class="content-cards">
+      <div class="content-cards_img">
+        <img
+          src="https://images.unsplash.com/photo-1542596768-5d1d21f1cf98?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
+          alt="">
+      </div>
+      <div class="content-cards_info">
+        <div class="content-cards_ratingAndLocation">
+          <span>Sydney Ikes</span>
+          <br>
+          <span>Rating : 5 Stars</span>
+          <br>
+          <span>Location: Columbus</span>
+        </div>
+        <h1 class="content-cards_title">Hair Stylist</h1>
+        <p class="content-cards_text">
+          The studio has been a part of the neighborhood for more than five years, and its
+          name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team
+          commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and
+          tapering </p>
+        <a href="" class="content-cards_cta">Read more</a>
+      </div>
+    </div>
+  </div>
   </div>
 
 </body>
 <!-- <footer>Footer w/ IG </footer> -->
 <div class="footer">
   <div id="button"></div>
-<div id="container">
-<div id="cont">
-<div class="footer_center">
-	   <h3 class="footer-title"><i>"Looking to look good"</i></h3>
-     <ul class="footer-content">
-       <a href="" class="footer-links">Back To Top</a>
-       <a href="" class="footer-links">About Us</a>
-       <a href="" class="footer-links">Extra Link</a>
-     </ul>
-     <li class="copyright">InVain Copyright&#169; 2021</li>
-     
-</div>
-</div>
-</div>
+  <div id="container">
+    <div id="cont">
+      <div class="footer_center">
+        <h3 class="footer-title"><i>"Looking to look good"</i></h3>
+        <ul class="footer-content">
+          <a href="" class="footer-links">Back To Top</a>
+          <a href="" class="footer-links">About Us</a>
+          <a href="" class="footer-links">Extra Link</a>
+        </ul>
+        <li class="copyright">InVain Copyright&#169; 2021</li>
+
+      </div>
+    </div>
+  </div>
 </div>
 <script></script>
 
