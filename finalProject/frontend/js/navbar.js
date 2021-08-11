@@ -3,7 +3,11 @@ import {
     clearChildren
 } from "./artistProfile.js"
 
-const createNavbar = function () {
+import {
+    displayAllPros
+} from "./professionals.js";
+
+const createNavbar = function (professionals) {
     const container = document.querySelector(".container")
     const navbar = document.createElement("nav");
     navbar.classList.add("nav-bar");
@@ -36,7 +40,7 @@ const createNavbar = function () {
     const hairStylists = document.createElement("a");
     hairStylists.innerText = "Hair Stylists";
     hairStylists.addEventListener("click", () => {
-        artistProfile();
+        displayAllPros(professionals);
     });
 
     hairDropDownContent.appendChild(hairBothBtn);
