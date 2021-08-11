@@ -1,4 +1,13 @@
-const createNavbar = function () {
+import {
+    artistProfile,
+    clearChildren
+} from "./artistProfile.js"
+
+import {
+    displayAllPros
+} from "./professionals.js";
+
+const createNavbar = function (professionals) {
     const container = document.querySelector(".container")
     const navbar = document.createElement("nav");
     navbar.classList.add("nav-bar");
@@ -19,7 +28,7 @@ const createNavbar = function () {
     const hairBothBtn = document.createElement("a");
     hairBothBtn.innerText = "Both";
     hairBothBtn.addEventListener("click", () => {
-        const hairTab = window.open('http://google.com', '_self');
+        artistProfile();
     });
 
     const barbers = document.createElement("a");
@@ -31,7 +40,7 @@ const createNavbar = function () {
     const hairStylists = document.createElement("a");
     hairStylists.innerText = "Hair Stylists";
     hairStylists.addEventListener("click", () => {
-        const hairStylistsTab = window.open('http://google.com', '_self');
+        displayAllPros(professionals);
     });
 
     hairDropDownContent.appendChild(hairBothBtn);

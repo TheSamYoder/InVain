@@ -1,3 +1,5 @@
+
+
 const displayLandingPage = function (professionals) {
 
     const mainContainer = document.createElement("main");

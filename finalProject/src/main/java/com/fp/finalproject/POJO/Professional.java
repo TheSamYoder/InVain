@@ -1,7 +1,5 @@
 package com.fp.finalproject.POJO;
 
-import java.util.Set;
-
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.ArrayList;
