@@ -1,3 +1,8 @@
+import {
+    artistProfile,
+    clearChildren
+} from "./artistProfile.js"
+
 const createNavbar = function () {
     const container = document.querySelector(".container")
     const navbar = document.createElement("nav");
@@ -19,7 +24,7 @@ const createNavbar = function () {
     const hairBothBtn = document.createElement("a");
     hairBothBtn.innerText = "Both";
     hairBothBtn.addEventListener("click", () => {
-        const hairTab = window.open('http://google.com', '_self');
+        artistProfile();
     });
 
     const barbers = document.createElement("a");
@@ -31,7 +36,7 @@ const createNavbar = function () {
     const hairStylists = document.createElement("a");
     hairStylists.innerText = "Hair Stylists";
     hairStylists.addEventListener("click", () => {
-        const hairStylistsTab = window.open('http://google.com', '_self');
+        artistProfile();
     });
 
     hairDropDownContent.appendChild(hairBothBtn);
