@@ -93,7 +93,7 @@ const displayLandingPage = function (professionals) {
     nailWords.appendChild(styText);
     nailsInfo.appendChild(nailsImg);
     nailsInfo.appendChild(nailWords);
-    secHair.appendChild(nailsInfo);
+    secNails.appendChild(nailsInfo);
 
     tattooWords.appendChild(newTat);
     tattooWords.appendChild(coverUps);
