@@ -11,6 +11,23 @@ export const displayLandingPage = function (professionals) {
 
     const hairWords = buildElement("div", "hair-words");
     const salonText = buildElement("h3", "salon-text", "Hair Salon");
+    // salonText.addEventListener("click", () => {
+    //     const salonTab = window.open('#', '_self');
+    // });
+    // salonText.onmouseover = function(event) {
+    //     let target = event.target;
+    //     target.style.background = 'rgb(71, 70, 70)';
+    //     text.value += `out <- ${target.tagName}\n`;
+    //     text.scrollTop = text.scrollHeight;
+    //   };
+
+    //   salonText.onmouseout = function(event) {
+    //     let target = event.target;
+    //     target.style.background = '';
+
+    //     text.value += `out <- ${target.tagName}\n`;
+    //     text.scrollTop = text.scrollHeight;
+    //   };
     const barberText = buildElement("h3", "barber-text", "Barbershop");
     const bothText = buildElement("h3", "both-text", "Both");
     const secNails = buildElement("section","sec-nails");
