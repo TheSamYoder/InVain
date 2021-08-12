@@ -121,11 +121,12 @@
 /* End of nav */
 
 body {
-  width: 100%;
+  width: 98vw;
+  margin-left: 1vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #eee;
+  background-color: black;
   padding: 0 1.5rem;
 }
 
@@ -169,24 +170,32 @@ h2 {
 .land-container {
   display: flex;
   justify-content: center;
+  max-width: 100vw;
+  /* margin-left: 1vw; */
+
+  gap: 12.80rem;
+  background-color: black;
   /* z-index: -1; */
+  margin-top: -2rem;
  
 }
-.sec-hair {
-  width: fit-content;
-  height: fit-content;
-  z-index: 0;
+.sec-hair { 
+  max-width: 100%;
+  height: auto;
 }
 .hair-info {
   position: relative;
-  /* z-index: 0; */
+
 }
 
 .hair-img {
-  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  /* display: block;
   width: 6%;
   height: 800px;
-  width: fit-content;
+  width: fit-content; */
   /* z-index: 0; */
 }
 
@@ -203,7 +212,7 @@ h2 {
   overflow: hidden;
   width: 0;
   height: 100%;
-  transition: 0.5s ease;
+  transition: .5s ease;
   gap: 3rem;
 }
 
@@ -261,6 +270,10 @@ h2 {
 
 
 /* Nails card section */
+.sec-nails{
+  max-width: 100%;
+  height: auto;
+}
 
 .nails-info {
   position: relative;
@@ -268,10 +281,14 @@ h2 {
 }
 
 .nails-img {
-  display: block;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  
+  /* display: block;
   width: 16%;
   height: 800px;
-  width: fit-content;
+  width: fit-content; */
 }
 
 .nail-words {
@@ -285,9 +302,9 @@ h2 {
   right: 0;
   background-color: black;
   overflow: hidden;
-  width: 100%;
+  width: 100%; 
   height: 0;
-  transition: 0.5s ease;
+  transition: .5s ease;
   gap: 5rem;
 }
 
@@ -345,9 +362,11 @@ h2 {
 
 /* Tattoo card Section */
 
+
 .sec-tat {
-  height: fit-content;
-  width: fit-content;
+  max-width: 100%;
+  height: auto;
+
 }
 
 .tattoo-info {
@@ -355,8 +374,11 @@ h2 {
 }
 
 .tattoo-img {
-  width: fit-content;
-  height: 800px;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  /* width: fit-content;
+  height: 800px; */
 }
 
 .tattoo-words {
@@ -372,13 +394,15 @@ h2 {
   overflow: hidden;
   width: 0;
   height: 100%;
-  transition: 0.5s ease;
+  
+  transition: .5s ease;
   gap: 5rem;
 }
 
 .tattoo-info:hover .tattoo-words {
   width: 100%;
   left: 0;
+  /* height: 99%; */
 }
 
 .tattoo-words{
