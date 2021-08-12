@@ -19,7 +19,7 @@
   font-size: 1rem;
   margin-bottom: 2rem;
   /* filter: drop-shadow(2px 2px 2px black); */
-  z-index: 2;
+  /* z-index: ; */
 
 }
 
@@ -57,11 +57,12 @@
   position: relative;
   display: inline-block;
   filter: drop-shadow(2px 2px 2px black);
+  z-index: 4;
 }
 
 .dropdown-content {
   display: none;
-  /* position: absolute; */
+  position: fixed;
   background-color: #f1f1f1;
   min-width: 160px;
   filter: drop-shadow(1px 1px 2px gray);
@@ -71,12 +72,10 @@
 .dropdown-content a {
   color: black;
   padding: 1rem 1.1rem;
-  position: absolute;
   text-decoration: none;
   display: block;
   background-color: #ddd;
   z-index: 2;
-
 }
 
 .dropdown-content a:hover {
@@ -86,8 +85,7 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
-  /* z-index: 2; */
-  position:relative;
+  z-index: 2;
 }
 
 .dropdown:hover .dropbtn {
@@ -107,11 +105,12 @@
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-size: 1vw;
+  position: absolute;
 }
 
 .dropdown:hover .loginBtn {
   color: rgb(255, 255, 255);
-  background-color: inherit;
+  /* background-color: inherit; */
   text-decoration: underline;
   transition-duration: .55s;
 }
@@ -168,9 +167,7 @@ h2 {
 .land-container {
   display: flex;
   justify-content: center;
-  max-width: 100vw;
-  gap: 10.10rem;
-  margin-top: -2rem;
+  z-index: -1;
 }
 
 .land-container section{
@@ -312,15 +309,41 @@ h2 {
   /* height: 99%; */
 }
 
-.tattoo-words{
+
+.new-tat {
   color: white;
+  font-size: 33px;
+  position: absolute;
+  top: 33%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: center;
 }
 
-.tattoo-words:hover h3{ 
-  color: white; 
-  font-size: 3vw;
-  cursor: pointer; 
-  transition-duration: .55s;
+.cover-ups {
+  color: white;
+  font-size: 33px;
+  position: absolute;
+  top: 50%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: center;
+}
+
+.enhancements {
+  color: white;
+  font-size: 33px;
+  position: absolute;
+  top: 66%;
+  left: 45%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  white-space: center;
 }
 
 /* 
