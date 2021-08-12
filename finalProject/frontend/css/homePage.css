@@ -169,25 +169,19 @@ h2 {
   display: flex;
   justify-content: center;
   max-width: 100vw;
-  /* margin-left: 1vw; */
   gap: 10.10rem;
-
   margin-top: -2rem;
 }
 
 .land-container section{
   max-width: 100vh;
   height: auto;
-
 }
 
 /* -------------container------------------ */
 
 /* Hair card section */
-/* .sec-hair { 
-  max-width: 100vh;
-  height: auto;
-} */
+
 .hair-info {
   position: relative;
 
@@ -197,11 +191,6 @@ h2 {
   width: 100%;
   max-width: 600px;
   height: auto;
-  /* display: block;
-  width: 6%;
-  height: 800px;
-  width: fit-content; */
-  /* z-index: 0; */
 }
 
 .hair-words {
@@ -226,6 +215,7 @@ h2 {
 }
 .hair-words{
   color: white;
+  
 }
 
 .hair-words:hover h3{ 
@@ -233,52 +223,12 @@ h2 {
   font-size: 3vw;
   cursor: pointer; 
   transition-duration: .55s;
+  
 }
-
-
-
-/* .salon-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 33%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-} 
-
-.barber-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.both-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 66%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  text-align: center;
-} */
 
 
 /* Nails card section */
-/* .sec-nails{
-  max-width: 100vh;
-  height: auto;
-} */
+
 
 .nails-info {
   position: relative;
@@ -289,11 +239,6 @@ h2 {
   width: 100%;
   max-width: 600px;
   height: auto;
-  
-  /* display: block;
-  width: 16%;
-  height: 800px;
-  width: fit-content; */
 }
 
 .nail-words {
@@ -329,50 +274,6 @@ h2 {
   transition-duration: .55s;
 }
 
-/* .ped-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 33%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.man-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.sty-text {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 66%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-} */
-
-/* Tattoo card Section */
-
-
-/* .sec-tat {
-  max-width: 100vh;
-  height: auto;
-
-} */
 
 .tattoo-info {
   position: relative;
@@ -382,8 +283,7 @@ h2 {
   width: 100%;
   max-width: 600px;
   height: auto;
-  /* width: fit-content;
-  height: 800px; */
+
 }
 
 .tattoo-words {
@@ -420,50 +320,6 @@ h2 {
   cursor: pointer; 
   transition-duration: .55s;
 }
-
-/* .tattoo-info:hover h3 :hover h3{ 
-  cursor: pointer;
-  border-style: groove;
-  background-color: black;
-} */
-
-
-/* .new-tat {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 33%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.cover-ups {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 50%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-}
-
-.enhancements {
-  color: white;
-  font-size: 33px;
-  position: absolute;
-  top: 66%;
-  left: 45%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  white-space: nowrap;
-} */
-
 
 /* 
 footer{
