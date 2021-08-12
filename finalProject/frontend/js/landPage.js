@@ -41,7 +41,7 @@ export const displayLandingPage = function (professionals) {
     const nailWords = buildElement("div", "nail-words");
     const pedText = buildElement("h3", "ped-text", "Pedicure");
     const medText = buildElement("h3", "man-text", "Manicure");
-    const styText = buildElement("h3", "sty-text", "Style");
+    const styText = buildElement("h3", "sty-text", "Both");
     const secTat = buildElement("section", "sec-tat");
     const tattooInfo = buildElement("div", "tattoo-info");
 
@@ -51,9 +51,9 @@ export const displayLandingPage = function (professionals) {
     tattooImg.alt = "A picture of a tattoo artist";
 
     const tattooWords = buildElement("div", "tattoo-words");
-    const newTat = buildElement("h3", "new-tat", "New Tattoo");
-    const coverUps = buildElement("h3", "cover-ups", "Cover Ups");
-    const enhancements = buildElement("h3", "enhancements", "Enhancements");
+    const newTat = buildElement("h3", "new-tat", "Black Ink Only");
+    const coverUps = buildElement("h3", "cover-ups", "Colored Ink");
+    const enhancements = buildElement("h3", "enhancements", "Both");
 
     hairWords.append(salonText, barberText, bothText);
     hairInfo.append(hairImg, hairWords);
