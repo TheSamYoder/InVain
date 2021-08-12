@@ -1,57 +1,25 @@
-const artistProfile = function (professional) {
+export const artistProfile = function (professional) {
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);
-
-    const mainElement = document.createElement("div");
-    mainElement.classList.add("pro-container");
-
-    const artistName = document.createElement("h1");
-    artistName.classList.add("artist-name");
-    artistName.innerText = professional.name;
-
-    const contentCards = document.createElement("div");
-    contentCards.classList.add("content-cards");
-
-    const contentCardImg = document.createElement("div")
-    contentCardImg.classList.add("content-cards_img");
+    
+    const mainElement = buildElement("div", "pro-container");
+    const artistName = buildElement("h1","artist-name", professional.name);
+    const contentCards = buildElement("div","content-cards");
+    const contentCardImg = buildElement("div", "content-cards_img");
 
     const artistImg = document.createElement("img");
     artistImg.src = "https://bit.ly/3CDaeht"
     artistImg.alt = ""
 
-    const contentCardInfo = document.createElement("div");
-    contentCardInfo.classList.add("content-cards_info");
-
-    const contentCardsTitle = document.createElement("div");
-    contentCardsTitle.classList.add("content-cards_title");
-
-    const occupation = document.createElement("span");
-    occupation.classList.add("occupation");
-    occupation.innerText = "Occupation";
-
-    const experience = document.createElement("span");
-    experience.classList.add("years");
-    experience.innerText = "Years";
-
-    const overallRating = document.createElement("span");
-    overallRating.classList.add("overall-rating");
-    overallRating.innerText = "Rating";
-
-    const location = document.createElement("span");
-    location.classList.add("location");
-    location.innerText = "Location of Shop";
-
-    const aboutArtist = document.createElement("span");
-    aboutArtist.classList.add("about-artist");
-    aboutArtist.innerText = `About Artist: `;
-
-
-    const artistInfo = document.createElement("p");
-    artistInfo.classList.add("artist-info");
-    artistInfo.innerText = "Artist Info...";
-
-
+    const contentCardInfo = buildElement("div", "content-cards_info");
+    const contentCardsTitle = buildElement("div", "content-cards_title");
+    const occupation = buildElement("span", "occupation", "Occupation");
+    const experience = buildElement("span", "years", "Years");
+    const overallRating = buildElement("span", "overall-rating","Rating");
+    const location = buildElement("span","location", "Location of Shop");
+    const aboutArtist = buildElement("span", "about-artist", "About Artist: ");
+    const artistInfo = buildElement("p", "artist-info", "Artist Info...");
 
 
     // ------------------Modal Container----------------------------
@@ -60,6 +28,7 @@ const artistProfile = function (professional) {
     modalContainer.classList.add("modal-container");
     const scheduleModal = document.createElement("div");
     scheduleModal.classList.add("modals");
+
     const scheduleBtn = document.createElement("button");
     scheduleBtn.innerText = "Scheduling / Hours of Opp";
     scheduleBtn.classList.add("content-cards_cta");
@@ -185,22 +154,8 @@ const artistProfile = function (professional) {
 
     serviceContainer.appendChild(services);
 
-    mainElement.appendChild(artistName);
-    mainElement.appendChild(contentCards);
-    mainElement.appendChild(serviceTitle);
-    mainElement.appendChild(serviceContainer);
+    mainElement.append(artistName, contentCards, serviceTitle, serviceContainer);
     mainContent.appendChild(mainElement);
 
-
 }
 
-const clearChildren = function (element) {
-    while (element.firstChild) {
-        element.removeChild(element.lastChild);
-    }
-}
-
-export {
-    artistProfile,
-    clearChildren
-};

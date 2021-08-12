@@ -1,5 +1,8 @@
 package com.fp.finalproject.Controller;
 
+import java.util.ArrayList;
+import java.util.Optional;
+
 import com.fp.finalproject.POJO.Professional;
 import com.fp.finalproject.POJO.Serve;
 import com.fp.finalproject.Repos.ProStorage;
@@ -19,6 +22,11 @@ public class ProController {
     @GetMapping("/api/professionals")
     public Iterable<Professional> retrieveAllPros(){
         return proStorage.retrieveAllPros();
+    }
+
+    @GetMapping("/api/professionals/specialties/{specialty}")
+    public Iterable<Professional> retrieveProBySpecialty(@PathVariable String specialty) {
+        return proStorage.findProsBySpecialty(specialty);
     }
 
     @GetMapping("/api/professionals/{id}")

@@ -1,5 +1,8 @@
 package com.fp.finalproject.Repos;
 
+import java.util.ArrayList;
+import java.util.Collection;
+
 import com.fp.finalproject.POJO.Professional;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +27,18 @@ public class ProStorage {
         proRepo.save(proToAdd);
     }
 
-    public void  deleteProById(Long id){
+    public void deleteProById(Long id){
         proRepo.deleteById(id);
+    }
+
+    public Collection<Professional> findProsBySpecialty(String specialty){
+        ArrayList<Professional> prosBySpecialty = new ArrayList<>();
+        for(Professional pro : retrieveAllPros()){
+            if(pro.getSpecialty().equalsIgnoreCase(specialty)){
+                prosBySpecialty.add(pro);
+            } 
+        }
+        return prosBySpecialty;
     }
 
 }
