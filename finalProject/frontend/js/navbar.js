@@ -129,6 +129,7 @@ const createNavbar = function () {
         const join = window.open('http://google.com', '_self');
     });
 
+    
     loginDropDownContent.appendChild(login);
     loginDropDownContent.appendChild(join);
     loginDropDown.appendChild(loginDropBtn);

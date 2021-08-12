@@ -20,14 +20,23 @@ const displayLandingPage = function (professionals) {
     const salonText = document.createElement("h3");
     salonText.classList.add("salon-text");
     salonText.innerText = "Hair Salon";
+    salonText.addEventListener("click", () => {
+        const salonTab = window.open('#', '_self');
+    });
 
     const barberText = document.createElement("h3");
     barberText.classList.add("barber-text");
     barberText.innerText = "Barbershop";
+    barberText.addEventListener("click", () => {
+        const barberTab = window.open('#', '_self');
+    });
 
     const bothText = document.createElement("h3");
     bothText.classList.add("both-text");
     bothText.innerText = "Both";
+    bothText.addEventListener("click", () => {
+        const bothTab = window.open('#', '_self');
+    });
 
     const secNails = document.createElement("section");
     secNails.classList.add("sec-nails");
@@ -46,14 +55,23 @@ const displayLandingPage = function (professionals) {
     const pedText = document.createElement("h3");
     pedText.classList.add("ped-text");
     pedText.innerText = "Pedicure";
+    pedText.addEventListener("click", () => {
+        const pedTab = window.open('#', '_self');
+    });
 
     const medText = document.createElement("h3");
     medText.classList.add("man-text");
     medText.innerText = "Manicure";
+    medText.addEventListener("click", () => {
+        const medTab = window.open('#', '_self');
+    });
 
     const styText = document.createElement("h3");
     styText.classList.add("sty-text");
-    styText.innerText = "Style";
+    styText.innerText = "Both";
+    styText.addEventListener("click", () => {
+        const styTab = window.open('#', '_self');
+    });
 
     const secTat = document.createElement("section");
     secTat.classList.add("sec-tat");
@@ -72,14 +90,23 @@ const displayLandingPage = function (professionals) {
     const newTat = document.createElement("h3");
     newTat.classList.add("new-tat");
     newTat.innerText = "New Tattoo";
+    newTat.addEventListener("click", () => {
+        const newTat = window.open('#', '_self');
+    });
 
     const coverUps = document.createElement("h3");
     coverUps.classList.add("cover-ups");
     coverUps.innerText = "Cover Ups";
+    coverUps.addEventListener("click", () => {
+        const coverTab = window.open('#', '_self');
+    });
 
     const enhancements = document.createElement("h3");
     enhancements.classList.add("enhancements");
     enhancements.innerText = "Enhancements";
+    enhancements.addEventListener("click", () => {
+        const enhancementTab = window.open('#', '_self');
+    });
 
     hairWords.appendChild(salonText);
     hairWords.appendChild(barberText);
