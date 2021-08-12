@@ -31,16 +31,13 @@ copyright.innerText = "InVain Copyright&#169; 2021";
 const iTitle = document.createElement("i");
 iTitle.innerHTML = "Looking to look good";
 
-
-
-footerContainer.appendChild(footerCont);
-footerCenter.appendChild(footerTitle);
-footerTitle.appendChild(iTitle);
-footerCenter.appendChild(footerContent);
-footerCont.appendChild(footerCenter);
-footerContent.appendChild(footerLinks);
 footerCenter.appendChild(copyright);
-// hairDiv.appendChild(footer);
+footerContent.appendChild(footerLinks);
+footerTitle.appendChild(iTitle);
+footerCont.appendChild(footerCenter);
+footerCenter.appendChild(footerTitle);
+footerCenter.appendChild(footerContent);
+footerContainer.appendChild(footerCont);
 footer.appendChild(footerBtn);
 footer.appendChild(footerContainer);
 
@@ -48,6 +45,4 @@ return footer;
 
 }
 
-export {
-    createFooter
-};
+export {createFooter};

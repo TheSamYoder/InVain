@@ -21,5 +21,6 @@ const mainContainer = document.createElement("main");
 mainContainer.classList.add("main-content");
 container.append(createNavbar());
 // mainContainer.appendChild(displayLandingPage());
+mainContainer.appendChild(createFooter());
 mainContainer.appendChild(contentPage());
 container.appendChild(mainContainer);
