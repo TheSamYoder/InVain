@@ -223,6 +223,8 @@ h2 {
   font-size: 3vw;
   cursor: pointer; 
   transition-duration: .55s;
+  border-radius: 1rem;
+  padding: .5rem;
   
 }
 

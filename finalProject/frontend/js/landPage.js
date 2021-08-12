@@ -23,6 +23,21 @@ const displayLandingPage = function (professionals) {
     salonText.addEventListener("click", () => {
         const salonTab = window.open('#', '_self');
     });
+    // salonText.onmouseover = function(event) {
+    //     let target = event.target;
+    //     target.style.background = 'rgb(71, 70, 70)';
+    //     text.value += `out <- ${target.tagName}\n`;
+    //     text.scrollTop = text.scrollHeight;
+    //   };
+      
+    //   salonText.onmouseout = function(event) {
+    //     let target = event.target;
+    //     target.style.background = '';
+      
+    //     text.value += `out <- ${target.tagName}\n`;
+    //     text.scrollTop = text.scrollHeight;
+    //   };
+    
 
     const barberText = document.createElement("h3");
     barberText.classList.add("barber-text");
