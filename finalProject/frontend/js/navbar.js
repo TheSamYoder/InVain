@@ -1,4 +1,12 @@
-const createNavbar = function () {
+import {
+    artistProfile
+} from "./artistProfile.js"
+
+import {
+    displayAllPros, displayProsBySpecialty
+} from "./professionals.js";
+
+export const createNavbar = function (professionals) {
     const container = document.querySelector(".container")
     const navbar = document.createElement("nav");
     navbar.classList.add("nav-bar");
@@ -18,9 +26,7 @@ const createNavbar = function () {
     hairDropBtn.classList.add("dropbtn");
     const hairBothBtn = document.createElement("a");
     hairBothBtn.innerText = "Both";
-    hairBothBtn.addEventListener("click", () => {
-        const hairTab = window.open('http://google.com', '_self');
-    });
+    hairBothBtn.addEventListener("click", artistProfile);
 
     const barbers = document.createElement("a");
     barbers.innerText = "Barbers";
@@ -31,7 +37,7 @@ const createNavbar = function () {
     const hairStylists = document.createElement("a");
     hairStylists.innerText = "Hair Stylists";
     hairStylists.addEventListener("click", () => {
-        const hairStylistsTab = window.open('http://google.com', '_self');
+        displayProsBySpecialty("HairStylist");
     });
 
     hairDropDownContent.appendChild(hairBothBtn);
@@ -96,18 +102,14 @@ const createNavbar = function () {
         const coloredInkTab = window.open('http://google.com', '_self');
     });
 
-    const blackInk = document.createElement("a");
-    blackInk.innerText = "Black Ink Only";
+    const blackInk = buildElement("a", undefined, "Black Ink Only");
     blackInk.addEventListener("click", () => {
         const blackInkTab = window.open('http://google.com', '_self');
     });
 
-    tattooDropDownContent.appendChild(tattooBothBtn);
-    tattooDropDownContent.appendChild(coloredInk);
-    tattooDropDownContent.appendChild(blackInk);
-    tattooDropDown.appendChild(tattooDropBtn);
-    tattooDropDown.appendChild(tattooDropDownContent);
-    navbar.appendChild(tattooDropDown);
+    tattooDropDownContent.append(tattooBothBtn, coloredInk, blackInk);
+    tattooDropDown.append(tattooDropBtn, tattooDropDownContent);
+    navbar.append(tattooDropDown);
 
     //-----------------Login/Join Btn------------------
     const loginDropDown = document.createElement("div");
@@ -117,27 +119,19 @@ const createNavbar = function () {
     loginDropBtn.classList.add("dropbtn");
     const loginDropDownContent = document.createElement("div");
     loginDropDownContent.classList.add("dropdown-content");
-    const login = document.createElement("a");
-    login.innerText = "Login";
+    const login = buildElement("a", undefined, "Login");
     login.addEventListener("click", () => {
         const loginTab = window.open('http://google.com', '_self');
     });
 
-    const join = document.createElement("a");
-    join.innerText = "Join";
+    const join = buildElement("a", undefined, "Join");
     join.addEventListener("click", () => {
         const join = window.open('http://google.com', '_self');
     });
 
-    loginDropDownContent.appendChild(login);
-    loginDropDownContent.appendChild(join);
-    loginDropDown.appendChild(loginDropBtn);
-    loginDropDown.appendChild(loginDropDownContent);
-    navbar.appendChild(loginDropDown);
+    loginDropDownContent.append(login, join);
+    loginDropDown.append(loginDropBtn, loginDropDownContent);
+    navbar.append(loginDropDown);
 
     return navbar;
 }
-
-export {
-    createNavbar
-};
