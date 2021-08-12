@@ -11,9 +11,9 @@ export const displayLandingPage = function (professionals) {
 
     const hairWords = buildElement("div", "hair-words");
     const salonText = buildElement("h3", "salon-text", "Hair Salon");
-    // salonText.addEventListener("click", () => {
-    //     const salonTab = window.open('#', '_self');
-    // });
+    salonText.addEventListener("click", () => {
+        const salonTab = window.open('#', '_self');
+    });
     // salonText.onmouseover = function(event) {
     //     let target = event.target;
     //     target.style.background = 'rgb(71, 70, 70)';
