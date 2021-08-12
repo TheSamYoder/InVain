@@ -75,33 +75,33 @@ artistPasswordInput.setAttribute("id", "password");
 artistPasswordInput.setAttribute("name", "password");
 
 //Submit Buttons
-const userSubmitBtn = document.createElement("input");
-userSubmitBtn.classList("submit-btn");
-userSubmitBtn.setAttribute("type" , "submit");
-userSubmitBtn.setAttribute("value" , "submit");
+// const userSubmitBtn = document.createElement("input");
+// userSubmitBtn.classList("submit-btn");
+// userSubmitBtn.setAttribute("type" , "submit");
+// userSubmitBtn.setAttribute("value" , "submit");
 
 const artistSubmitBtn = document.createElement("input");
 artistSubmitBtn.classList("submit-btn");
 artistSubmitBtn.setAttribute("type" , "submit");
 artistSubmitBtn.setAttribute("value" , "submit");
 
-const vl = document.createElement("div");
-vl.classList("vl");
+// const vl = document.createElement("div");
+// vl.classList("vl");
 
 
 
 accountTitles.appendChild(h1);
 accountTitles.appendChild(h2);
 
-userForm.appendChild(userEmailLabel);
-userForm.appendChild(userEmailInput);
-userForm.appendChild(userPasswordLabel);
-userForm.appendChild(userPasswordInput);
-userLogin.appendChild(userForm);
-userAccountContainer.appendChild(userH3);
-userAccountContainer.appendChild(userLogin);
+// userForm.appendChild(userEmailLabel);
+// userForm.appendChild(userEmailInput);
+// userForm.appendChild(userPasswordLabel);
+// userForm.appendChild(userPasswordInput);
+// userLogin.appendChild(userForm);
+// userAccountContainer.appendChild(userH3);
+// userAccountContainer.appendChild(userLogin);
 
-userAccountContainer.appendChild(vl);
+// userAccountContainer.appendChild(vl);
 
 artistForm.appendChild(artistEmailLabel);
 artistForm.appendChild(artistEmailInput);
