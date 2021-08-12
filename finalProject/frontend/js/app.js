@@ -24,6 +24,12 @@ const mainContainer = document.createElement("main");
 
 mainContainer.classList.add("main-content");
 container.append(createNavbar());
+<<<<<<< HEAD
+// mainContainer.appendChild(displayLandingPage());
+mainContainer.appendChild(createFooter());
+mainContainer.appendChild(contentPage());
+container.appendChild(mainContainer);
+=======
 mainContainer.appendChild(displayLandingPage());
 // mainContainer.appendChild(artistProfile())
 container.appendChild(mainContainer);
@@ -33,3 +39,4 @@ await fetch("http://localhost:8080/api/professionals")
     .then(professionals => displayAllPros(professionals))
     .catch(error => console.log(error));
     
+>>>>>>> main
