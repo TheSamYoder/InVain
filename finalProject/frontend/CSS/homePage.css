@@ -112,7 +112,7 @@
 
 .dropdown:hover .loginBtn {
   color: rgb(255, 255, 255);
-  background-color: inherit;
+  /* background-color: inherit; */
   text-decoration: underline;
   transition-duration: .55s;
 }
@@ -346,7 +346,7 @@ h2 {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  white-space: nowrap;
+  white-space: center;
 }
 
 .cover-ups {
@@ -358,7 +358,7 @@ h2 {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  white-space: nowrap;
+  white-space: center;
 }
 
 .enhancements {
@@ -370,7 +370,7 @@ h2 {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  white-space: nowrap;
+  white-space: center;
 }
 
 footer{
