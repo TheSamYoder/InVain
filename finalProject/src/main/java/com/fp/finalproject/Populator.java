@@ -38,7 +38,7 @@ public class Populator implements CommandLineRunner {
         proStorage.savePro(heather);
 
 //      Bri
-        Professional bri = new Professional("Bri", "Good stylist", 5.6, "Filler", true, "Hair Stylist","1234566643", "cash", "Weekdays");
+        Professional bri = new Professional("Bri", "Good stylist", 5.6, "Filler", true, "HairStylist","1234566643", "cash", "Weekdays");
         bri.addReview("Great style!");
         bri.addPhoto("https://bit.ly/3lPFnIl");
         bri.addReview("My no more roots!");

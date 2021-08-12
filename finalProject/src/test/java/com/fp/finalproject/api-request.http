@@ -57,3 +57,6 @@ Content-Type: application/json
 
 ### Delete a service from a professional.
 DELETE http://localhost:8080/api/professionals/1/serves/5
+
+### Get a professional based on their specialty.
+GET http://localhost:8080/api/professionals/specialties/PuddingThief

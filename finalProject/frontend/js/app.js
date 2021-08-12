@@ -28,8 +28,8 @@ mainContainer.appendChild(displayLandingPage());
 // mainContainer.appendChild(artistProfile())
 container.appendChild(mainContainer);
 
-await fetch("http://localhost:8080/api/professionals")
-    .then(response => response.json())
-    .then(professionals => displayAllPros(professionals))
-    .catch(error => console.log(error));
+// await fetch("http://localhost:8080/api/professionals")
+//     .then(response => response.json())
+//     .then(professionals => displayAllPros(professionals))
+//     .catch(error => console.log(error));
     
