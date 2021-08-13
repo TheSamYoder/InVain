@@ -97,6 +97,10 @@
 /*NOTE: CSS FOR ArtistProfile.html, CreateAcctPage.html & LoginPage.html */
 /* ----------------------------------------------------- */
 
+.body{
+  background-color: white;
+}
+
 .content-cards {
   width: 100%;
   max-width: 90vw;

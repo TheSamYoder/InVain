@@ -1,8 +1,13 @@
+export const loginPage = function() {
+
+    const mainContent = document.querySelector(".main-content");
+    clearChildren(mainContent);
+
 const loginContainer = document.createElement("div");
-loginContainer.classList("create-container")
+loginContainer.classList.add("create-container")
 
 const accountTitles = document.createElement("div");
-accountTitles.classList("account-titles");
+accountTitles.classList.add("account-titles");
 
 //h-tags
 const h1 = document.createElement("h1")
@@ -18,16 +23,16 @@ const artistH3 = document.createElement("h3")
 artistH3.innerText = "Login";
 
 const userAccountContainer = document.createElement("div");
-userAccountContainer.classList("account-container");
+userAccountContainer.classList.add("account-container");
 
 const artistAccountContainer = document.createElement("div");
-artistAccountContainer.classList("account-container");
+artistAccountContainer.classList.add("account-container");
 
 const userLogin = document.createElement("div");
-userLogin.classList("user");
+userLogin.classList.add("user");
 
 const artistLogin = document.createElement("div");
-artistLogin.classList("artist");
+artistLogin.classList.add("artist");
 
 // Forms
 const userForm = document.createElement("form");
@@ -76,12 +81,12 @@ artistPasswordInput.setAttribute("name", "password");
 
 //Submit Buttons
 // const userSubmitBtn = document.createElement("input");
-// userSubmitBtn.classList("submit-btn");
+// userSubmitBtn.classList.add("submit-btn");
 // userSubmitBtn.setAttribute("type" , "submit");
 // userSubmitBtn.setAttribute("value" , "submit");
 
 const artistSubmitBtn = document.createElement("input");
-artistSubmitBtn.classList("submit-btn");
+artistSubmitBtn.classList.add("submit-btn");
 artistSubmitBtn.setAttribute("type" , "submit");
 artistSubmitBtn.setAttribute("value" , "submit");
 artistSubmitBtn.addEventListener("click", () => {
@@ -89,7 +94,7 @@ artistSubmitBtn.addEventListener("click", () => {
 });
 
 // const vl = document.createElement("div");
-// vl.classList("vl");
+// vl.classList.add("vl");
 
 
 
@@ -115,4 +120,8 @@ artistAccountContainer.appendChild(artistH3);
 artistAccountContainer.appendChild(userLogin);
 
 
-loginContainer.appendChild(userAccountContainer);
+// loginContainer.appendChild(userAccountContainer);
+loginContainer.appendChild(artistAccountContainer);
+mainContent.appendChild(loginContainer);
+
+}

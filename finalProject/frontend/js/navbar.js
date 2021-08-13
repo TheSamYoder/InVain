@@ -2,6 +2,10 @@ import {
     artistProfile
 } from "./artistProfile.js"
 
+import{
+    loginPage
+} from "./loginPage.js"
+
 import {
     displayAllPros, displayProsBySpecialty
 } from "./professionals.js";
@@ -120,11 +124,12 @@ export const createNavbar = function (professionals) {
     const loginDropDownContent = document.createElement("div");
     loginDropDownContent.classList.add("dropdown-content");
     const login = buildElement("a", undefined, "Login");
-    login.addEventListener("click", () => {
-        const loginTab = window.open('http://google.com', '_self');
-    });
+    // login.addEventListener("click", () => {
+    //     const loginTab = window.open('http://google.com', '_self');
+    // });
+    login.addEventListener("click", loginPage);
 
-    const join = buildElement("a", undefined, "Join");
+    const join = buildElement("a", undefined, "Delete this button");
     join.addEventListener("click", () => {
         const join = window.open('http://google.com', '_self');
     });
