@@ -4,6 +4,10 @@ import{
     loginPage
 } from "./loginPage.js"
 
+import{
+  displayProsBySpecialty
+} from "./hair.js"
+
 export const createNavbar = function (professionals) {
 
   const navbar = buildElement("nav","nav-bar");
