@@ -1,6 +1,12 @@
 import { artistProfile } from "./artistProfile.js";
 
-import { displayAllPros, displayProsBySpecialty } from "./hair.js";
+import{
+    loginPage
+} from "./loginPage.js"
+
+import {
+    displayAllPros, displayProsBySpecialty
+} from "./professionals.js";
 
 export const createNavbar = function (professionals) {
 
@@ -69,18 +75,24 @@ export const createNavbar = function (professionals) {
   tattooDropDown.append(tattooDropBtn, tattooDropDownContent);
   navbar.append(tattooDropDown);
 
-  //-----------------Login/Join Btn------------------
-  const loginDropDown = buildElement("div", "dropdown");
-  const loginDropBtn = buildElement("button", "dropbtn", "Login / Join");
-  const loginDropDownContent = buildElement("div", "dropdown-content");
-  const login = buildElement("a", undefined, "Login");
-  login.addEventListener("click", () => {
-    const loginTab = window.open("http://google.com", "_self");
-  });
-  const join = buildElement("a", undefined, "Join");
-  join.addEventListener("click", () => {
-    const join = window.open("http://google.com", "_self");
-  });
+    //-----------------Login/Join Btn------------------
+    const loginDropDown = document.createElement("div");
+    loginDropDown.classList.add("dropdown");
+    const loginDropBtn = document.createElement("button");
+    loginDropBtn.innerText = "Login / Join";
+    loginDropBtn.classList.add("dropbtn");
+    const loginDropDownContent = document.createElement("div");
+    loginDropDownContent.classList.add("dropdown-content");
+    const login = buildElement("a", undefined, "Login");
+    // login.addEventListener("click", () => {
+    //     const loginTab = window.open('http://google.com', '_self');
+    // });
+    login.addEventListener("click", loginPage);
+
+    const join = buildElement("a", undefined, "Delete this button");
+    join.addEventListener("click", () => {
+        const join = window.open('http://google.com', '_self');
+    });
 
   loginDropDownContent.append(login, join);
   loginDropDown.append(loginDropBtn, loginDropDownContent);
