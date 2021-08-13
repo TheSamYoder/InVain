@@ -1,8 +1,5 @@
 package com.fp.finalproject.Controller;
 
-import java.util.ArrayList;
-import java.util.Optional;
-
 import com.fp.finalproject.POJO.Professional;
 import com.fp.finalproject.POJO.Serve;
 import com.fp.finalproject.Repos.ProStorage;
@@ -55,7 +52,9 @@ public class ProController {
         proToChange.updateProOnline(proToModify.isOnline());
         proToChange.updateProPhoneNumber(proToModify.getPhoneNumber());
         proToChange.updateProDaysOfOperation(proToModify.getDaysOfOperation());
-        proToChange.updateProPayment(proToModify.getPayment());
+        proToChange.updateProTakesCash(proToModify.isTakesCash());
+        proToChange.updateProTakesCashApp(proToModify.isTakesCashApp());
+        proToChange.updateProTakesCredit(proToModify.isTakesCredit());
         return proToChange;
     }
     
