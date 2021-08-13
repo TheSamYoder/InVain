@@ -4,10 +4,6 @@ import{
     loginPage
 } from "./loginPage.js"
 
-import {
-    displayAllPros, displayProsBySpecialty
-} from "./professionals.js";
-
 export const createNavbar = function (professionals) {
 
   const navbar = buildElement("nav","nav-bar");
