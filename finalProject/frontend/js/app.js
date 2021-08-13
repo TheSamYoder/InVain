@@ -12,11 +12,9 @@ import {
 
 
 const container = document.querySelector(".container");
+const mainContainer = buildElement("main","main-content");
 
-const mainContainer = document.createElement("main");
-
-mainContainer.classList.add("main-content");
-container.append(createNavbar());
 mainContainer.appendChild(displayLandingPage());
-container.appendChild(mainContainer);
+container.append(createNavbar(), mainContainer);
+
 
