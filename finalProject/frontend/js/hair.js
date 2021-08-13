@@ -1,7 +1,16 @@
 import { artistProfile } from "./artistProfile.js";
-export const contentPage = function (pro) {
+
+import {
+  fetchProBySpecialty
+} from "./fetch.js";
+
+
+
+export const displayAllPros = function (professionals) {
+  const mainElement = document.querySelector(".main-content");
+  clearChildren(mainElement);
+
   const hairDiv = document.createElement("div");
-  
 
   const hairTitle = document.createElement("h1");
   hairTitle.innerText = "Hair Profesionals Near You";
@@ -85,57 +94,60 @@ export const contentPage = function (pro) {
   hairDiv.appendChild(breakPoint1);
 
   //Content Cards
-  const contentCardElement = document.createElement("div");
-  contentCardElement.classList.add("content-cards");
+  professionals.then((pros) =>
+    pros.forEach((pro) => {
+      const contentCardElement = document.createElement("div");
+      contentCardElement.classList.add("content-cards");
 
-  const contentCardImg = document.createElement("div");
-  contentCardImg.classList.add("content-cards_img");
+      const contentCardImg = document.createElement("div");
+      contentCardImg.classList.add("content-cards_img");
 
-  const cardImg = document.createElement("img");
-  cardImg.src = "https://bit.ly/3lVe5jK";
+      const cardImg = document.createElement("img");
+      cardImg.src = "https://bit.ly/3lVe5jK";
 
-  const contentCardInfo = document.createElement("div");
-  contentCardInfo.classList.add("content-cards_info");
+      const contentCardInfo = document.createElement("div");
+      contentCardInfo.classList.add("content-cards_info");
 
-  const contentCardRatingAndLoc = document.createElement("div");
-  contentCardRatingAndLoc.classList.add("content-cards_ratingAndLocation");
+      const contentCardRatingAndLoc = document.createElement("div");
+      contentCardRatingAndLoc.classList.add("content-cards_ratingAndLocation");
 
-  const cardSpan1 = document.createElement("span");
-  cardSpan1.innerText = "Angelo Moore";
-  // This is where the artists name will be
-  const cardSpan2 = document.createElement("span");
-  cardSpan2.innerText = "Rating: 5 stars";
-  // This is where the rating will be listed
-  const cardSpan3 = document.createElement("span");
-  cardSpan3.innerText = "Location: Columbus";
-  // This is where the location will be listed
+      const cardSpan1 = document.createElement("span");
+      cardSpan1.innerText = "Angelo Moore";
+      // This is where the artists name will be
+      const cardSpan2 = document.createElement("span");
+      cardSpan2.innerText = "Rating: 5 stars";
+      // This is where the rating will be listed
+      const cardSpan3 = document.createElement("span");
+      cardSpan3.innerText = "Location: Columbus";
+      // This is where the location will be listed
 
-  const cardTitle = document.createElement("h1");
-  cardTitle.classList.add("content-cards_title");
-  cardTitle.innerText = "Barber";
+      const cardTitle = document.createElement("h1");
+      cardTitle.classList.add("content-cards_title");
+      cardTitle.innerText = "Barber";
 
-  const cardText = document.createElement("p");
-  cardText.classList.add("content-cards_text");
-  cardText.innerText =
-    "The studio has been a part of the neighborhood for more than five years, and its name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and tapering";
+      const cardText = document.createElement("p");
+      cardText.classList.add("content-cards_text");
+      cardText.innerText =
+        "The studio has been a part of the neighborhood for more than five years, and its name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and tapering";
 
-  const cardCta = document.createElement("a");
-  cardCta.classList.add("content-cards_cta");
-  cardCta.innerText = "Read more";
-  cardCta.addEventListener("click", () => artistProfile(pro))
+      const cardCta = document.createElement("a");
+      cardCta.classList.add("content-cards_cta");
+      cardCta.innerText = "Read more";
+      cardCta.addEventListener("click", () => artistProfile(pro));
 
-  contentCardRatingAndLoc.append(
-    cardSpan1,
-    breakPoint2,
-    cardSpan2,
-    breakPoint3,
-    cardSpan3
+      contentCardRatingAndLoc.append(cardSpan1, cardSpan2, cardSpan3);
+      contentCardInfo.append(contentCardRatingAndLoc, cardTitle, cardText, cardCta);
+      contentCardImg.appendChild(cardImg);
+      contentCardElement.appendChild(contentCardImg);
+      contentCardElement.appendChild(contentCardInfo);
+      hairDiv.appendChild(contentCardElement);
+    })
   );
-  contentCardInfo.append(contentCardRatingAndLoc, cardTitle, cardText, cardCta);
-  contentCardImg.appendChild(cardImg);
-  contentCardElement.appendChild(contentCardImg);
-  contentCardElement.appendChild(contentCardInfo);
-  hairDiv.appendChild(contentCardElement);
-
-  return hairDiv;
+    mainElement.append(hairDiv);
 };
+
+
+
+export const displayProsBySpecialty = (specialty) => {
+  displayAllPros(fetchProBySpecialty(specialty));
+}
