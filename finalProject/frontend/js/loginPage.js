@@ -15,7 +15,7 @@ const userH3 = document.createElement("h3")
 userH3.innerText = "User Login";
 
 const artistH3 = document.createElement("h3")
-artistH3.innerText = "Artist Login";
+artistH3.innerText = "Login";
 
 const userAccountContainer = document.createElement("div");
 userAccountContainer.classList("account-container");
@@ -84,6 +84,9 @@ const artistSubmitBtn = document.createElement("input");
 artistSubmitBtn.classList("submit-btn");
 artistSubmitBtn.setAttribute("type" , "submit");
 artistSubmitBtn.setAttribute("value" , "submit");
+artistSubmitBtn.addEventListener("click", () => {
+    const salonTab = window.open('#', '_self');
+});
 
 // const vl = document.createElement("div");
 // vl.classList("vl");
@@ -113,8 +116,3 @@ artistAccountContainer.appendChild(userLogin);
 
 
 loginContainer.appendChild(userAccountContainer);
-
-
-
-
-
