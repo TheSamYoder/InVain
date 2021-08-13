@@ -8,3 +8,8 @@ export const fetchProBySpecialty = async (specialty) => {
         .then((response) => response.json())
         
 }
+
+export const fetchServeByProId = async () => {
+    return fetch(`http://localhost:8080/api/professionals/{id}/serves`)
+        .then((response) => response.json())
+}
