@@ -4,7 +4,7 @@ import {
 
 import {
     displayAllPros, displayProsBySpecialty
-} from "./professionals.js";
+} from "./hair.js";
 
 export const createNavbar = function (professionals) {
     const container = document.querySelector(".container")
@@ -37,7 +37,7 @@ export const createNavbar = function (professionals) {
     const hairStylists = document.createElement("a");
     hairStylists.innerText = "Hair Stylists";
     hairStylists.addEventListener("click", () => {
-        displayProsBySpecialty("HairStylist");
+        displayProsBySpecialty("Barber");
     });
 
     hairDropDownContent.appendChild(hairBothBtn);

@@ -147,7 +147,7 @@ export const artistProfile = function (professional) {
     contentCards.appendChild(contentCardInfo);
     contentCards.appendChild(mapContainer);
 
-    serviceContent.appendChild(serviceName);
+    serviceContent.appendChild(serviceName,);
     serviceContent.appendChild(serviceDescription);
     serviceContent.appendChild(servicePrice);
     services.appendChild(serviceContent);
