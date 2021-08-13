@@ -38,13 +38,13 @@ export const displayAllPros = function (professionals) {
       const contentCardElement = buildElement("div","content-cards");
       const contentCardImg = buildElement("div","content-cards_img");
       const cardImg = document.createElement("img");
-      cardImg.src = "https://bit.ly/3lVe5jK";
+      cardImg.src = pro.profilePhoto;
 
       const contentCardInfo = buildElement("div","content-cards_info");
       const contentCardRatingAndLoc = buildElement("div","content-cards_ratingAndLocation");
 
       const cardSpan1 = buildElement("span", undefined, pro.name);
-      const cardSpan2 = buildElement("span", undefined, "Rating: " + pro.rating);
+      const cardSpan2 = buildElement("span", undefined, "Rating: " + pro.rating + "(" + pro.ratingCounter + ")");
       const cardSpan3 = buildElement("span", undefined, "Location: " + pro.location);
       const cardTitle = buildElement("h1","content-cards_title", pro.specialty);
       const cardText = buildElement("p", "content-cards_text", pro.description);

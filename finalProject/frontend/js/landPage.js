@@ -1,3 +1,8 @@
+import {
+    displayAllPros,
+    displayProsBySpecialty
+} from "./hair.js";
+
 export const displayLandingPage = function (professionals) {
 
     const mainContainer = buildElement("main", "land-container");

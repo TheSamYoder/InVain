@@ -23,7 +23,10 @@ public class Professional {
     private Collection<Serve> serves;
 
     private String phoneNumber;
-    private String payment;
+    private String profilePhoto;
+    private boolean takesCash;
+    private boolean takesCredit;
+    private boolean takesCashApp;
     private String daysOfOperation;
     private int ratingCounter = 1;
     private Double ratingTotal;
@@ -34,15 +37,18 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation){
+    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, String daysOfOperation){
         this.name = name;
         this.description = description;
         this.rating = rating;
         this.location = location;
         this.online = online;
         this.specialty = specialty;
+        this.profilePhoto = profilePhoto;
         this.phoneNumber = phoneNumber;
-        this.payment = payment;
+        this.takesCash = takesCash;
+        this.takesCashApp = takesCashApp;
+        this.takesCredit = takesCredit;
         this.daysOfOperation = daysOfOperation;
     }
 
@@ -73,8 +79,20 @@ public class Professional {
         return location;
     }
 
-    public String getPayment(){
-        return payment;
+    public String getProfilePhoto() {
+        return profilePhoto;
+    }
+
+    public boolean isTakesCash() {
+        return takesCash;
+    }
+
+    public boolean isTakesCredit() {
+        return takesCredit;
+    }
+
+    public boolean isTakesCashApp() {
+        return takesCashApp;
     }
 
     public String getPhoneNumber(){
@@ -141,8 +159,16 @@ public class Professional {
         this.daysOfOperation = daysOfOperation;
     }
 
-    public void updateProPayment(String payment) {
-        this.payment = payment;
+    public void updateProTakesCash(boolean takesCash) {
+        this.takesCash = takesCash;
+    }
+
+    public void updateProTakesCashApp(boolean takesCashApp) {
+        this.takesCashApp = takesCashApp;
+    }
+
+    public void updateProTakesCredit(boolean takesCredit) {
+        this.takesCredit = takesCredit;
     }
 
     public void addServe (Serve serveToAdd){
