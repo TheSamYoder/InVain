@@ -356,6 +356,7 @@ header {
   padding:10px;  
   padding-bottom: 50px;
   border-radius: 40px;
+  flex-direction: column;
 }
 
 
