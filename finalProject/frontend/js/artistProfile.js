@@ -9,17 +9,17 @@ export const artistProfile = function (professional) {
     const contentCardImg = buildElement("div", "content-cards_img");
 
     const artistImg = document.createElement("img");
-    artistImg.src = "https://bit.ly/3CDaeht"
+    artistImg.src = professional.profilePhoto;
     artistImg.alt = ""
 
     const contentCardInfo = buildElement("div", "content-cards_info");
     const contentCardsTitle = buildElement("div", "content-cards_title");
-    const occupation = buildElement("span", "occupation", "Occupation");
+    const occupation = buildElement("span", "occupation", "Occupation: " + professional.specialty);
     const experience = buildElement("span", "years", "Years");
-    const overallRating = buildElement("span", "overall-rating","Rating");
-    const location = buildElement("span","location", "Location of Shop");
-    const aboutArtist = buildElement("span", "about-artist", "About Artist: ");
-    const artistInfo = buildElement("p", "artist-info", "Artist Info...");
+    const overallRating = buildElement("span", "overall-rating","Rating: " + professional.rating + "/10");
+    const location = buildElement("span","location", "Location: " + professional.location);
+    const aboutArtist = buildElement("span", "about-artist", "About Artist");
+    const artistInfo = buildElement("p", "artist-info", + professional.description);
 
 
     // ------------------Modal Container----------------------------
