@@ -30,7 +30,7 @@ public class Populator implements CommandLineRunner {
         christian.addPhoto("https://bit.ly/3CzDdCy");
         christian.addPhoto("https://bit.ly/3Az6lZ5");
         Professional heather = new Professional("Heather McKinley", "Really great tattoos", 5.4,
-                "Filler", true, "Tattoo Artist","https://bit.ly/2VNFSru","1234836262"
+                "Filler", true, "TattooArtist","https://bit.ly/2VNFSru","1234836262"
                 ,true,true,true, "Weekdays");
         heather.addReview("She is a great artist!");
         heather.addReview("My tattoo is looking great!");
