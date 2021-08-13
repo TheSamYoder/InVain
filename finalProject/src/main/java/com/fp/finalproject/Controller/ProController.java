@@ -55,7 +55,9 @@ public class ProController {
         proToChange.updateProOnline(proToModify.isOnline());
         proToChange.updateProPhoneNumber(proToModify.getPhoneNumber());
         proToChange.updateProDaysOfOperation(proToModify.getDaysOfOperation());
-        proToChange.updateProPayment(proToModify.getPayment());
+        proToChange.updateProTakesCash(proToModify.isTakesCash());
+        proToChange.updateProTakesCashApp(proToModify.isTakesCashApp());
+        proToChange.updateProTakesCredit(proToModify.isTakesCredit());
         return proToChange;
     }
     
