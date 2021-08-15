@@ -15,4 +15,3 @@ const buildElementImg = (tag, src, alt) => {
 const clearChildren = (element) => {
     while (element.firstChild) element.removeChild(element.lastChild);
 }
-
