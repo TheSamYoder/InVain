@@ -7,7 +7,7 @@ const buildElement = (tag, cl, txt) =>{
 
 const buildElementImg = (tag, src, alt) => {
     const el = document.createElement(tag);
-    if (src) el.src.add(src);
+    if (src) el.src = src;
     if (alt) el.alt = alt;
     return el;
 }
