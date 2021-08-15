@@ -15,6 +15,7 @@ public class Professional {
     private String name;
     private String description;
     private Double rating;
+    private int experienceYears;
     private String location;
     private boolean online;
     private String specialty;
@@ -37,10 +38,11 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, String daysOfOperation){
+    public Professional(String name, String description, Double rating, int experienceYears, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, String daysOfOperation){
         this.name = name;
         this.description = description;
         this.rating = rating;
+        this.experienceYears = experienceYears;
         this.location = location;
         this.online = online;
         this.specialty = specialty;
@@ -73,6 +75,10 @@ public class Professional {
 
     public Double getRating(){
         return rating;
+    }
+
+    public int getExperienceYears(){
+        return experienceYears;
     }
 
     public String getLocation(){

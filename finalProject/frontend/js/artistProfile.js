@@ -2,41 +2,22 @@ import { fetchServeByProId } from "./fetch.js";
 
 export const artistProfile = function (pro) {
   const mainContent = document.querySelector(".main-content");
+  
   clearChildren(mainContent);
 
   const mainElement = buildElement("div", "pro-container");
   const artistName = buildElement("h1", "artist-name", pro.name);
   const contentCards = buildElement("div", "content-cards");
   const contentCardImg = buildElement("div", "content-cards_img");
-
-  const artistImg = document.createElement("img");
-  artistImg.src = pro.profilePhoto;
-  artistImg.alt = "";
-
+  const artistImg = document.createElement("img", pro.profilePhoto, "");
   const contentCardInfo = buildElement("div", "content-cards_info");
   const contentCardsTitle = buildElement("div", "content-cards_title");
-  const occupation = buildElement(
-    "span",
-    "occupation",
-    "Occupation: " + pro.specialty
-  );
-  const experience = buildElement("span", "years", "Years");
-  const overallRating = buildElement(
-    "span",
-    "overall-rating",
-    "Rating: " + pro.rating + "/10"
-  );
-  const location = buildElement(
-    "span",
-    "location",
-    "Location: " + pro.location
-  );
+  const occupation = buildElement("span", "occupation", "Occupation: " + pro.specialty);
+  const experience = buildElement("span", "years", "Years: " + pro.experienceYears);
+  const overallRating = buildElement("span", "overall-rating", "Rating: " + pro.rating + "/10");
+  const location = buildElement("span", "location", "Location: " + pro.location);
   const aboutArtist = buildElement("span", "about-artist", "About Artist");
-  const artistInfo = buildElement(
-    "p",
-    "artist-info",
-    +pro.description
-  );
+  const artistInfo = buildElement("p", "artist-info", pro.description);
 
   // ------------------Modal Container----------------------------
 
@@ -93,11 +74,19 @@ export const artistProfile = function (pro) {
 
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
     const serviceContainer = buildElement("div","service-container");
-    const serviceContent = buildElement("div","service-content");
-    const serviceName = buildElement("h5", undefined,"Razor Shave (complete)");
-    const serviceDescription = buildElement("p",undefined,"Razor shave on head & facial hair");
-    const servicePrice = buildElement("h5",undefined,"$$");
-    const services = buildElement("div","services");
+
+    pro.serves.forEach((serve) => {
+            const serviceContent = buildElement("div", "service-content");
+            const serviceName = buildElement("h5", undefined, serve.serveName);
+            const serviceDescription = buildElement("p", undefined, serve.serveDescription);
+            const servicePrice = buildElement("h5", undefined, serve.price);
+            const services = buildElement("div", "services");
+
+            serviceContent.append(serviceName, serviceDescription, servicePrice);
+            services.appendChild(serviceContent);
+            serviceContainer.appendChild(services);
+    })
+    
     const breakPoint1 = document.createElement("br");
     const breakPoint2 = document.createElement("br");
     const breakPoint3 = document.createElement("br");
@@ -117,11 +106,8 @@ export const artistProfile = function (pro) {
     map.appendChild(iframe);
     mapContainer.append(locationTitle, map);
     contentCards.append(contentCardImg, contentCardInfo, mapContainer);
-    serviceContent.append(serviceName, serviceDescription, servicePrice);
-    services.appendChild(serviceContent);
-    serviceContainer.appendChild(services);
+
     mainElement.append(artistName, contentCards, serviceTitle, serviceContainer);
     mainContent.appendChild(mainElement);
 
 }
-

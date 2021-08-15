@@ -82,7 +82,6 @@ public class ProController {
         return proToChange;
     }
 
-
     @GetMapping("/api/professionals/{id}/serves")
     public Iterable<Serve> retrieveServesByPro(@PathVariable Long id){
         Professional proToChange = proStorage.retrieveProById(id);
@@ -94,7 +93,6 @@ public class ProController {
         Serve serveToChange = serveStorage.retrieveServeById(serveId);
         return serveToChange;
     }
-
 
     @PostMapping("/api/professionals/{id}/serves")
     public Professional addServeToPro (@PathVariable Long id, @RequestBody Serve serveToAdd){

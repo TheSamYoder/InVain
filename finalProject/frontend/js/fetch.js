@@ -9,7 +9,7 @@ export const fetchProBySpecialty = async (specialty) => {
         
 }
 
-export const fetchServeByProId = async () => {
-    return fetch(`http://localhost:8080/api/professionals/{id}/serves`)
-        .then((response) => response.json())
+export const fetchServeByProId = async (id) => {
+    return fetch(`http://localhost:8080/api/professionals/${id}/serves`)
+        .then((response) => response.json());
 }
