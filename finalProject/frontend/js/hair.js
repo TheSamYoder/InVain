@@ -4,8 +4,6 @@ import {
   fetchProBySpecialty
 } from "./fetch.js";
 
-
-
 export const displayAllPros = function (professionals) {
   const mainElement = document.querySelector(".main-content");
   clearChildren(mainElement);

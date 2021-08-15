@@ -3,7 +3,6 @@ package com.fp.finalproject.POJO;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.Collection;
 
 @Entity
 public class Serve {
