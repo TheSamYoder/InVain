@@ -1,6 +1,7 @@
+import { editProfile } from "./editProfile.js";
 
 
-export const loginPage = function () {
+export const loginPage = function (professional) {
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);
@@ -95,7 +96,9 @@ export const loginPage = function () {
     // artistSubmitBtn.addEventListener("click", () => {
     //     const salonTab = window.open('#', '_self');
     // });
-    artistSubmitBtn.addEventListener("click", editProfile);
+    artistSubmitBtn.addEventListener("click", () => {
+        editProfile(professional)
+    });
 
     // const vl = document.createElement("div");
     // vl.classList.add("vl");
@@ -119,6 +122,7 @@ export const loginPage = function () {
     artistForm.appendChild(artistEmailInput);
     artistForm.appendChild(artistPasswordLabel);
     artistForm.appendChild(artistPasswordInput);
+    artistForm.appendChild(artistSubmitBtn);
     artistLogin.appendChild(artistForm);
     artistAccountContainer.appendChild(artistH3);
     artistAccountContainer.appendChild(artistLogin);

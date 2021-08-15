@@ -10,7 +10,7 @@ export const editProfile = function (professional) {
     const editArtistName = buildElement("h1","edit-artist-name", professional.name);
     const editBtnArtistName = document.createElement("button");    
     editBtnArtistName.classList.add("editBtn-artist-name");
-    editBtnArtistName.innerText("Edit Your Name");
+    editBtnArtistName.innerText = "Edit Your Name";
 
     const contentCards = buildElement("div","content-cards");
     const editContentCardImg = buildElement("div", "edit-content-cards_img");
@@ -19,32 +19,32 @@ export const editProfile = function (professional) {
     editArtistImg.alt = ""
     const editBtnArtistPhoto = document.createElement("button");
     editBtnArtistPhoto.classList.add("editBtn-Artist-Photo");
-    editBtnArtistPhoto.innerText("Replace Photo");
+    editBtnArtistPhoto.innerText= "Replace Photo";
 
     const editContentCardInfo = buildElement("div", "edit-content-cards_info");
     const editContentCardsTitle = buildElement("div", "edit-content-cards_title");
     const editOccupation = buildElement("span", "edit-occupation", "Occupation: " + professional.specialty);
     const editBtnOccupation = document.createElement("button");
     editBtnOccupation.classList.add("editBtn-occupation");
-    editBtnOccupation.innerText("Edit Occupation");
+    editBtnOccupation.innerText = "Edit Occupation";
 
     const editExperience = buildElement("span", "years", "Years");
     const editBtnExperience = document.createElement("button");
     editBtnExperience.classList.add("editBtn-years");
-    editBtnExperience.innerText("Edit Years");
+    editBtnExperience.innerText = "Edit Years";
 
 
     const overallRating = buildElement("span", "overall-rating","Rating: " + professional.rating + "/10");
     const editLocation = buildElement("span","edit-location", "Location: " + professional.location);
     const editBtnLocation = document.createElement("button");
     editBtnLocation.classList.add("editBtn-location");
-    editBtnLocation.innerText("Edit Location");
+    editBtnLocation.innerText = "Edit Location";
 
     const aboutArtist = buildElement("span", "about-artist", "About Artist");   
     const editArtistInfo = buildElement("p", "edit-artist-info", + professional.description);
     const editBtnArtistInfo = document.createElement("button");
     editBtnArtistInfo.classList.add("editBtn-artist-info")
-    editBtnArtistInfo.innerText("Edit About Me");
+    editBtnArtistInfo.innerText = "Edit About Me";
 
     // ------------------Modal Container----------------------------
 
@@ -103,13 +103,13 @@ export const editProfile = function (professional) {
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
     const serviceContainer = buildElement("div","edit-service-container");
     const editServiceContent = buildElement("div","edit-service-content");
-    const editBtnService = document("button");
+    const editBtnService = document.createElement("button");
     editBtnService.classList.add("editBtn-services");
-    editBtnService.innerText("Edit Service");
+    editBtnService.innerText = "Edit Service";
 
-    const removeBtnService = document("button")
+    const removeBtnService = document.createElement("button")
     removeBtnService.classList.add("removeBtn-services")
-    removeBtnService.innerText("Revmove Service");
+    removeBtnService.innerText= "Revmove Service";
 
     const editServiceName = buildElement("h5", undefined,"Razor Shave (complete)");
     const editServiceDescription = buildElement("p",undefined,"Razor shave on head & facial hair");
@@ -131,7 +131,7 @@ export const editProfile = function (professional) {
     messageModal.appendChild(messageBtn);
     lastModal.appendChild(lastBtn);
     editModalContainer.append(scheduleModal, reviewModal, messageModal, lastModal);
-    contentCardInfo.append(editContentCardsTitle, editModalContainer);
+    editContentCardInfo.append(editContentCardsTitle, editModalContainer);
     map.appendChild(iframe);
     mapContainer.append(locationTitle, map);
     contentCards.append(editContentCardImg, editContentCardInfo, mapContainer);
