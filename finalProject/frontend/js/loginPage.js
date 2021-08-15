@@ -1,3 +1,5 @@
+
+
 export const loginPage = function () {
 
     const mainContent = document.querySelector(".main-content");
@@ -90,9 +92,10 @@ export const loginPage = function () {
     artistSubmitBtn.classList.add("submit-btn");
     artistSubmitBtn.setAttribute("type", "submit");
     artistSubmitBtn.setAttribute("value", "submit");
-    artistSubmitBtn.addEventListener("click", () => {
-        const salonTab = window.open('#', '_self');
-    });
+    // artistSubmitBtn.addEventListener("click", () => {
+    //     const salonTab = window.open('#', '_self');
+    // });
+    artistSubmitBtn.addEventListener("click", editProfile);
 
     // const vl = document.createElement("div");
     // vl.classList.add("vl");
