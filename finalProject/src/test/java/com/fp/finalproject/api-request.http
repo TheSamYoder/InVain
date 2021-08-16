@@ -59,4 +59,7 @@ Content-Type: application/json
 DELETE http://localhost:8080/api/professionals/1/serves/5
 
 ### Get a professional based on their specialty.
-GET http://localhost:8080/api/professionals/specialties/PuddingThief
+GET http://localhost:8080/api/professionals/specialty/Stylist
+
+### Get professionals based on two specialties.
+GET http://localhost:8080/api/professionals/specialties/Stylist+Barber

@@ -22,7 +22,7 @@ public class Populator implements CommandLineRunner {
 
         Professional christian = new Professional("Christian Rivea","Cool dude!", 5.3, 10,
                 "Good Life Barber Shop", true, "Barber","https://bit.ly/3iLxgLb","123456789",
-                true,true,true, "Weekdays");
+                true,true,true, true, false);
         christian.addReview("He's Great at hair cut!");
         christian.addReview("Baby smooth.");
         christian.addReview("My beard looks great!");
@@ -31,14 +31,14 @@ public class Populator implements CommandLineRunner {
         christian.addPhoto("https://bit.ly/3Az6lZ5");
         Professional heather = new Professional("Heather McKinley", "Really great tattoos", 5.4, 5,
                 "Filler", true, "TattooArtist","https://bit.ly/2VNFSru","1234836262"
-                ,true,true,true, "Weekdays");
+                ,true,true,true, true, true);
         heather.addReview("She is a great artist!");
         heather.addReview("My tattoo is looking great!");
         heather.addPhoto("https://bit.ly/3iBOvhM");
         heather.addPhoto("https://bit.ly/3CCls5C");
         Professional bri = new Professional("Bri Phillips", "Good stylist", 5.6, 7,
-                "Filler", true, "HairStylist","https://bit.ly/3yKPCkZ","1234566643"
-                ,true,true,true,"Weekdays");
+                "Filler", true, "Stylist","https://bit.ly/3yKPCkZ","1234566643"
+                ,true,true,true,true,false);
         bri.addReview("Great style!");
         bri.addReview("My no more roots!");
         bri.addReview("My hair is really light!");
@@ -47,14 +47,14 @@ public class Populator implements CommandLineRunner {
         bri.addPhoto("https://bit.ly/2VAzGUc");
         Professional mandy = new Professional("Mandy Moore", "Good nails", 5.1, 2,
                 "Filler", true, "Manicurist","https://bit.ly/3yLJF7o","32487641314"
-                ,true,true,true,"Weekdays");
+                ,true,true,true,true, false);
         mandy.addReview("She did my nails!");
         mandy.addReview("My nails look amazing!");
         mandy.addPhoto("https://bit.ly/3iAi3wn");
         mandy.addPhoto("https://bit.ly/3yATwwA");
         Professional eli = new Professional("Eli Wagner", "Great hair cuts!", 5.0, 6,
-                "Filler", true, "Barber","https://bit.ly/3CIAbvX","1112223333"
-                ,true,true,true,"Weekdays");
+                "Filler", false, "Barber","https://bit.ly/3CIAbvX","1112223333"
+                ,true,true,true,true,false);
         eli.addReview("He is a great dude and I love his hair cuts!");
         eli.addReview("My beard looks great everytime Eli cuts me up!");
         eli.addPhoto("https://bit.ly/2UatSQu");

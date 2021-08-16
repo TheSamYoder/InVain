@@ -5,7 +5,8 @@ import{
 } from "./loginPage.js"
 
 import{
-  displayProsBySpecialty
+  displayProsBySpecialty, 
+  displayAllPros
 } from "./hair.js"
 
 export const createNavbar = function (professionals) {
@@ -21,15 +22,15 @@ export const createNavbar = function (professionals) {
   const hairDropBtn = buildElement("button", "dropbtn", "Hair");
   const hairBothBtn = buildElement("a", undefined, "Both");
   hairBothBtn.addEventListener("click", () => {
-    displayProsBySpecialty("Barber");
+    displayAllPros(professionals);
   });
   const barbers = buildElement("a", undefined,"Barbers");
   barbers.addEventListener("click", () => {
     displayProsBySpecialty("Barber");
   });
-  const hairStylists = buildElement("a", undefined, "Hair Stylists");
+  const hairStylists = buildElement("a", undefined, "Stylists");
   hairStylists.addEventListener("click", () => {
-    displayProsBySpecialty("HairStylist");
+    displayProsBySpecialty("Stylist");
   });
   hairDropDownContent.append(hairBothBtn, barbers, hairStylists);
   hairDropDown.append(hairDropBtn, hairDropDownContent);

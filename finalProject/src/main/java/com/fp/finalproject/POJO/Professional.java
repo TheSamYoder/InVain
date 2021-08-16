@@ -28,7 +28,8 @@ public class Professional {
     private boolean takesCash;
     private boolean takesCredit;
     private boolean takesCashApp;
-    private String daysOfOperation;
+    private boolean weekday;
+    private boolean weekend;
     private int ratingCounter = 1;
     private Double ratingTotal;
 
@@ -38,7 +39,7 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, int experienceYears, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, String daysOfOperation){
+    public Professional(String name, String description, Double rating, int experienceYears, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, boolean weekday, boolean weekend){
         this.name = name;
         this.description = description;
         this.rating = rating;
@@ -51,7 +52,8 @@ public class Professional {
         this.takesCash = takesCash;
         this.takesCashApp = takesCashApp;
         this.takesCredit = takesCredit;
-        this.daysOfOperation = daysOfOperation;
+        this.weekday = weekday;
+        this.weekend = weekend;
     }
 
     protected Professional(){}
@@ -105,8 +107,12 @@ public class Professional {
         return phoneNumber;
     }
 
-    public String getDaysOfOperation(){
-        return daysOfOperation;
+    public boolean isWeekend(){
+        return weekend;
+    }
+
+    public boolean isWeekday(){
+        return weekday;
     }
 
     public Collection<String> getReviews(){
