@@ -167,9 +167,6 @@ public class Professional {
         this.phoneNumber = phoneNumber;
     }
 
-    public void updateProDaysOfOperation(String daysOfOperation) {
-        this.daysOfOperation = daysOfOperation;
-    }
 
     public void updateProTakesCash(boolean takesCash) {
         this.takesCash = takesCash;
