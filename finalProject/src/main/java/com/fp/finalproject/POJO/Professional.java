@@ -15,6 +15,7 @@ public class Professional {
     private String name;
     private String description;
     private Double rating;
+    private int experienceYears;
     private String location;
     private boolean online;
     private String specialty;
@@ -27,7 +28,8 @@ public class Professional {
     private boolean takesCash;
     private boolean takesCredit;
     private boolean takesCashApp;
-    private String daysOfOperation;
+    private boolean weekday;
+    private boolean weekend;
     private int ratingCounter = 1;
     private Double ratingTotal;
 
@@ -37,10 +39,11 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, String daysOfOperation){
+    public Professional(String name, String description, Double rating, int experienceYears, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, boolean weekday, boolean weekend){
         this.name = name;
         this.description = description;
         this.rating = rating;
+        this.experienceYears = experienceYears;
         this.location = location;
         this.online = online;
         this.specialty = specialty;
@@ -49,7 +52,8 @@ public class Professional {
         this.takesCash = takesCash;
         this.takesCashApp = takesCashApp;
         this.takesCredit = takesCredit;
-        this.daysOfOperation = daysOfOperation;
+        this.weekday = weekday;
+        this.weekend = weekend;
     }
 
     protected Professional(){}
@@ -73,6 +77,10 @@ public class Professional {
 
     public Double getRating(){
         return rating;
+    }
+
+    public int getExperienceYears(){
+        return experienceYears;
     }
 
     public String getLocation(){
@@ -99,8 +107,12 @@ public class Professional {
         return phoneNumber;
     }
 
-    public String getDaysOfOperation(){
-        return daysOfOperation;
+    public boolean isWeekend(){
+        return weekend;
+    }
+
+    public boolean isWeekday(){
+        return weekday;
     }
 
     public Collection<String> getReviews(){
