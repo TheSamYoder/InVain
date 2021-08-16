@@ -7,13 +7,13 @@ body {
     background-color: #f7f7f7;
   }
   
-  .section-heading {
+  .heading {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 64px;
     color: #4facfe;
     margin: 0 0 70px;
-    padding-bottom: 50px;
+    padding-bottom: 40px;
   }
   
   .container {
