@@ -54,6 +54,7 @@ export const contentCardCreator = (professionals, {
                 if (!pro.weekday) check = false;
 
             if (check) contentCardContainer.append(contentCardElement);
+            console.log(pro);
         })
     );
 
