@@ -14,7 +14,7 @@ const editBtnArtistName = buildElement("button", "editBtn-artist-name", "Edit Yo
 const contentCards = buildElement("div", "content-cards");
 const editContentCardImg = buildElement("div", "edit-content-cards_img");
 const editArtistImg = buildElementImg("img", professional.profilePhoto, "");
-const editBtnArtistPhoto = buildElement("button", "editBtn-artist-photo", "Relace Photo");
+const editBtnArtistPhoto = buildElement("button", "editBtn-artist-photo", "Replace Photo");
 
 const editContentCardInfo = buildElement("div", "edit-content-cards_info");
 const editContentCardsTitle = buildElement("div", "edit-content-cards_title");
@@ -85,17 +85,17 @@ const editBtnArtistInfo = buildElement("button", "editBtn-experience", "Edit Abo
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
     const serviceContainer = buildElement("div","service-container");
 
-//     professional.serves.forEach((serve) => {
-//         const serviceContent = buildElement("div", "service-content");
-//         const serviceName = buildElement("h5", undefined, serve.serveName);
-//         const serviceDescription = buildElement("p", undefined, serve.serveDescription);
-//         const servicePrice = buildElement("h5", undefined, serve.price);
-//         const services = buildElement("div", "services");
+    professional.serves.forEach((serve) => {
+        const serviceContent = buildElement("div", "service-content");
+        const serviceName = buildElement("h5", undefined, serve.serveName);
+        const serviceDescription = buildElement("p", undefined, serve.serveDescription);
+        const servicePrice = buildElement("h5", undefined, serve.price);
+        const services = buildElement("div", "services");
 
-//         serviceContent.append(serviceName, serviceDescription, servicePrice);
-//         services.appendChild(serviceContent);
-//         serviceContainer.appendChild(services);
-// });
+        serviceContent.append(serviceName, serviceDescription, servicePrice);
+        services.appendChild(serviceContent);
+        serviceContainer.appendChild(services);
+});
 
 
 editContentCardImg.appendChild(editArtistImg, editBtnArtistPhoto);

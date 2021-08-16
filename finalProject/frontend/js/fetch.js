@@ -18,7 +18,7 @@ export const fetchServeByProId = async (id) => {
         .then((response) => response.json());
         
 }
-export const fetchByProId = (id) =>{
+export const fetchByProId = async (id) =>{
     return fetch(`http://localhost:8080/api/professionals/${id}`)
     .then((response)=>response.json());
 }

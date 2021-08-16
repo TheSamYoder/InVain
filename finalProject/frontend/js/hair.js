@@ -90,9 +90,23 @@ export const displayProsBySpecialty = (specialty) => {
 };
 
 export const filterProfessionals = () => {
-  let professionals = fetchPros();
+  
 
   const filterOptions = {};
+  const professionals = getPros();
+
+  if ($(".online-button").isActive()) filterOptions.online = true;
+  if ($(".weekday-button").isActive()) filterOptions.weekday = true;
+  if ($(".weekend-button").isActive()) filterOptions.weekend = true;
+  if ($(".app-button").isActive()) filterOptions.app = true;
+  if ($(".cash-button").isActive()) filterOptions.cash = true;
+  if ($(".credit-button").isActive()) filterOptions.credit = true;
+
+  if (professionals) contentCardCreator(professionals, filterOptions);
+}
+
+const getPros = () => {
+  let professionals = fetchPros();
 
   if ($(".barber-button").isActive() && $(".stylist-button").isActive()) {
     professionals = fetchProBySpecialties("Barber", "Stylist");
@@ -109,12 +123,5 @@ export const filterProfessionals = () => {
   } else if ($(".bw-button").isActive()) professionals = fetchProBySpecialty("BlackInk");
   else if ($(".color-button").isActive()) professionals = fetchProBySpecialty("ColorTattoo");
 
-  if ($(".online-button").isActive()) filterOptions.online = true;
-  if ($(".weekday-button").isActive()) filterOptions.weekday = true;
-  if ($(".weekend-button").isActive()) filterOptions.weekend = true;
-  if ($(".app-button").isActive()) filterOptions.app = true;
-  if ($(".cash-button").isActive()) filterOptions.cash = true;
-  if ($(".credit-button").isActive()) filterOptions.credit = true;
-
-  if (professionals) contentCardCreator(professionals, filterOptions);
+  return professionals;
 }
