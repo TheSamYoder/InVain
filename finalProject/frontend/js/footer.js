@@ -1,23 +1,28 @@
 export const createFooter = function() {
 
 const footer = buildElement("div", "footer");
-const footerBtn = buildElement("div", "button")
-const footerContainer = buildElement("div","container");
-const footerCont = buildElement("div", "cont");
+const footerBtn = buildElement("div");
+footerBtn.id = "button";
+const footerContainer = buildElement("div");
+footerContainer.id = "container";
+const footerCont = buildElement("div");
+footerCont.id = "cont";
 const footerCenter = buildElement("div", "footer_center");
 const footerTitle = buildElement("h3", "footer-title");
 const footerContent = buildElement("ul", "footer-content");
-const footerLinks = buildElement("a", undefined, "About Us");
-const copyright = buildElement("li", undefined, "InVain Copyright&#169; 2021");
+const footerLinks = buildElement("a", "footer-links", "About Us");
+const copyright = buildElement("li", "copyright", "InVain Copyright&#169; 2021");
 const iTitle = buildElement("i", undefined, "Looking to look good");
+const footerLink2 = buildElement("a", "footer-links", "Back To Top");
+const footerLink3 = buildElement("a", "footer-links", "Extra Link");
 
-footerCenter.appendChild(copyright);
-footerContent.appendChild(footerLinks);
-footerTitle.appendChild(iTitle);
-footerCont.appendChild(footerCenter);
-footerCenter.appendChild(footerTitle, footerContent);
-footerContainer.appendChild(footerCont);
-footer.appendChild(footerBtn, footerContainer);
+
+footerContent.append(footerLink2, footerLinks, footerLink3);
+footerTitle.append(iTitle);
+footerCenter.append(footerTitle, footerContent, copyright);
+footerCont.append(footerCenter);
+footerContainer.append(footerCont);
+footer.append(footerBtn, footerContainer);
 
 return footer;
 
