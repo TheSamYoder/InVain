@@ -13,8 +13,19 @@ import {
   showAllButtonLogic,
   barberLogic,
   stylistLogic,
+  maniLogic,
+  pediLogic,
+  blackInkLogic,
+  colorInkLogic,
+  openWeekendsLogic,
   onlineSchButtonLogic,
-  weekdayButtonLogic
+  weekdayButtonLogic,
+  acceptsCashAppLogic,
+  acceptsCashLogic,
+  acceptsCreditLogic,
+  lowPriceLogic,
+  highPriceLogic,
+  mostExperienceLogic
 } from "./specialtyPage/eventListeners.js";
 
 export const displayAllPros = function (professionals) {
@@ -36,187 +47,41 @@ export const displayAllPros = function (professionals) {
   const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
   const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");
   const stylistButton = buildElement("button", ["btn", "stylist-button", "hair-pros"], "Stylist");
-  const maniButton = buildElement("button", ["btn", "nail-pros"], "Manicurist");
-  const pediButton = buildElement("button", ["btn", "nail-pros"], "Pedicurist");
-  const blackInkButton = buildElement("button", ["btn", "tattoo-pros"], "Black Ink");
-  const coloredInkButton = buildElement("button", ["btn", "tattoo-pros"], "Colored Ink");
+  const maniButton = buildElement("button", ["btn", "mani-button","nail-pros"], "Manicurist");
+  const pediButton = buildElement("button", ["btn", "pedi-button", "nail-pros"], "Pedicurist");
+  const blackInkButton = buildElement("button", ["btn", "bw-button", "tattoo-pros"], "Black Ink");
+  const coloredInkButton = buildElement("button", ["btn", "color-button", "tattoo-pros"], "Colored Ink");
   const onlineSchButton = buildElement("button", ["btn", "online-button", "filter-options"], "Online Scheduling");
   const openOnWeekButton = buildElement("button", ["btn", "weekday-button", "filter-options"], "Open on weekdays");
-  const openOnWeekendsButton = buildElement("button", ["btn", "filter-options"], "Open on weekends");
-  const acceptsCashAppBtn = buildElement("button", ["btn", "filter-options"], "Accepts Cash App");
-  const acceptsCashbtn = buildElement("button", ["btn", "filter-options"], "Accepts Cash");
-  const acceptsDebitOrCreditBtn = buildElement("button", ["btn", "filter-options"], "Accepts Debit/Credit");
-  const lowestPriceBtn = buildElement("button", ["btn", "sort-options"], "Lowest Price");
-  const highestPriceBtn = buildElement("button", ["btn", "sort-options"], "Highest Price");
-  const mostExperienceButton = buildElement("button", ["btn", "sort-options"], "Most Experienced");
+  const openOnWeekendsButton = buildElement("button", ["btn", "weekend-button", "filter-options"], "Open on weekends");
+  const acceptsCashAppBtn = buildElement("button", ["btn", "app-button", "filter-options"], "Accepts Cash App");
+  const acceptsCashbtn = buildElement("button", ["btn", "cash-button", "filter-options"], "Accepts Cash");
+  const acceptsDebitOrCreditBtn = buildElement("button", ["btn", "credit-button", "filter-options"], "Accepts Debit/Credit");
+  const lowestPriceBtn = buildElement("button", ["btn", "low-price-button","sort-options"], "Lowest Price");
+  const highestPriceBtn = buildElement("button", ["btn", "highest-price-button","sort-options"], "Highest Price");
+  const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
-  filterButtonContainer.append(
-    showAllButton,
-    barberButton,
-    stylistButton,
-    maniButton,
-    pediButton,
-    blackInkButton,
-    coloredInkButton,
-    onlineSchButton,
-    openOnWeekButton,
-    openOnWeekendsButton,
-    acceptsCashAppBtn,
-    acceptsCashbtn,
-    acceptsDebitOrCreditBtn,
-    lowestPriceBtn,
-    highestPriceBtn,
-    mostExperienceButton
-  );
+  filterButtonContainer.append(showAllButton, barberButton, stylistButton, maniButton, pediButton, blackInkButton,
+    coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
+    acceptsDebitOrCreditBtn, lowestPriceBtn, highestPriceBtn, mostExperienceButton);
 
   showAllButton.addEventListener("click", showAllButtonLogic);
   barberButton.addEventListener("click", barberLogic);
   stylistButton.addEventListener("click", stylistLogic);
-
+  maniButton.addEventListener("click", maniLogic);
+  pediButton.addEventListener("click", pediLogic);
+  blackInkButton.addEventListener("click", blackInkLogic);
+  coloredInkButton.addEventListener("click", colorInkLogic);
+  openOnWeekendsButton.addEventListener("click", openWeekendsLogic);
   onlineSchButton.addEventListener("click", onlineSchButtonLogic);
   openOnWeekButton.addEventListener("click", weekdayButtonLogic);
-
-  maniButton.addEventListener("click", () => {
-    if (maniButton.className === "btn-on") {
-      maniButton.className = "btn";
-      if (pediButton.className === "btn") {
-        stylistButton.className = "btn";
-        barberButton.className = "btn";
-        blackInkButton.className = "btn";
-        coloredInkButton.className = "btn";
-      }
-    } else {
-      maniButton.className = "btn-on";
-      stylistButton.className = "btn-disabled";
-      barberButton.className = "btn-disabled";
-      blackInkButton.className = "btn-disabled";
-      coloredInkButton.className = "btn-disabled";
-      showAllButton.className = "btn";
-    }
-  });
-
-  pediButton.addEventListener("click", () => {
-    if (pediButton.className === "btn-on") {
-      pediButton.className = "btn";
-      if (maniButton.className === "btn") {
-        stylistButton.className = "btn";
-        barberButton.className = "btn";
-        blackInkButton.className = "btn";
-        coloredInkButton.className = "btn";
-      }
-    } else {
-      pediButton.className = "btn-on";
-      stylistButton.className = "btn-disabled";
-      barberButton.className = "btn-disabled";
-      blackInkButton.className = "btn-disabled";
-      coloredInkButton.className = "btn-disabled";
-      showAllButton.className = "btn";
-    }
-  });
-
-  blackInkButton.addEventListener("click", () => {
-    if (blackInkButton.className === "btn-on") {
-      blackInkButton.className = "btn";
-      if (coloredInkButton.className === "btn") {
-        stylistButton.className = "btn";
-        barberButton.className = "btn";
-        maniButton.className = "btn";
-        pediButton.className = "btn";
-      }
-    } else {
-      blackInkButton.className = "btn-on";
-      stylistButton.className = "btn-disabled";
-      barberButton.className = "btn-disabled";
-      maniButton.className = "btn-disabled";
-      pediButton.className = "btn-disabled";
-      showAllButton.className = "btn";
-    }
-  });
-
-  coloredInkButton.addEventListener("click", () => {
-    if (coloredInkButton.className === "btn-on") {
-      coloredInkButton.className = "btn";
-      if (blackInkButton.className === "btn") {
-        stylistButton.className = "btn";
-        barberButton.className = "btn";
-        maniButton.className = "btn";
-        pediButton.className = "btn";
-      }
-    } else {
-      coloredInkButton.className = "btn-on";
-      stylistButton.className = "btn-disabled";
-      barberButton.className = "btn-disabled";
-      maniButton.className = "btn-disabled";
-      pediButton.className = "btn-disabled";
-      showAllButton.className = "btn";
-    }
-  });
-
-  openOnWeekendsButton.addEventListener("click", () => {
-    if (openOnWeekendsButton.className === "btn-on") {
-      openOnWeekendsButton.className = "btn";
-    } else {
-      openOnWeekendsButton.className = "btn-on";
-      showAllButton.className = "btn";
-    }
-  });
-
-  acceptsCashAppBtn.addEventListener("click", () => {
-    if (acceptsCashAppBtn.className === "btn-on") {
-      acceptsCashAppBtn.className = "btn";
-    } else {
-      acceptsCashAppBtn.className = "btn-on";
-      showAllButton.className = "btn";
-    }
-  });
-
-  acceptsCashbtn.addEventListener("click", () => {
-    if (acceptsCashbtn.className === "btn-on") {
-      acceptsCashbtn.className = "btn";
-    } else {
-      acceptsCashbtn.className = "btn-on";
-      showAllButton.className = "btn";
-    }
-  });
-
-  acceptsDebitOrCreditBtn.addEventListener("click", () => {
-    if (acceptsDebitOrCreditBtn.className === "btn-on") {
-      acceptsDebitOrCreditBtn.className = "btn";
-    } else {
-      acceptsDebitOrCreditBtn.className = "btn-on";
-      showAllButton.className = "btn";
-    }
-  });
-
-  lowestPriceBtn.addEventListener("click", () => {
-    if (lowestPriceBtn.className === "btn-on") {
-      lowestPriceBtn.className = "btn";
-    } else {
-      lowestPriceBtn.className = "btn-on";
-      highestPriceBtn.className = "btn";
-      showAllButton.className = "btn";
-    }
-  });
-
-  highestPriceBtn.addEventListener("click", () => {
-    if (highestPriceBtn.className === "btn-on") {
-      highestPriceBtn.className = "btn";
-    } else {
-      highestPriceBtn.className = "btn-on";
-      lowestPriceBtn.className = "btn";
-      showAllButton.className = "btn";
-    }
-  });
-
-  mostExperienceButton.addEventListener("click", () => {
-    if (mostExperienceButton.className === "btn-on") {
-      mostExperienceButton.className = "btn";
-    } else {
-      mostExperienceButton.className = "btn-on";
-      showAllButton.className = "btn";
-    }
-  });
-
+  acceptsCashAppBtn.addEventListener("click", acceptsCashAppLogic);
+  acceptsCashbtn.addEventListener("click", acceptsCashLogic);
+  acceptsDebitOrCreditBtn.addEventListener("click", acceptsCreditLogic);
+  lowestPriceBtn.addEventListener("click", lowPriceLogic);
+  highestPriceBtn.addEventListener("click", highPriceLogic);
+  mostExperienceButton.addEventListener("click", mostExperienceLogic);
+ 
   contentCardCreator(professionals);
 };
 
@@ -233,13 +98,23 @@ export const filterProfessionals = () => {
     professionals = fetchProBySpecialties("Barber", "Stylist");
   } else if ($(".barber-button").isActive()) professionals = fetchProBySpecialty("Barber");
   else if ($(".stylist-button").isActive()) professionals = fetchProBySpecialty("Stylist");
-  // if ($(".manicurist-button").isActive() && $(".pedicurist-button").isActive()) {
-  //   professionals = fetchProBySpecialties("Manicurist", "Pedicurist");
-  // } else if ($(".manicurist-button").isActive()) professionals = fetchProBySpecialty("Manicuris");
-  // else if ($(".pedicurist-button").isActive()) professionals = fetchProBySpecialty("Pedicurist");
+
+  if ($(".mani-button").isActive() && $(".pedi-button").isActive()) {
+    professionals = fetchProBySpecialties("Manicurist", "Pedicurist");
+  } else if ($(".mani-button").isActive()) professionals = fetchProBySpecialty("Manicurist");
+  else if ($(".pedi-button").isActive()) professionals = fetchProBySpecialty("Pedicurist");
+
+  if ($(".bw-button").isActive() && $(".color-button").isActive()) {
+    professionals = fetchProBySpecialties("BlackInk", "ColorTattoo");
+  } else if ($(".bw-button").isActive()) professionals = fetchProBySpecialty("BlackInk");
+  else if ($(".color-button").isActive()) professionals = fetchProBySpecialty("ColorTattoo");
 
   if ($(".online-button").isActive()) filterOptions.online = true;
   if ($(".weekday-button").isActive()) filterOptions.weekday = true;
+  if ($(".weekend-button").isActive()) filterOptions.weekend = true;
+  if ($(".app-button").isActive()) filterOptions.app = true;
+  if ($(".cash-button").isActive()) filterOptions.cash = true;
+  if ($(".credit-button").isActive()) filterOptions.credit = true;
 
   if (professionals) contentCardCreator(professionals, filterOptions);
 }
