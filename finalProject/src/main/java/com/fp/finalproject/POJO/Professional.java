@@ -167,6 +167,13 @@ public class Professional {
         this.phoneNumber = phoneNumber;
     }
 
+    public void updateProWorksWeekend(boolean weekend) {
+        this.weekend = weekend;
+    }
+
+    public void updateProWorksWeekday(boolean weekday) {
+        this.weekday = weekday;
+    }
 
     public void updateProTakesCash(boolean takesCash) {
         this.takesCash = takesCash;
