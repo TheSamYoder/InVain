@@ -85,7 +85,7 @@ export const artistProfile = function (pro) {
             serviceContent.append(serviceName, serviceDescription, servicePrice);
             services.appendChild(serviceContent);
             serviceContainer.appendChild(services);
-    })
+    });
     
     const breakPoint1 = document.createElement("br");
     const breakPoint2 = document.createElement("br");

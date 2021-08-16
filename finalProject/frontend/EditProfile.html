@@ -17,8 +17,9 @@
     <div class="editPage-container">
 
         <div class="edit-name-container">
-        <h1 class="edit-artist-name">Angelo Moore</h1>
-        <button class="editBtn-artist-name">Edit Name</button></div>
+            <h1 class="edit-artist-name">Angelo Moore</h1>
+            <button class="editBtn-artist-name">Edit Name</button>
+        </div>
 
         <div class="content-cards">
             <div class="edit-content-cards_img">
@@ -63,7 +64,7 @@
                     <div class="edit-modals">
                         <button onclick="document.getElementById('id01').style.display='block'"
                             class="content-cards_cta">Scheduling</button>
-                    </div>                    
+                    </div>
                 </div>
                 <button class="editBtn-modals">Edit Buttons</button>
             </div>
@@ -82,11 +83,15 @@
             <div class="services">
 
                 <div class="edit-service-content">
-                    <h5 class="edit-service-name"><strong>Razor Shave (complete)</strong></h5>
-                    <p class="edit-service-description">Razor shave on head & facial hair</p>
-                    <h5 class="edit-service-price"><strong>$40</strong></h5>
-                    <button class="editBtn-services">Edit Service</button>
-                    <button class="removeBtn-services">Remove Service</button>
+                    <ul id="edit-service-list">
+                        <li>
+                            <h5 class="edit-service-name"><strong>Razor Shave (complete)</strong></h5>
+                            <p class="edit-service-description">Razor shave on head & facial hair</p>
+                            <h5 class="edit-service-price"><strong>$40</strong></h5>
+                            <button class="editBtn-services">Edit Service</button>
+                            <button class="removeBtn-services">Remove Service</button>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
