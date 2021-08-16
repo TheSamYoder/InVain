@@ -1,4 +1,7 @@
-export const loginPage = function () {
+import { editProfile } from "./editProfile.js";
+
+
+export const loginPage = function (professional) {
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);
@@ -90,8 +93,11 @@ export const loginPage = function () {
     artistSubmitBtn.classList.add("submit-btn");
     artistSubmitBtn.setAttribute("type", "submit");
     artistSubmitBtn.setAttribute("value", "submit");
+    // artistSubmitBtn.addEventListener("click", () => {
+    //     const salonTab = window.open('#', '_self');
+    // });
     artistSubmitBtn.addEventListener("click", () => {
-        const salonTab = window.open('#', '_self');
+        editProfile(professional)
     });
 
     // const vl = document.createElement("div");
@@ -116,6 +122,7 @@ export const loginPage = function () {
     artistForm.appendChild(artistEmailInput);
     artistForm.appendChild(artistPasswordLabel);
     artistForm.appendChild(artistPasswordInput);
+    artistForm.appendChild(artistSubmitBtn);
     artistLogin.appendChild(artistForm);
     artistAccountContainer.appendChild(artistH3);
     artistAccountContainer.appendChild(artistLogin);
