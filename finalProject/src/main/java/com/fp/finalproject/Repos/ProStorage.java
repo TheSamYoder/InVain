@@ -15,30 +15,39 @@ public class ProStorage {
         this.proRepo = proRepo;
     }
 
-    public Iterable<Professional> retrieveAllPros(){
+    public Iterable<Professional> retrieveAllPros() {
         return proRepo.findAll();
     }
 
-    public Professional retrieveProById(Long id){
+    public Professional retrieveProById(Long id) {
         return proRepo.findById(id).get();
     }
 
-    public void savePro(Professional proToAdd){
+    public void savePro(Professional proToAdd) {
         proRepo.save(proToAdd);
     }
 
-    public void deleteProById(Long id){
+    public void deleteProById(Long id) {
         proRepo.deleteById(id);
     }
 
-    public Collection<Professional> findProsBySpecialty(String specialty){
+    public Collection<Professional> findProsBySpecialty(String specialty) {
         ArrayList<Professional> prosBySpecialty = new ArrayList<>();
-        for(Professional pro : retrieveAllPros()){
-            if(pro.getSpecialty().equalsIgnoreCase(specialty)){
+        for (Professional pro : retrieveAllPros()) {
+            if (pro.getSpecialty().equalsIgnoreCase(specialty)) {
                 prosBySpecialty.add(pro);
-            } 
+            }
         }
         return prosBySpecialty;
     }
 
+    public Collection<Professional> findProsBySpecialties(String specialty1, String specialty2) {
+        ArrayList<Professional> prosBySpecialty = new ArrayList<>();
+        for (Professional pro : retrieveAllPros()) {
+            if (pro.getSpecialty().equalsIgnoreCase(specialty1) || pro.getSpecialty().equalsIgnoreCase(specialty2)) {
+                prosBySpecialty.add(pro);
+            }
+        }
+        return prosBySpecialty;
+    }
 }

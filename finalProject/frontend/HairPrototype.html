@@ -60,7 +60,79 @@
     <!-- <div class="filter-container"> -->
     <h2 class="filter-h2">Filters</h2>
     <br>
-    <div class="filter-box">
+
+    <div class="w-layout-grid">
+      <div class="hair-filter-box">
+          <h4 class="heading">Hair Filters</h4>
+          <button class="btn" onclick="filterSelection('all')">Salons</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Barbers</button>
+        <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+      </div>
+      
+      <div class="nail-filter-box">
+      <h4 class="heading-2">Nail Filters</h4>
+      <button class="btn" onclick="filterSelection('all')">Manicures</button>
+      <button class="btn" onclick="filterSelection('Scheduling')">Pedicures</button>
+      <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+      <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+      </div>
+      <div class="tattoo-filter-box">
+      <h4 class="heading-3">Tattoo Filters</h4>
+      <button class="btn" onclick="filterSelection('all')">Black Tattoos</button>
+      <button class="btn" onclick="filterSelection('Scheduling')">Colored Tattoos</button>
+      <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+      <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+      </div>
+      <!-- <div class="extra-filter-box">
+      <h4 class="heading-4">Extra Filters</h4>
+      <button class="btn" onclick="filterSelection('all')"> Show all</button>
+      <button class="btn" onclick="filterSelection('Scheduling')">Online Scheduling</button>
+      <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+      <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button>
+      </div> -->
+      <div class="sort-by-filter-box">
+        <div class="box">
+        <h4 class="heading-5">Sort by: </h4>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Rating</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Rating</button>
+        </div>
+      </div>
+      <!-- <div class="tattoo-filter-box">
+        <h4 class="heading-3">Sort by: </h4>
+        <button class="btn" onclick="filterSelection('all')">Black Tattoos</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Colored Tattoos</button>
+        <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+        <!-- </div> -->
+    </div>
+
+    <!-- <div class="sortByFilter">
+      <div class="sort-by-box">
+        <h4 class="heading-5">Sort By: </h4>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Rating</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Rating</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Most Experience</button>
+      </div>
+    </div> -->
+
+    <br>
+
+    <!-- <div class="sort-by-filter-box">
+      <div class="box">
+      <h4 class="heading5">Sort by: </h4>
+      <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Lowest Rating</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Highest Rating</button>
+      </div>
+    </div> -->
+
+    <!-- <div class="filter-box">
       <div id="myBtnContainer">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
         <button class="btn" onclick="filterSelection('Scheduling')">Online Scheduling</button>
@@ -71,11 +143,9 @@
         <button class="btn" onclick="filterSelection('Payment')">Accepts Debit/Credit</button>
         <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
         <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
-        <button class="btn" onclick="filterSelection('Extra Filter')">Extra Filters</button>
-        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button>
       </div>
     </div>
-    <br>
+    <br> -->
 
     <!-- Content cards -->
     <div class="content-cards">
@@ -129,7 +199,7 @@
     <div class="content-cards">
       <div class="content-cards_img">
         <img
-          src="https://images.unsplash.com/photo-1519763421920-f2d769e01a37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=670&q=80"
+          src="https://images.unsplash.com/photo-1496088941920-f7d451d95bf4?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
           alt="">
       </div>
       <div class="content-cards_info">

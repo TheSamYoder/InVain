@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap"
+        rel="stylesheet">
+    <link href="./css/EditProfile.css" rel="stylesheet" />
+    <link href="./CSS/homePage.css" rel="stylesheet" />
+
+    <title>Edit Your Profile Prototype</title>
+</head>
+
+<body class="editPage-body">
+    <div class="editPage-container">
+
+        <div class="edit-name-container">
+            <h1 class="edit-artist-name">Angelo Moore</h1>
+            <button class="editBtn-artist-name">Edit Name</button>
+        </div>
+
+        <div class="content-cards">
+            <div class="edit-content-cards_img">
+                <img class="edit-artist-img" src="https://bit.ly/3CDaeht" alt="">
+                <button class="editBtn-artist-photo">Edit Photo</button>
+            </div>
+            <div class="edit-content-cards_info">
+                <div class="edit-content-cards_title">
+                    <span class="edit-occupation">Occupation: Hair Stylist</span>
+                    <button class="editBtn-occupation">Edit Occupation</button>
+                    <br>
+                    <span class="edit-years">Years of Service: 7</span>
+                    <button class="editBtn-years">Edit Years</button>
+                    <br>
+                    <span class="overall-rating">Overall Rating: 5 Stars</span>
+                    <br>
+                    <span class="edit-location">Location: Good Life Barber Shop</span>
+                    <button class="editBtn-location">Edit Location</button>
+                    <br>
+                    <span class="about-artist">About the Artist:</span>
+                    <p class="edit-artist-info">Every day you walk into work, you will socialize. Barbershops are known
+                        as a place
+                        for folx to go
+                        hangout and socialize while getting a haircut. You have the opportunity to create a fun
+                        environment with your clients and create a social network with them.</p>
+                    <button class="editBtn-artist-info">Edit About The Artist</button>
+                </div>
+
+                <div class="edit-modal-container">
+                    <div class="edit-modals">
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            class="content-cards_cta">Scheduling/Hours of Opp</button>
+                    </div>
+                    <div class="edit-modals">
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            class="content-cards_cta">Reviews & Ratings</button>
+                    </div>
+                    <div class="edit-modals">
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            class="content-cards_cta">Message Me</button>
+                    </div>
+                    <div class="edit-modals">
+                        <button onclick="document.getElementById('id01').style.display='block'"
+                            class="content-cards_cta">Scheduling</button>
+                    </div>
+                </div>
+                <button class="editBtn-modals">Edit Buttons</button>
+            </div>
+            <div class="map-container">
+                <h3 class="location-tile">Location</h3>
+                <div class="map">
+                    <iframe class="iframe"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12233.469928631035!2d-83.0642771!3d39.9555359!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xaa242594abd21a4b!2sGood%20Life%20Barber%20Shop!5e0!3m2!1sen!2sus!4v1628387633899!5m2!1sen!2sus"
+                        allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="service-title">Services & Prices</h2>
+        <div class="services-container">
+            <div class="services">
+
+                <div class="edit-service-content">
+                    <ul id="edit-service-list">
+                        <li>
+                            <h5 class="edit-service-name"><strong>Razor Shave (complete)</strong></h5>
+                            <p class="edit-service-description">Razor shave on head & facial hair</p>
+                            <h5 class="edit-service-price"><strong>$40</strong></h5>
+                            <button class="editBtn-services">Edit Service</button>
+                            <button class="removeBtn-services">Remove Service</button>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/artistProfile.js"></script>
+</body>
+
+</html>

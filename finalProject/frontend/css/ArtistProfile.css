@@ -1,7 +1,103 @@
+/* 
+.nav-bar {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  justify-content: space-around;
+  background: hsla(0, 0%, 0%, 1);
+  background: linear-gradient(90deg, hsla(0, 0%, 0%, 1) 60%, hsla(0, 0%, 0%, 0.8) 100%);
+  padding: 30px, 10%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+} */
 
+/* ::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+} */
+/* Track */
+/* ::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px darkgray;
+  border-radius: .8rem;
+} */
+/* Handle */
+/* ::-webkit-scrollbar-thumb {
+  background: rgb(28, 28, 28);
+  background: linear-gradient(75deg, rgba(28, 28, 28, 1) 75%, rgba(120, 120, 120, 1) 100%);
+  border-radius: 10px;
+} */
+/* 
+.dropbtn {
+  color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  background-color: inherit;
+  font-size: 1vw;
+  z-index: 5;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  filter: drop-shadow(2px 2px 2px black);
+  z-index: 4;
+}
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: #F1F1F1;
+  min-width: 160px;
+  filter: drop-shadow(1px 1px 2px gray);
+  z-index: 2;
+}
+.dropdown-content a {
+  color: black;
+  padding: 1rem 1.1rem;
+  text-decoration: none;
+  display: block;
+  background-color: #ddd;
+  z-index: 2;
+}
+.dropdown-content a:hover {
+  background-color: whitesmoke;
+  z-index: 2;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+  z-index: 2;
+}
+.dropdown:hover .dropbtn {
+  background-color: #00F2FE;
+  color: black;
+  text-decoration: underline;
+  transition-duration: .55s;
+}
+.loginBtn {
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: .4rem;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  font-size: 1vw;
+  position: absolute;
+}
+.dropdown:hover .loginBtn {
+  color: rgb(255, 255, 255);
+  background-color: inherit;
+  text-decoration: underline;
+  transition-duration: .55s;
+} */
 
-/*NOTE: CSS FOR ArtistProfile.html, CreateAcctPage.html & LoginPage.html */
+/*NOTE: CSS FOR ArtistProfile.html & LoginPage.html */
 /* ----------------------------------------------------- */
+
+.body{
+  background-color: white;
+}
 
 .content-cards {
   width: 100%;
@@ -137,10 +233,22 @@
 
 /* ---------------------------------------------------- */
 
-/* NOTE: CSS FOR CreateAcctPage.html & LoginPage.html */
+/* NOTE: CSS FOR LoginPage.html */
 
+main .main-content{
+  display: flex;
+  
+}
+
+.account-titles h1,h2{
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 2.5vw;
+  filter: drop-shadow(1px 1px 2px black);  
+
+}
 .account-titles h2{
-margin-top: -2rem;
+margin-top: -1rem;
 }
 
 .create-container{
@@ -152,30 +260,33 @@ margin-top: -2rem;
   background-color: white;
   box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
   border-radius: .8rem;
-  margin-left: 20vw;
   margin-bottom: 3rem;
   gap: 5vw;
   justify-content: space-around;
   font-family: 'Poppins', sans-serif;
 }
 
-/* vertical line css */
-.vl {
-  border-left: 8px solid darkgray;
-  min-height: min-content;
-  border-radius: 100%;
-}
-
 .account-container{
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-top: -2rem;
+  margin-left: -2rem;
 }
 
 .account-container h3{
   margin-bottom: 1rem;
   text-align: center;
+  font-size: 2vw;
 }
+
+form label{
+  display: flex;
+  padding-right: 1rem;
+  font-size: 1.5vw;
+  margin-top: 1rem;
+}
+
 .submit-btn{
   display: inline-block;
   padding: .75rem 1.5rem;
@@ -184,8 +295,12 @@ margin-top: -2rem;
   color: black;
   background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
   border-radius: .8rem;
+  border-style: none;
   text-decoration: none;
+  filter: drop-shadow(1px 1px 2px black);
   cursor: pointer;
+  margin-top: 1rem;
+  
 }
 
 

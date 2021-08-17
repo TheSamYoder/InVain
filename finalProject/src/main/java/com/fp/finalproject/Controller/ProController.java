@@ -1,8 +1,5 @@
 package com.fp.finalproject.Controller;
 
-import java.util.ArrayList;
-import java.util.Optional;
-
 import com.fp.finalproject.POJO.Professional;
 import com.fp.finalproject.POJO.Serve;
 import com.fp.finalproject.Repos.ProStorage;
@@ -24,9 +21,15 @@ public class ProController {
         return proStorage.retrieveAllPros();
     }
 
-    @GetMapping("/api/professionals/specialties/{specialty}")
+    @GetMapping("/api/professionals/specialty/{specialty}")
     public Iterable<Professional> retrieveProBySpecialty(@PathVariable String specialty) {
         return proStorage.findProsBySpecialty(specialty);
+    }
+
+    @GetMapping("/api/professionals/specialties/{specialty1}+{specialty2}")
+    public Iterable<Professional> retrieveProBySpecialties(@PathVariable String specialty1, 
+            @PathVariable String specialty2) {
+        return proStorage.findProsBySpecialties(specialty1, specialty2);
     }
 
     @GetMapping("/api/professionals/{id}")
@@ -54,8 +57,11 @@ public class ProController {
         proToChange.updateProLocation(proToModify.getLocation());
         proToChange.updateProOnline(proToModify.isOnline());
         proToChange.updateProPhoneNumber(proToModify.getPhoneNumber());
-        proToChange.updateProDaysOfOperation(proToModify.getDaysOfOperation());
-        proToChange.updateProPayment(proToModify.getPayment());
+        proToChange.updateProWorksWeekend(proToModify.isWeekend());
+        proToChange.updateProWorksWeekday(proToModify.isWeekday());
+        proToChange.updateProTakesCash(proToModify.isTakesCash());
+        proToChange.updateProTakesCashApp(proToModify.isTakesCashApp());
+        proToChange.updateProTakesCredit(proToModify.isTakesCredit());
         return proToChange;
     }
     
@@ -83,7 +89,6 @@ public class ProController {
         return proToChange;
     }
 
-
     @GetMapping("/api/professionals/{id}/serves")
     public Iterable<Serve> retrieveServesByPro(@PathVariable Long id){
         Professional proToChange = proStorage.retrieveProById(id);
@@ -95,7 +100,6 @@ public class ProController {
         Serve serveToChange = serveStorage.retrieveServeById(serveId);
         return serveToChange;
     }
-
 
     @PostMapping("/api/professionals/{id}/serves")
     public Professional addServeToPro (@PathVariable Long id, @RequestBody Serve serveToAdd){

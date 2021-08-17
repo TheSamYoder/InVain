@@ -15,6 +15,7 @@ public class Professional {
     private String name;
     private String description;
     private Double rating;
+    private int experienceYears;
     private String location;
     private boolean online;
     private String specialty;
@@ -23,8 +24,12 @@ public class Professional {
     private Collection<Serve> serves;
 
     private String phoneNumber;
-    private String payment;
-    private String daysOfOperation;
+    private String profilePhoto;
+    private boolean takesCash;
+    private boolean takesCredit;
+    private boolean takesCashApp;
+    private boolean weekday;
+    private boolean weekend;
     private int ratingCounter = 1;
     private Double ratingTotal;
 
@@ -34,16 +39,21 @@ public class Professional {
     @ElementCollection
     private Collection<String> photos = new ArrayList<String>();
 
-    public Professional(String name, String description, Double rating, String location, boolean online, String specialty, String phoneNumber, String payment, String daysOfOperation){
+    public Professional(String name, String description, Double rating, int experienceYears, String location, boolean online, String specialty, String profilePhoto, String phoneNumber, boolean takesCash, boolean takesCashApp, boolean takesCredit, boolean weekday, boolean weekend){
         this.name = name;
         this.description = description;
         this.rating = rating;
+        this.experienceYears = experienceYears;
         this.location = location;
         this.online = online;
         this.specialty = specialty;
+        this.profilePhoto = profilePhoto;
         this.phoneNumber = phoneNumber;
-        this.payment = payment;
-        this.daysOfOperation = daysOfOperation;
+        this.takesCash = takesCash;
+        this.takesCashApp = takesCashApp;
+        this.takesCredit = takesCredit;
+        this.weekday = weekday;
+        this.weekend = weekend;
     }
 
     protected Professional(){}
@@ -69,20 +79,40 @@ public class Professional {
         return rating;
     }
 
+    public int getExperienceYears(){
+        return experienceYears;
+    }
+
     public String getLocation(){
         return location;
     }
 
-    public String getPayment(){
-        return payment;
+    public String getProfilePhoto() {
+        return profilePhoto;
+    }
+
+    public boolean isTakesCash() {
+        return takesCash;
+    }
+
+    public boolean isTakesCredit() {
+        return takesCredit;
+    }
+
+    public boolean isTakesCashApp() {
+        return takesCashApp;
     }
 
     public String getPhoneNumber(){
         return phoneNumber;
     }
 
-    public String getDaysOfOperation(){
-        return daysOfOperation;
+    public boolean isWeekend(){
+        return weekend;
+    }
+
+    public boolean isWeekday(){
+        return weekday;
     }
 
     public Collection<String> getReviews(){
@@ -137,12 +167,24 @@ public class Professional {
         this.phoneNumber = phoneNumber;
     }
 
-    public void updateProDaysOfOperation(String daysOfOperation) {
-        this.daysOfOperation = daysOfOperation;
+    public void updateProWorksWeekend(boolean weekend) {
+        this.weekend = weekend;
     }
 
-    public void updateProPayment(String payment) {
-        this.payment = payment;
+    public void updateProWorksWeekday(boolean weekday) {
+        this.weekday = weekday;
+    }
+
+    public void updateProTakesCash(boolean takesCash) {
+        this.takesCash = takesCash;
+    }
+
+    public void updateProTakesCashApp(boolean takesCashApp) {
+        this.takesCashApp = takesCashApp;
+    }
+
+    public void updateProTakesCredit(boolean takesCredit) {
+        this.takesCredit = takesCredit;
     }
 
     public void addServe (Serve serveToAdd){

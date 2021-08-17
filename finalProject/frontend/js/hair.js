@@ -1,141 +1,163 @@
-import { artistProfile } from "./artistProfile.js";
-export const contentPage = function (pro) {
-  const hairDiv = document.createElement("div");
-  
+import {
+  fetchPros,
+  fetchProBySpecialty,
+  fetchProBySpecialties
+} from "./fetch.js";
 
-  const hairTitle = document.createElement("h1");
-  hairTitle.innerText = "Hair Profesionals Near You";
+import {
+  contentCardCreator
+}
+from "./contentCardCreator.js";
 
-  //Filter Element Div
-  const filterElement = document.createElement("div");
-  filterElement.classList.add("filter-h2");
-  filterElement.innerText = "Filters";
-  const filterBox = document.createElement("div");
-  filterBox.classList.add("filter-box");
-  const filterButtonContainer = document.createElement("div");
-  filterButtonContainer.classList.add("myBtnContainer");
+import {
+  showAllButtonLogic,
+  barberLogic,
+  stylistLogic,
+  maniLogic,
+  pediLogic,
+  blackInkLogic,
+  colorInkLogic,
+  openWeekendsLogic,
+  onlineSchButtonLogic,
+  weekdayButtonLogic,
+  acceptsCashAppLogic,
+  acceptsCashLogic,
+  acceptsCreditLogic,
+  lowRatingLogic,
+  highRatingLogic,
+  mostExperienceLogic
+} from "./specialtyPage/eventListeners.js";
+
+export const displayAllPros = function (professionals) {
+  const mainElement = document.querySelector(".main-content");
+  clearChildren(mainElement);
+
+  const hairDiv = buildElement("div");
+  const hairTitle = buildElement("h1", undefined, "Professionals Near You");
+  const filterElement = buildElement("div", "filter-h2", "Filters");
+
+  // What the buildElement fuction does
+  // const filterElement = document.createElement("div");
+  // filterElement.classList.add(filter-h2);
+  // filterElement.innerText = "Filters"
+  const filterBox = buildElement("div", "filter-box");
+  const filterButtonContainer = buildElement("div", "mnBtnContainer");
   filterBox.appendChild(filterButtonContainer);
+  hairDiv.append(hairTitle, filterElement, filterBox);
 
-  //Filter Buttons
-  const showAllButton = document.createElement("button");
-  showAllButton.classList.add("btn-active");
-  showAllButton.innerText = "Show all";
+  const contentCardContainer = buildElement("div", "cards-container");
+  hairDiv.append(contentCardContainer);
+  mainElement.append(hairDiv);
 
-  const onlineSchButton = document.createElement("button");
-  onlineSchButton.classList.add("btn");
-  onlineSchButton.innerText = "Online Scheduling";
+  // const sortByFilterBox = buildElement("div", "sort-by-filter-box");
+  // const box = buildElement("div", "box");
+  // const heading5 = buildElement("h4", "heading-5", "Sort By: ");
+  // const lPriceBtn = buildElement("button", ["btn", "Lowest Price"]);
+  // const hPriceBtn = buildElement("button", "btn", "Highest Price");
+  // const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
+  // const hRatingBtn = buildElement("button", "btn", "Highest Rating");
 
-  const openOnWeekButton = document.createElement("button");
-  openOnWeekButton.classList.add("btn");
-  openOnWeekButton.innerText = "Open on weekdays";
+  const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
+  const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");
+  const stylistButton = buildElement("button", ["btn", "stylist-button", "hair-pros"], "Stylist");
+  const maniButton = buildElement("button", ["btn", "mani-button","nail-pros"], "Manicurist");
+  const pediButton = buildElement("button", ["btn", "pedi-button", "nail-pros"], "Pedicurist");
+  const blackInkButton = buildElement("button", ["btn", "bw-button", "tattoo-pros"], "Black Ink");
+  const coloredInkButton = buildElement("button", ["btn", "color-button", "tattoo-pros"], "Colored Ink");
+  const onlineSchButton = buildElement("button", ["btn", "online-button", "filter-options"], "Online Scheduling");
+  const openOnWeekButton = buildElement("button", ["btn", "weekday-button", "filter-options"], "Open on weekdays");
+  const openOnWeekendsButton = buildElement("button", ["btn", "weekend-button", "filter-options"], "Open on weekends");
+  const acceptsCashAppBtn = buildElement("button", ["btn", "app-button", "filter-options"], "Accepts Cash App");
+  const acceptsCashbtn = buildElement("button", ["btn", "cash-button", "filter-options"], "Accepts Cash");
+  const acceptsDebitOrCreditBtn = buildElement("button", ["btn", "credit-button", "filter-options"], "Accepts Debit/Credit");
+  const lowestRatingBtn = buildElement("button", ["btn", "low-rating-button","sort-options"], "Lowest Rating");
+  const highestRatingBtn = buildElement("button", ["btn", "highest-rating-button","sort-options"], "Highest Rating");
+  const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
-  const openOnWeekendsButton = document.createElement("button");
-  openOnWeekendsButton.classList.add("btn");
-  openOnWeekendsButton.innerText = "Open on weekends";
+  filterButtonContainer.append(showAllButton, barberButton, stylistButton, maniButton, pediButton, blackInkButton,
+    coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
+    acceptsDebitOrCreditBtn, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
 
-  const acceptsCashAppBtn = document.createElement("button");
-  acceptsCashAppBtn.classList.add("btn");
-  acceptsCashAppBtn.innerText = "Accepts Cashapp";
-
-  const acceptsCashbtn = document.createElement("button");
-  acceptsCashbtn.classList.add("btn");
-  acceptsCashbtn.innerText = "Accepts Cash";
-
-  const acceptsDebitOrCreditBtn = document.createElement("button");
-  acceptsDebitOrCreditBtn.classList.add("btn");
-  acceptsDebitOrCreditBtn.innerText = "Accepts Debit/Credit";
-
-  const lowestPriceBtn = document.createElement("button");
-  lowestPriceBtn.classList.add("btn");
-  lowestPriceBtn.innerText = "Lowest Price";
-
-  const highestPriceBtn = document.createElement("button");
-  highestPriceBtn.classList.add("btn");
-  highestPriceBtn.innerText = "Highest Price";
-
-  const extraFilterBtnOne = document.createElement("button");
-  extraFilterBtnOne.classList.add("btn");
-  extraFilterBtnOne.innerText = "Extra Filters";
-
-  const extraFilterBtnTwo = document.createElement("button");
-  extraFilterBtnTwo.classList.add("btn");
-  extraFilterBtnTwo.innerText = "Extra";
-
-  const breakPoint = document.createElement("br");
-  const breakPoint1 = document.createElement("br");
-  const breakPoint2 = document.createElement("br");
-  const breakPoint3 = document.createElement("br");
-
-  filterButtonContainer.appendChild(showAllButton);
-  filterButtonContainer.appendChild(onlineSchButton);
-  filterButtonContainer.appendChild(openOnWeekButton);
-  filterButtonContainer.appendChild(openOnWeekendsButton);
-  filterButtonContainer.appendChild(acceptsCashAppBtn);
-  filterButtonContainer.appendChild(acceptsCashbtn);
-  filterButtonContainer.appendChild(acceptsDebitOrCreditBtn);
-  filterButtonContainer.appendChild(lowestPriceBtn);
-  filterButtonContainer.appendChild(highestPriceBtn);
-  filterButtonContainer.appendChild(extraFilterBtnOne);
-  filterButtonContainer.appendChild(extraFilterBtnTwo);
-  filterBox.appendChild(filterButtonContainer);
-  hairDiv.appendChild(hairTitle);
-  hairDiv.appendChild(filterElement);
-  hairDiv.appendChild(breakPoint);
-  hairDiv.appendChild(filterBox);
-  hairDiv.appendChild(breakPoint1);
-
-  //Content Cards
-  const contentCardElement = document.createElement("div");
-  contentCardElement.classList.add("content-cards");
-
-  const contentCardImg = document.createElement("div");
-  contentCardImg.classList.add("content-cards_img");
-
-  const cardImg = document.createElement("img");
-  cardImg.src = "https://bit.ly/3lVe5jK";
-
-  const contentCardInfo = document.createElement("div");
-  contentCardInfo.classList.add("content-cards_info");
-
-  const contentCardRatingAndLoc = document.createElement("div");
-  contentCardRatingAndLoc.classList.add("content-cards_ratingAndLocation");
-
-  const cardSpan1 = document.createElement("span");
-  cardSpan1.innerText = "Angelo Moore";
-  // This is where the artists name will be
-  const cardSpan2 = document.createElement("span");
-  cardSpan2.innerText = "Rating: 5 stars";
-  // This is where the rating will be listed
-  const cardSpan3 = document.createElement("span");
-  cardSpan3.innerText = "Location: Columbus";
-  // This is where the location will be listed
-
-  const cardTitle = document.createElement("h1");
-  cardTitle.classList.add("content-cards_title");
-  cardTitle.innerText = "Barber";
-
-  const cardText = document.createElement("p");
-  cardText.classList.add("content-cards_text");
-  cardText.innerText =
-    "The studio has been a part of the neighborhood for more than five years, and its name comes from a brand of double-edged razors that had been popular in the 1950s and 1960s. The team commits to delivering affordable, high-quality haircuts, and it focuses on blending, fading, and tapering";
-
-  const cardCta = document.createElement("a");
-  cardCta.classList.add("content-cards_cta");
-  cardCta.innerText = "Read more";
-  cardCta.addEventListener("click", () => artistProfile(pro))
-
-  contentCardRatingAndLoc.append(
-    cardSpan1,
-    breakPoint2,
-    cardSpan2,
-    breakPoint3,
-    cardSpan3
-  );
-  contentCardInfo.append(contentCardRatingAndLoc, cardTitle, cardText, cardCta);
-  contentCardImg.appendChild(cardImg);
-  contentCardElement.appendChild(contentCardImg);
-  contentCardElement.appendChild(contentCardInfo);
-  hairDiv.appendChild(contentCardElement);
-
-  return hairDiv;
+  showAllButton.addEventListener("click", () => handleClick(showAllButtonLogic));
+  barberButton.addEventListener("click", () => handleClick(barberLogic));
+  stylistButton.addEventListener("click", () => handleClick(stylistLogic));
+  maniButton.addEventListener("click", () => handleClick(maniLogic));
+  pediButton.addEventListener("click", () => handleClick(pediLogic));
+  blackInkButton.addEventListener("click", () => handleClick(blackInkLogic));
+  coloredInkButton.addEventListener("click", () => handleClick(colorInkLogic));
+  openOnWeekendsButton.addEventListener("click", () => handleClick(openWeekendsLogic));
+  onlineSchButton.addEventListener("click", () => handleClick(onlineSchButtonLogic));
+  openOnWeekButton.addEventListener("click", () => handleClick(weekdayButtonLogic));
+  acceptsCashAppBtn.addEventListener("click", () => handleClick(acceptsCashAppLogic));
+  acceptsCashbtn.addEventListener("click", () => handleClick(acceptsCashLogic));
+  acceptsDebitOrCreditBtn.addEventListener("click", () => handleClick(acceptsCreditLogic));
+  lowestRatingBtn.addEventListener("click", () => handleClick(lowRatingLogic));
+  highestRatingBtn.addEventListener("click", () => handleClick(highRatingLogic));
+  mostExperienceButton.addEventListener("click", () => handleClick(mostExperienceLogic));
+ 
+  return contentCardCreator(professionals);
 };
+
+const handleClick = (fn) => {
+  fn();
+  return renderProfessionals();
+}
+
+export const displayProsBySpecialty = (specialty) => {
+  displayAllPros(fetchProBySpecialty(specialty));
+  
+};
+
+export const renderProfessionals = () => {
+
+  const professionals = getPros();
+  const filterOptions = createFilterOptions();
+  const sortingOption = getSortingOption();
+
+  return contentCardCreator(professionals, filterOptions, sortingOption);
+}
+
+const createFilterOptions = () => {
+  const filterOptions = {};
+
+ if ($(".online-button").isActive()) filterOptions.online = true;
+ if ($(".weekday-button").isActive()) filterOptions.weekday = true;
+ if ($(".weekend-button").isActive()) filterOptions.weekend = true;
+ if ($(".app-button").isActive()) filterOptions.app = true;
+ if ($(".cash-button").isActive()) filterOptions.cash = true;
+ if ($(".credit-button").isActive()) filterOptions.credit = true;
+
+ return filterOptions;
+}
+
+const getSortingOption = () => {
+  let sortingOption;
+
+  if ($(".low-rating-button").isActive()) sortingOption = (pro1, pro2) => pro1.rating - pro2.rating;
+  if ($(".highest-rating-button").isActive()) sortingOption = (pro1, pro2) => pro2.rating - pro1.rating;
+  if ($(".experience-button").isActive()) sortingOption = (pro1, pro2) => pro2.experienceYears - pro1.experienceYears;
+
+  return sortingOption;
+}
+
+
+export const getPros = () => {
+  let professionals = fetchPros();
+
+  if ($(".barber-button").isActive() && $(".stylist-button").isActive()) {
+    professionals = fetchProBySpecialties("Barber", "Stylist");
+  } else if ($(".barber-button").isActive()) professionals = fetchProBySpecialty("Barber");
+  else if ($(".stylist-button").isActive()) professionals = fetchProBySpecialty("Stylist");
+
+  if ($(".mani-button").isActive() && $(".pedi-button").isActive()) {
+    professionals = fetchProBySpecialties("Manicurist", "Pedicurist");
+  } else if ($(".mani-button").isActive()) professionals = fetchProBySpecialty("Manicurist");
+  else if ($(".pedi-button").isActive()) professionals = fetchProBySpecialty("Pedicurist");
+
+  if ($(".bw-button").isActive() && $(".color-button").isActive()) {
+    professionals = fetchProBySpecialties("BlackInk", "ColorTattoo");
+  } else if ($(".bw-button").isActive()) professionals = fetchProBySpecialty("BlackInk");
+  else if ($(".color-button").isActive()) professionals = fetchProBySpecialty("ColorTattoo");
+
+  return professionals;
+}
