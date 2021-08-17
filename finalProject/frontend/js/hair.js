@@ -23,8 +23,8 @@ import {
   acceptsCashAppLogic,
   acceptsCashLogic,
   acceptsCreditLogic,
-  lowPriceLogic,
-  highPriceLogic,
+  lowRatingLogic,
+  highRatingLogic,
   mostExperienceLogic
 } from "./specialtyPage/eventListeners.js";
 
@@ -35,6 +35,11 @@ export const displayAllPros = function (professionals) {
   const hairDiv = buildElement("div");
   const hairTitle = buildElement("h1", undefined, "Professionals Near You");
   const filterElement = buildElement("div", "filter-h2", "Filters");
+
+  // What the buildElement fuction does
+  // const filterElement = document.createElement("div");
+  // filterElement.classList.add(filter-h2);
+  // filterElement.innerText = "Filters"
   const filterBox = buildElement("div", "filter-box");
   const filterButtonContainer = buildElement("div", "mnBtnContainer");
   filterBox.appendChild(filterButtonContainer);
@@ -43,6 +48,14 @@ export const displayAllPros = function (professionals) {
   const contentCardContainer = buildElement("div", "cards-container");
   hairDiv.append(contentCardContainer);
   mainElement.append(hairDiv);
+
+  // const sortByFilterBox = buildElement("div", "sort-by-filter-box");
+  // const box = buildElement("div", "box");
+  // const heading5 = buildElement("h4", "heading-5", "Sort By: ");
+  // const lPriceBtn = buildElement("button", ["btn", "Lowest Price"]);
+  // const hPriceBtn = buildElement("button", "btn", "Highest Price");
+  // const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
+  // const hRatingBtn = buildElement("button", "btn", "Highest Rating");
 
   const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
   const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");
@@ -57,55 +70,78 @@ export const displayAllPros = function (professionals) {
   const acceptsCashAppBtn = buildElement("button", ["btn", "app-button", "filter-options"], "Accepts Cash App");
   const acceptsCashbtn = buildElement("button", ["btn", "cash-button", "filter-options"], "Accepts Cash");
   const acceptsDebitOrCreditBtn = buildElement("button", ["btn", "credit-button", "filter-options"], "Accepts Debit/Credit");
-  const lowestPriceBtn = buildElement("button", ["btn", "low-price-button","sort-options"], "Lowest Price");
-  const highestPriceBtn = buildElement("button", ["btn", "highest-price-button","sort-options"], "Highest Price");
+  const lowestRatingBtn = buildElement("button", ["btn", "low-rating-button","sort-options"], "Lowest Rating");
+  const highestRatingBtn = buildElement("button", ["btn", "highest-rating-button","sort-options"], "Highest Rating");
   const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
   filterButtonContainer.append(showAllButton, barberButton, stylistButton, maniButton, pediButton, blackInkButton,
     coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
-    acceptsDebitOrCreditBtn, lowestPriceBtn, highestPriceBtn, mostExperienceButton);
+    acceptsDebitOrCreditBtn, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
 
-  showAllButton.addEventListener("click", showAllButtonLogic);
-  barberButton.addEventListener("click", barberLogic);
-  stylistButton.addEventListener("click", stylistLogic);
-  maniButton.addEventListener("click", maniLogic);
-  pediButton.addEventListener("click", pediLogic);
-  blackInkButton.addEventListener("click", blackInkLogic);
-  coloredInkButton.addEventListener("click", colorInkLogic);
-  openOnWeekendsButton.addEventListener("click", openWeekendsLogic);
-  onlineSchButton.addEventListener("click", onlineSchButtonLogic);
-  openOnWeekButton.addEventListener("click", weekdayButtonLogic);
-  acceptsCashAppBtn.addEventListener("click", acceptsCashAppLogic);
-  acceptsCashbtn.addEventListener("click", acceptsCashLogic);
-  acceptsDebitOrCreditBtn.addEventListener("click", acceptsCreditLogic);
-  lowestPriceBtn.addEventListener("click", lowPriceLogic);
-  highestPriceBtn.addEventListener("click", highPriceLogic);
-  mostExperienceButton.addEventListener("click", mostExperienceLogic);
+  showAllButton.addEventListener("click", () => handleClick(showAllButtonLogic));
+  barberButton.addEventListener("click", () => handleClick(barberLogic));
+  stylistButton.addEventListener("click", () => handleClick(stylistLogic));
+  maniButton.addEventListener("click", () => handleClick(maniLogic));
+  pediButton.addEventListener("click", () => handleClick(pediLogic));
+  blackInkButton.addEventListener("click", () => handleClick(blackInkLogic));
+  coloredInkButton.addEventListener("click", () => handleClick(colorInkLogic));
+  openOnWeekendsButton.addEventListener("click", () => handleClick(openWeekendsLogic));
+  onlineSchButton.addEventListener("click", () => handleClick(onlineSchButtonLogic));
+  openOnWeekButton.addEventListener("click", () => handleClick(weekdayButtonLogic));
+  acceptsCashAppBtn.addEventListener("click", () => handleClick(acceptsCashAppLogic));
+  acceptsCashbtn.addEventListener("click", () => handleClick(acceptsCashLogic));
+  acceptsDebitOrCreditBtn.addEventListener("click", () => handleClick(acceptsCreditLogic));
+  lowestRatingBtn.addEventListener("click", () => handleClick(lowRatingLogic));
+  highestRatingBtn.addEventListener("click", () => handleClick(highRatingLogic));
+  mostExperienceButton.addEventListener("click", () => handleClick(mostExperienceLogic));
  
-  contentCardCreator(professionals);
+  return contentCardCreator(professionals);
 };
+
+const handleClick = (fn) => {
+  fn();
+  return renderProfessionals();
+}
 
 export const displayProsBySpecialty = (specialty) => {
   displayAllPros(fetchProBySpecialty(specialty));
+  
 };
 
-export const filterProfessionals = () => {
-  
+export const renderProfessionals = () => {
 
-  const filterOptions = {};
   const professionals = getPros();
+  const filterOptions = createFilterOptions();
+  const sortingOption = getSortingOption();
 
-  if ($(".online-button").isActive()) filterOptions.online = true;
-  if ($(".weekday-button").isActive()) filterOptions.weekday = true;
-  if ($(".weekend-button").isActive()) filterOptions.weekend = true;
-  if ($(".app-button").isActive()) filterOptions.app = true;
-  if ($(".cash-button").isActive()) filterOptions.cash = true;
-  if ($(".credit-button").isActive()) filterOptions.credit = true;
-
-  if (professionals) contentCardCreator(professionals, filterOptions);
+  return contentCardCreator(professionals, filterOptions, sortingOption);
 }
 
-const getPros = () => {
+const createFilterOptions = () => {
+  const filterOptions = {};
+
+ if ($(".online-button").isActive()) filterOptions.online = true;
+ if ($(".weekday-button").isActive()) filterOptions.weekday = true;
+ if ($(".weekend-button").isActive()) filterOptions.weekend = true;
+ if ($(".app-button").isActive()) filterOptions.app = true;
+ if ($(".cash-button").isActive()) filterOptions.cash = true;
+ if ($(".credit-button").isActive()) filterOptions.credit = true;
+
+ return filterOptions;
+}
+
+const getSortingOption = () => {
+  let sortingOption;
+
+  if ($(".low-rating-button").isActive()) sortingOption = (pro1, pro2) => pro1.rating - pro2.rating;
+  if ($(".highest-rating-button").isActive()) sortingOption = (pro1, pro2) => pro2.rating - pro1.rating;
+  if ($(".experience-button").isActive()) sortingOption = (pro1, pro2) => pro2.experienceYears - pro1.experienceYears;
+
+  return sortingOption;
+}
+
+
+export const getPros = () => {
   let professionals = fetchPros();
 
   if ($(".barber-button").isActive() && $(".stylist-button").isActive()) {
