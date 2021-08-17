@@ -49,13 +49,13 @@ export const displayAllPros = function (professionals) {
   hairDiv.append(contentCardContainer);
   mainElement.append(hairDiv);
 
-  const sortByFilterBox = buildElement("div", "sort-by-filter-box");
-  const box = buildElement("div", "box");
-  const heading5 = buildElement("h4", "heading-5", "Sort By: ");
-  const lPriceBtn = buildElement("button", ["btn", "Lowest Price]", "");
-  const hPriceBtn = buildElement("button", "btn", "Highest Price");
-  const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
-  const hRatingBtn = buildElement("button", "btn", "Highest Rating");
+  // const sortByFilterBox = buildElement("div", "sort-by-filter-box");
+  // const box = buildElement("div", "box");
+  // const heading5 = buildElement("h4", "heading-5", "Sort By: ");
+  // const lPriceBtn = buildElement("button", ["btn", "Lowest Price"]);
+  // const hPriceBtn = buildElement("button", "btn", "Highest Price");
+  // const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
+  // const hRatingBtn = buildElement("button", "btn", "Highest Rating");
 
   const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
   const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");

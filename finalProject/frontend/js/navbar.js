@@ -1,6 +1,10 @@
 import {
   barberLogic,
-  stylistLogic
+  stylistLogic,
+  maniLogic,
+  pediLogic,
+  blackInkLogic,
+  colorInkLogic
 } from "./specialtyPage/eventListeners.js";
 
 import {
@@ -30,7 +34,6 @@ export const createNavbar = function () {
   const hairDropBtn = buildElement("button", "dropbtn", "Hair");
   const hairBothBtn = buildElement("a", undefined, "Both");
   hairBothBtn.addEventListener("click", () => {
-
     const promise = displayAllPros(Promise.resolve([]));
     promise.then(() => {
       barberLogic();
@@ -58,15 +61,22 @@ export const createNavbar = function () {
   const nailDropDownContent = buildElement("div", "dropdown-content");
   const nailBothBtn = buildElement("a", undefined, "Both");
   nailBothBtn.addEventListener("click", () => {
-    displayProsBySpecialty("Manicurist");
+    const promise = displayAllPros(Promise.resolve([]));
+    promise.then(() => {
+          maniLogic();
+          pediLogic();
+          renderProfessionals();
+  });
   });
   const pedicure = buildElement("a", undefined, "Pedicure");
   pedicure.addEventListener("click", () => {
     displayProsBySpecialty("Pedicurist");
+    pediLogic();
   });
   const manicure = buildElement("a", undefined, "Manicure");
   manicure.addEventListener("click", () => {
     displayProsBySpecialty("Manicurist");
+    maniLogic();
   });
   nailDropDownContent.append(nailBothBtn, manicure, pedicure);
   nailDropDown.append(nailDropBtn, nailDropDownContent);
@@ -78,15 +88,22 @@ export const createNavbar = function () {
   const tattooDropDownContent = buildElement("div", "dropdown-content");
   const tattooBothBtn = buildElement("a", undefined, "Both");
   tattooBothBtn.addEventListener("click", () => {
-    displayProsBySpecialty("TattooArtist");
+     const promise = displayAllPros(Promise.resolve([]));
+     promise.then(() => {
+           blackInkLogic();
+           colorInkLogic();
+           renderProfessionals();
   });
+});
   const coloredInk = buildElement("a", undefined, "Colored Ink");
   coloredInk.addEventListener("click", () => {
-    displayProsBySpecialty("TattooArtist");
+    displayProsBySpecialty("ColorTattoo");
+    colorInkLogic();
   });
   const blackInk = buildElement("a", undefined, "Black Ink Only");
   blackInk.addEventListener("click", () => {
-    displayProsBySpecialty("TattooArtist")
+    displayProsBySpecialty("BlackInk");
+    blackInk();
   });
   tattooDropDownContent.append(tattooBothBtn, coloredInk, blackInk);
   tattooDropDown.append(tattooDropBtn, tattooDropDownContent);

@@ -59,12 +59,26 @@ public class Populator implements CommandLineRunner {
         eli.addReview("My beard looks great everytime Eli cuts me up!");
         eli.addPhoto("https://bit.ly/2UatSQu");
         eli.addPhoto("https://bit.ly/3AphVpi");
+        Professional julie = new Professional("Julie Davis", "Amazing tattoos!", 8.2, 6, "Filler", false, "BlackInk",
+                        "https://bit.ly/2UpXJ7v", "1112223333", true, true, true, true, false);
+        julie.addReview("Her tattoos are dope");
+        julie.addReview("Her blank ink work is amazing!");
+        julie.addPhoto("https://bit.ly/2UatSQu");
+        julie.addPhoto("https://bit.ly/3AphVpi");
+        Professional ruby = new Professional("Ruby Smith", "Good nails", 9.1, 12, "Filler", true, "Pedicurist",
+                        "https://bit.ly/3mbNVcW", "32487641314", true, true, true, true, false);
+        ruby.addReview("She did my nails!");
+        ruby.addReview("My nails look amazing!");
+        ruby.addPhoto("https://bit.ly/3iAi3wn");
+        ruby.addPhoto("https://bit.ly/3yATwwA");
 
         proStorage.savePro(christian);
         proStorage.savePro(heather);
         proStorage.savePro(bri);
         proStorage.savePro(mandy);
         proStorage.savePro(eli);
+        proStorage.savePro(julie);
+        proStorage.savePro(ruby);
 
         Serve cCutHair = new Serve(christian,"Hair-cut", "Standard Hair-Cut", "$");
         Serve cBeardTrim = new Serve(christian,"Beard-Trim","Standard Beard-trim","$");
@@ -79,6 +93,8 @@ public class Populator implements CommandLineRunner {
         Serve bHairHighlight = new Serve(bri,"Hair-Highlight", "Trendy and stylish, highlights are a great option for spicing up you look!.", "$$");
         Serve bHairColor = new Serve(bri,"Color Hair", "We offer a variety of color options.", "$$");
         Serve bHairStyle = new Serve(bri,"Hair-Style", "Hair-styling", "$$");
+        Serve jTTT = new Serve(julie, "Black Ink Tattoo", "High quality black ink tattoo", "$$$");
+        Serve rPedi = new Serve(ruby, "Pedicure", "High quality pedicure", "$$");
 
         serveStorage.saveServe(cCutHair);
         serveStorage.saveServe(cBeardTrim);
@@ -93,6 +109,8 @@ public class Populator implements CommandLineRunner {
         serveStorage.saveServe(bHairHighlight);
         serveStorage.saveServe(bHairColor);
         serveStorage.saveServe(bHairStyle);
+        serveStorage.saveServe(jTTT);
+        serveStorage.saveServe(rPedi);
     }
 
 }
