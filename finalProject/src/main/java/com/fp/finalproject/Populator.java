@@ -59,18 +59,18 @@ public class Populator implements CommandLineRunner {
         eli.addReview("My beard looks great everytime Eli cuts me up!");
         eli.addPhoto("https://bit.ly/2UatSQu");
         eli.addPhoto("https://bit.ly/3AphVpi");
-        Professional julie = new Professional("Julie Davis", "Amazing tattoos!", 8.2, 6, "Filler", false, "BlackInk",
-                        "https://bit.ly/2UpXJ7v", "1112223333", true, true, true, true, false);
+        Professional julie = new Professional("Sarah Moran", "Amazing tattoos!", 8.2, 6, "33 Lions Tattoo's", false, "BlackInk",
+                        "https://static.wixstatic.com/media/ce8f3e_3a07796f60a34b749051b0ea8358ded9~mv2.jpg/v1/fill/w_237,h_312,al_c,q_80,usm_0.66_1.00_0.01/fullsizeoutput_2a1d_edited_edited.jpg", "1112223333", true, true, true, true, false);
         julie.addReview("Her tattoos are dope");
         julie.addReview("Her blank ink work is amazing!");
         julie.addPhoto("https://bit.ly/2UatSQu");
         julie.addPhoto("https://bit.ly/3AphVpi");
         Professional ruby = new Professional("Ruby Smith", "Good nails", 9.1, 12, "Filler", true, "Pedicurist",
-                        "https://bit.ly/3mbNVcW", "32487641314", true, true, true, true, false);
+                        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkzsdEIyJ87dxlvH1xh4-Q3-wggI0zCuOp1A&usqp=CAU", "32487641314", true, true, true, true, false);
         ruby.addReview("She did my nails!");
         ruby.addReview("My nails look amazing!");
-        ruby.addPhoto("https://bit.ly/3iAi3wn");
-        ruby.addPhoto("https://bit.ly/3yATwwA");
+        ruby.addPhoto("https://lilynailsspacolumbus.com/uploads/lilynatpxpyv6/gallery/1552921396_30-gelacrylic.jpg");
+        ruby.addPhoto("https://lilynailsspacolumbus.com/uploads/lilynatpxpyv6/gallery/1552921325_w574_1537613048_8.jpg");
 
         proStorage.savePro(christian);
         proStorage.savePro(heather);
@@ -83,6 +83,11 @@ public class Populator implements CommandLineRunner {
         Serve cCutHair = new Serve(christian,"Hair-cut", "Standard Hair-Cut", "$");
         Serve cBeardTrim = new Serve(christian,"Beard-Trim","Standard Beard-trim","$");
         Serve cRazorShave = new Serve(christian,"Razor-Shave", "Clean razor shave.", "$");
+        Serve cEyeBrows = new Serve(christian,"Eye Brows Trim","Eye Brow Shaping.","$");
+        Serve cHotTowel = new Serve(christian,"Hot Towel","Hot Towel Treatment.","$");
+        Serve cFaceMask = new Serve(christian,"Face Mask","Face Mask feel good.","$");
+        Serve cKidsCuts = new Serve(christian,"Kids Hair Cut","Show up with good grades and it will be half off.","$");
+        Serve cKidsBeards = new Serve(christian,"Kids Beard Trims","This is fun.","$");
         Serve eCutHair = new Serve(eli,"Hair-cut", "Hair-Cut", "$");
         Serve eBeardTrim = new Serve(eli,"Beard-Trim","Beard-trim","$");
         Serve eRazorShave = new Serve(eli,"Razor-Shave", "Close shave with a razor", "$$");
@@ -99,6 +104,11 @@ public class Populator implements CommandLineRunner {
         serveStorage.saveServe(cCutHair);
         serveStorage.saveServe(cBeardTrim);
         serveStorage.saveServe(cRazorShave);
+        serveStorage.saveServe(cEyeBrows);
+        serveStorage.saveServe(cHotTowel);
+        serveStorage.saveServe(cFaceMask);
+        serveStorage.saveServe(cKidsCuts);
+        serveStorage.saveServe(cKidsBeards);
         serveStorage.saveServe(eCutHair);
         serveStorage.saveServe(eBeardTrim);
         serveStorage.saveServe(eRazorShave);
