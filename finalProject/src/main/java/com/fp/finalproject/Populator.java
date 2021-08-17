@@ -20,22 +20,22 @@ public class Populator implements CommandLineRunner {
 
     @Override public void run(String...args) throws Exception{
 
-        Professional christian = new Professional("Christian Rivea","Cool dude!", 5.3, 10,
-                "Good Life Barber Shop", true, "Barber","https://bit.ly/3iLxgLb","123456789",
+        Professional christian = new Professional("Christian Slatery","Cool dude!", 5.3, 10,
+                "Psychobilly Barbershop", true, "Barber","https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/resource_photos/3958041c30b34faf8bc4c2c9866a4204.jpeg?size=250x250&size=250x250","123456789",
                 true,true,true, true, false);
         christian.addReview("He's Great at hair cut!");
         christian.addReview("Baby smooth.");
         christian.addReview("My beard looks great!");
-        christian.addPhoto("https://bit.ly/3siGu4N");
-        christian.addPhoto("https://bit.ly/3CzDdCy");
+        christian.addPhoto("https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/biz_photo/5e3c5381175a4f04be166cb3e17151-psychobilly-barbershop-biz-photo-ce7105224717450c8ff517d82ac390-booksy.jpeg?size=640x427");
+        christian.addPhoto("https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/biz_photo/8505ebf86a11465fb368371d16a0df-psychobilly-barbershop-biz-photo-2e28a3dbe5c14562812a5c49da0d1a-booksy.jpeg?size=640x427");
         christian.addPhoto("https://bit.ly/3Az6lZ5");
-        Professional heather = new Professional("Heather McKinley", "Really great tattoos", 5.4, 5,
-                "Filler", true, "ColorTattoo","https://bit.ly/2VNFSru","1234836262"
+        Professional heather = new Professional("Heather Kathrine", "Really great tattoos", 5.4, 5,
+                "J. Carney's Tattoo's", true, "ColorTattoo","https://bit.ly/2VNFSru","1234836262"
                 ,true,true,true, true, true);
         heather.addReview("She is a great artist!");
         heather.addReview("My tattoo is looking great!");
-        heather.addPhoto("https://bit.ly/3iBOvhM");
-        heather.addPhoto("https://bit.ly/3CCls5C");
+        heather.addPhoto("https://lh3.googleusercontent.com/p/AF1QipOhV2KXNZJPH3SlHQSfGtWCV1KmCBUTVOT51GKk=w573-h573-p-no");
+        heather.addPhoto("https://lh3.googleusercontent.com/p/AF1QipO0Emqr9J7qMte2ImG4Z5uGh-nxlaKokGK3C0YP=w573-h573-p-no");
         Professional bri = new Professional("Bri Phillips", "Good stylist", 5.6, 7,
                 "Filler", true, "Stylist","https://bit.ly/3yKPCkZ","1234566643"
                 ,true,true,true,true,false);
