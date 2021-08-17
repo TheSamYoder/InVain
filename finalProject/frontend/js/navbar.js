@@ -8,12 +8,12 @@ import {
 } from "./specialtyPage/eventListeners.js";
 
 import {
-  fetchPros
-} from "./fetch.js";
-
-import {
   loginPage
 } from "./loginPage.js"
+
+import {
+  displayLandingPage
+} from "./landPage.js"
 
 import {
   displayProsBySpecialty,

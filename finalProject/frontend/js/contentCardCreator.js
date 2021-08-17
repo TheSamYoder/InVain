@@ -35,6 +35,16 @@ export const contentCardCreator = (professionals, {
                 if (!pro.weekday) check = false;
 
             if (check) {
+                let proSpecialty;
+                if (pro.specialty === "BlackInk" || pro.specialty === "ColorTattoo"){
+                    proSpecialty = "Tattoo Artist";
+                } else if (pro.specialty === "Stylist") {
+                    proSpecialty = "Hair Stylist";
+                } else {
+                    proSpecialty = pro.specialty;
+                }
+                 
+                
                 const contentCardElement = buildElement("div", "content-cards");
                 const contentCardImg = buildElement("div", "content-cards_img");
                 const cardImg = document.createElement("img");
@@ -47,7 +57,7 @@ export const contentCardCreator = (professionals, {
                 const cardSpan1 = buildElement("span", undefined, pro.name);
                 const cardSpan2 = buildElement("span", undefined, "Rating: " + pro.rating + "(" + pro.ratingCounter + ")");
                 const cardSpan3 = buildElement("span", undefined, "Location: " + pro.location);
-                const cardTitle = buildElement("h1", "content-cards_title", pro.specialty);
+                const cardTitle = buildElement("h1", "content-cards_title", proSpecialty);
                 const cardText = buildElement("p", "content-cards_text", pro.description);
                 const cardCta = buildElement("a", "content-cards_cta", "Read More");
                 cardCta.addEventListener("click", () => artistProfile(pro));
