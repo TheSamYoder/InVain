@@ -41,7 +41,15 @@ export const displayAllPros = function (professionals) {
   // filterElement.classList.add(filter-h2);
   // filterElement.innerText = "Filters"
   const filterBox = buildElement("div", "filter-box");
-  const filterButtonContainer = buildElement("div", "mnBtnContainer");
+  const filterButtonContainer = buildElement("div", "w-layout-grid");
+  const hairFilterBox = buildElement("div", "hair-filter-box");
+  const nailFilterBox = buildElement("div", "nail-filter-box");
+  const tattooFilterBox = buildElement("div", "tattoo-filter-box");
+  const sortByFilterBox = buildElement("div", "sort-by-filter-box");
+  const hairHeading = buildElement("h4", "heading", "Hair Filters");
+  const nailHeading = buildElement("h4", "heading-2", "Nail Filters");
+  const tattooHeading = buildElement("h4", "heading-3", "Tattoo Filters");
+  const sortingHeading = buildElement("h4", "heading-5", "Sort By:");
   filterBox.appendChild(filterButtonContainer);
   hairDiv.append(hairTitle, filterElement, filterBox);
 
@@ -74,9 +82,12 @@ export const displayAllPros = function (professionals) {
   const highestRatingBtn = buildElement("button", ["btn", "highest-rating-button","sort-options"], "Highest Rating");
   const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
-  filterButtonContainer.append(showAllButton, barberButton, stylistButton, maniButton, pediButton, blackInkButton,
-    coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
-    acceptsDebitOrCreditBtn, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
+  hairFilterBox.append(hairHeading, stylistButton, barberButton);
+  nailFilterBox.append(nailHeading, maniButton, pediButton);
+  tattooFilterBox.append(tattooHeading, blackInkButton, coloredInkButton);
+  sortByFilterBox.append(sortingHeading, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
+  filterButtonContainer.append(hairFilterBox, nailFilterBox, tattooFilterBox, sortByFilterBox, showAllButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
+    acceptsDebitOrCreditBtn);
 
   showAllButton.addEventListener("click", () => handleClick(showAllButtonLogic));
   barberButton.addEventListener("click", () => handleClick(barberLogic));
