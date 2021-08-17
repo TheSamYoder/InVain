@@ -14,7 +14,7 @@ export const contentCardCreator = (professionals, {
     const contentCardContainer = document.querySelector(".cards-container");
     clearChildren(contentCardContainer);
     let i = 0;
-    professionals.then((pros) => {
+    return professionals.then((pros) => {
 
         if (sortingOption) pros.sort(sortingOption);
 

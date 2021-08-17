@@ -1,7 +1,3 @@
-import {
-  renderProfessionals
-} from "../hair.js";
-
 export const showAllButtonLogic = () => {
   const showAllButton = $(".show-all-button");
   const allButtons = $$(".btn");
@@ -11,7 +7,6 @@ export const showAllButtonLogic = () => {
     allButtons.forEach((btn) => btn.resetBtnClass());
     showAllButton.classList.toggle("active");
   }
-  renderProfessionals();
 };
 
 export const barberLogic = () => {
@@ -29,7 +24,6 @@ export const barberLogic = () => {
     notHairPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const stylistLogic = () => {
@@ -47,7 +41,6 @@ export const stylistLogic = () => {
     notHairPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const maniLogic = () => {
@@ -65,7 +58,6 @@ export const maniLogic = () => {
     notNailPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const pediLogic = () => {
@@ -83,7 +75,6 @@ export const pediLogic = () => {
     notNailPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const blackInkLogic = () => {
@@ -101,7 +92,6 @@ export const blackInkLogic = () => {
     notTatPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const colorInkLogic = () => {
@@ -119,7 +109,6 @@ export const colorInkLogic = () => {
     notTatPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const openWeekendsLogic = () => {
@@ -131,7 +120,6 @@ export const openWeekendsLogic = () => {
     weekendButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const acceptsCashAppLogic = () => {
@@ -143,7 +131,6 @@ export const acceptsCashAppLogic = () => {
     acceptsCashAppBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const onlineSchButtonLogic = () => {
@@ -156,8 +143,6 @@ export const onlineSchButtonLogic = () => {
     onlineSchButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-
-  renderProfessionals();
 };
 
 export const weekdayButtonLogic = () => {
@@ -170,8 +155,6 @@ export const weekdayButtonLogic = () => {
     weekdayButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-
-  renderProfessionals();
 };
 
 export const acceptsCashLogic = () => {
@@ -184,7 +167,6 @@ export const acceptsCashLogic = () => {
     acceptsCashbtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const acceptsCreditLogic = () => {
@@ -197,7 +179,6 @@ export const acceptsCreditLogic = () => {
     acceptsDebitOrCreditBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const lowRatingLogic = () => {
@@ -211,7 +192,6 @@ export const lowRatingLogic = () => {
     lowestRatingBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const highRatingLogic = () => {
@@ -221,11 +201,10 @@ export const highRatingLogic = () => {
   if (highestRatingBtn.isActive()) {
     highestRatingBtn.resetBtnClass();
   } else {
-    sortingButtons.forEach((btn) => btn.resetBtnClass())
+    sortingButtons.forEach((btn) => btn.resetBtnClass());
     highestRatingBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };
 
 export const mostExperienceLogic = () => {
@@ -235,9 +214,8 @@ export const mostExperienceLogic = () => {
   if (mostExperienceButton.isActive()) {
     mostExperienceButton.resetBtnClass();
   } else {
-    sortingButtons.forEach((btn) => btn.resetBtnClass())
+    sortingButtons.forEach((btn) => btn.resetBtnClass());
     mostExperienceButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  renderProfessionals();
 };

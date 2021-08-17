@@ -65,28 +65,34 @@ export const displayAllPros = function (professionals) {
     coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
     acceptsDebitOrCreditBtn, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
 
-  showAllButton.addEventListener("click", showAllButtonLogic);
-  barberButton.addEventListener("click", barberLogic);
-  stylistButton.addEventListener("click", stylistLogic);
-  maniButton.addEventListener("click", maniLogic);
-  pediButton.addEventListener("click", pediLogic);
-  blackInkButton.addEventListener("click", blackInkLogic);
-  coloredInkButton.addEventListener("click", colorInkLogic);
-  openOnWeekendsButton.addEventListener("click", openWeekendsLogic);
-  onlineSchButton.addEventListener("click", onlineSchButtonLogic);
-  openOnWeekButton.addEventListener("click", weekdayButtonLogic);
-  acceptsCashAppBtn.addEventListener("click", acceptsCashAppLogic);
-  acceptsCashbtn.addEventListener("click", acceptsCashLogic);
-  acceptsDebitOrCreditBtn.addEventListener("click", acceptsCreditLogic);
-  lowestRatingBtn.addEventListener("click", lowRatingLogic);
-  highestRatingBtn.addEventListener("click", highRatingLogic);
-  mostExperienceButton.addEventListener("click", mostExperienceLogic);
+  showAllButton.addEventListener("click", () => handleClick(showAllButtonLogic));
+  barberButton.addEventListener("click", () => handleClick(barberLogic));
+  stylistButton.addEventListener("click", () => handleClick(stylistLogic));
+  maniButton.addEventListener("click", () => handleClick(maniLogic));
+  pediButton.addEventListener("click", () => handleClick(pediLogic));
+  blackInkButton.addEventListener("click", () => handleClick(blackInkLogic));
+  coloredInkButton.addEventListener("click", () => handleClick(colorInkLogic));
+  openOnWeekendsButton.addEventListener("click", () => handleClick(openWeekendsLogic));
+  onlineSchButton.addEventListener("click", () => handleClick(onlineSchButtonLogic));
+  openOnWeekButton.addEventListener("click", () => handleClick(weekdayButtonLogic));
+  acceptsCashAppBtn.addEventListener("click", () => handleClick(acceptsCashAppLogic));
+  acceptsCashbtn.addEventListener("click", () => handleClick(acceptsCashLogic));
+  acceptsDebitOrCreditBtn.addEventListener("click", () => handleClick(acceptsCreditLogic));
+  lowestRatingBtn.addEventListener("click", () => handleClick(lowRatingLogic));
+  highestRatingBtn.addEventListener("click", () => handleClick(highRatingLogic));
+  mostExperienceButton.addEventListener("click", () => handleClick(mostExperienceLogic));
  
-  contentCardCreator(professionals);
+  return contentCardCreator(professionals);
 };
+
+const handleClick = (fn) => {
+  fn();
+  return renderProfessionals();
+}
 
 export const displayProsBySpecialty = (specialty) => {
   displayAllPros(fetchProBySpecialty(specialty));
+  
 };
 
 export const renderProfessionals = () => {
@@ -95,7 +101,7 @@ export const renderProfessionals = () => {
   const filterOptions = createFilterOptions();
   const sortingOption = getSortingOption();
 
-  if (professionals) contentCardCreator(professionals, filterOptions, sortingOption);
+  return contentCardCreator(professionals, filterOptions, sortingOption);
 }
 
 const createFilterOptions = () => {
@@ -122,7 +128,7 @@ const getSortingOption = () => {
 }
 
 
-const getPros = () => {
+export const getPros = () => {
   let professionals = fetchPros();
 
   if ($(".barber-button").isActive() && $(".stylist-button").isActive()) {
