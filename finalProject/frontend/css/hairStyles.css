@@ -118,19 +118,8 @@ header {
 
 }
 
-/* Logo */
-.logo {
-  display: flex;
-  justify-content: center;
-  align-self: center;
-  width: 150px;
-  height: 5rem;
-  background-color: gray;
-  border-radius: 10px;
-}
-
 /* Navigation Bar */
-.nav-bar {
+/* .nav-bar {
   display: flex;
   align-items: center;
   width: 90vw;
@@ -140,7 +129,7 @@ header {
   padding: 30px, 10%;
   font-size: 1rem;
   margin-bottom: 2rem;
-  /* filter: drop-shadow(2px 2px 2px black); */
+
   z-index: 2;
 }
 .dropbtn {
@@ -202,7 +191,7 @@ header {
   background-color: inherit;
   text-decoration: underline;
   transition-duration: .55s;
-}
+} */
 /* .nav-bar {
   display: flex;
   align-items: center;
