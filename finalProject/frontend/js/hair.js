@@ -23,8 +23,8 @@ import {
   acceptsCashAppLogic,
   acceptsCashLogic,
   acceptsCreditLogic,
-  lowPriceLogic,
-  highPriceLogic,
+  lowRatingLogic,
+  highRatingLogic,
   mostExperienceLogic
 } from "./specialtyPage/eventListeners.js";
 
@@ -57,13 +57,13 @@ export const displayAllPros = function (professionals) {
   const acceptsCashAppBtn = buildElement("button", ["btn", "app-button", "filter-options"], "Accepts Cash App");
   const acceptsCashbtn = buildElement("button", ["btn", "cash-button", "filter-options"], "Accepts Cash");
   const acceptsDebitOrCreditBtn = buildElement("button", ["btn", "credit-button", "filter-options"], "Accepts Debit/Credit");
-  const lowestPriceBtn = buildElement("button", ["btn", "low-price-button","sort-options"], "Lowest Price");
-  const highestPriceBtn = buildElement("button", ["btn", "highest-price-button","sort-options"], "Highest Price");
+  const lowestRatingBtn = buildElement("button", ["btn", "low-rating-button","sort-options"], "Lowest Rating");
+  const highestRatingBtn = buildElement("button", ["btn", "highest-rating-button","sort-options"], "Highest Rating");
   const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
   filterButtonContainer.append(showAllButton, barberButton, stylistButton, maniButton, pediButton, blackInkButton,
     coloredInkButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
-    acceptsDebitOrCreditBtn, lowestPriceBtn, highestPriceBtn, mostExperienceButton);
+    acceptsDebitOrCreditBtn, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
 
   showAllButton.addEventListener("click", showAllButtonLogic);
   barberButton.addEventListener("click", barberLogic);
@@ -78,8 +78,8 @@ export const displayAllPros = function (professionals) {
   acceptsCashAppBtn.addEventListener("click", acceptsCashAppLogic);
   acceptsCashbtn.addEventListener("click", acceptsCashLogic);
   acceptsDebitOrCreditBtn.addEventListener("click", acceptsCreditLogic);
-  lowestPriceBtn.addEventListener("click", lowPriceLogic);
-  highestPriceBtn.addEventListener("click", highPriceLogic);
+  lowestRatingBtn.addEventListener("click", lowRatingLogic);
+  highestRatingBtn.addEventListener("click", highRatingLogic);
   mostExperienceButton.addEventListener("click", mostExperienceLogic);
  
   contentCardCreator(professionals);
@@ -89,21 +89,38 @@ export const displayProsBySpecialty = (specialty) => {
   displayAllPros(fetchProBySpecialty(specialty));
 };
 
-export const filterProfessionals = () => {
-  
+export const renderProfessionals = () => {
 
-  const filterOptions = {};
   const professionals = getPros();
+  const filterOptions = createFilterOptions();
+  const sortingOption = getSortingOption();
 
-  if ($(".online-button").isActive()) filterOptions.online = true;
-  if ($(".weekday-button").isActive()) filterOptions.weekday = true;
-  if ($(".weekend-button").isActive()) filterOptions.weekend = true;
-  if ($(".app-button").isActive()) filterOptions.app = true;
-  if ($(".cash-button").isActive()) filterOptions.cash = true;
-  if ($(".credit-button").isActive()) filterOptions.credit = true;
-
-  if (professionals) contentCardCreator(professionals, filterOptions);
+  if (professionals) contentCardCreator(professionals, filterOptions, sortingOption);
 }
+
+const createFilterOptions = () => {
+  const filterOptions = {};
+
+ if ($(".online-button").isActive()) filterOptions.online = true;
+ if ($(".weekday-button").isActive()) filterOptions.weekday = true;
+ if ($(".weekend-button").isActive()) filterOptions.weekend = true;
+ if ($(".app-button").isActive()) filterOptions.app = true;
+ if ($(".cash-button").isActive()) filterOptions.cash = true;
+ if ($(".credit-button").isActive()) filterOptions.credit = true;
+
+ return filterOptions;
+}
+
+const getSortingOption = () => {
+  let sortingOption;
+
+  if ($(".low-rating-button").isActive()) sortingOption = (pro1, pro2) => pro1.rating - pro2.rating;
+  if ($(".highest-rating-button").isActive()) sortingOption = (pro1, pro2) => pro2.rating - pro1.rating;
+  if ($(".experience-button").isActive()) sortingOption = (pro1, pro2) => pro2.experienceYears - pro1.experienceYears;
+
+  return sortingOption;
+}
+
 
 const getPros = () => {
   let professionals = fetchPros();

@@ -1,4 +1,6 @@
-import { filterProfessionals } from "../hair.js";
+import {
+  renderProfessionals
+} from "../hair.js";
 
 export const showAllButtonLogic = () => {
   const showAllButton = $(".show-all-button");
@@ -9,7 +11,7 @@ export const showAllButtonLogic = () => {
     allButtons.forEach((btn) => btn.resetBtnClass());
     showAllButton.classList.toggle("active");
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const barberLogic = () => {
@@ -27,7 +29,7 @@ export const barberLogic = () => {
     notHairPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const stylistLogic = () => {
@@ -45,7 +47,7 @@ export const stylistLogic = () => {
     notHairPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const maniLogic = () => {
@@ -63,7 +65,7 @@ export const maniLogic = () => {
     notNailPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const pediLogic = () => {
@@ -81,7 +83,7 @@ export const pediLogic = () => {
     notNailPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const blackInkLogic = () => {
@@ -99,7 +101,7 @@ export const blackInkLogic = () => {
     notTatPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const colorInkLogic = () => {
@@ -117,7 +119,7 @@ export const colorInkLogic = () => {
     notTatPros.forEach((btn) => btn.disable());
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const openWeekendsLogic = () => {
@@ -129,7 +131,7 @@ export const openWeekendsLogic = () => {
     weekendButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const acceptsCashAppLogic = () => {
@@ -141,7 +143,7 @@ export const acceptsCashAppLogic = () => {
     acceptsCashAppBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const onlineSchButtonLogic = () => {
@@ -155,7 +157,7 @@ export const onlineSchButtonLogic = () => {
     showAllButton.resetBtnClass();
   }
 
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const weekdayButtonLogic = () => {
@@ -169,7 +171,7 @@ export const weekdayButtonLogic = () => {
     showAllButton.resetBtnClass();
   }
 
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const acceptsCashLogic = () => {
@@ -182,7 +184,7 @@ export const acceptsCashLogic = () => {
     acceptsCashbtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const acceptsCreditLogic = () => {
@@ -195,45 +197,47 @@ export const acceptsCreditLogic = () => {
     acceptsDebitOrCreditBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
-export const lowPriceLogic = () => {
-  const lowestPriceBtn = $(".low-price-button");
-  const highestPriceBtn = $(".highest-price-button");
+export const lowRatingLogic = () => {
+  const lowestRatingBtn = $(".low-rating-button");
+  const sortingButtons = $$(".sort-options");
   const showAllButton = $(".show-all-button");
-  if (lowestPriceBtn.isActive()) {
-    lowestPriceBtn.resetBtnClass();
+  if (lowestRatingBtn.isActive()) {
+    lowestRatingBtn.resetBtnClass();
   } else {
-    lowestPriceBtn.classList.toggle("active");
-    highestPriceBtn.resetBtnClass();
+    sortingButtons.forEach((btn) => btn.resetBtnClass());
+    lowestRatingBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
-export const highPriceLogic = () => {
-  const lowestPriceBtn = $(".low-price-button");
-  const highestPriceBtn = $(".highest-price-button");
+export const highRatingLogic = () => {
+  const highestRatingBtn = $(".highest-rating-button");
+  const sortingButtons = $$(".sort-options");
   const showAllButton = $(".show-all-button");
-  if (highestPriceBtn.isActive()) {
-    highestPriceBtn.resetBtnClass();
+  if (highestRatingBtn.isActive()) {
+    highestRatingBtn.resetBtnClass();
   } else {
-    highestPriceBtn.classList.toggle("active");
-    lowestPriceBtn.resetBtnClass();
+    sortingButtons.forEach((btn) => btn.resetBtnClass())
+    highestRatingBtn.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
 
 export const mostExperienceLogic = () => {
   const mostExperienceButton = $(".experience-button");
+  const sortingButtons = $$(".sort-options");
   const showAllButton = $(".show-all-button");
   if (mostExperienceButton.isActive()) {
     mostExperienceButton.resetBtnClass();
   } else {
+    sortingButtons.forEach((btn) => btn.resetBtnClass())
     mostExperienceButton.classList.toggle("active");
     showAllButton.resetBtnClass();
   }
-  filterProfessionals();
+  renderProfessionals();
 };
