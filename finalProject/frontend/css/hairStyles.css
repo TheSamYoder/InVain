@@ -383,14 +383,6 @@ header {
     /* /* flex-direction: row; */
     /* border-style: dashed; */
     padding-bottom: 15px;
-    /* justify-content: center; */
-    padding-left: 485px;
-  }
-
-  .sortByFilterBox{
-    /* border-style: dotted; */
-    /* width: 200px;
-    padding-left: 100px; */
     
   }
 
@@ -409,20 +401,30 @@ header {
   .heading-4{
     padding-left: 90px;
   }
-
-  .hair-filter-box{
-    padding-right: 25px;
-  }
-  .nail-filter-box{
-    padding-right: 25px;
-  }
   .heading-5{
-    padding-left: 330px;
+    padding-left: 90px;
   }
 
-  .sort-by-box{
-    padding-left: 495px;
+  .box{
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    align-content: space-between;
+    border-style: dotted;
+    position: absolute;
+    right: 0; */
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /* border-style: dashed; */
+    padding-bottom: 15px;
   }
+
 
 
 /* Main content */
