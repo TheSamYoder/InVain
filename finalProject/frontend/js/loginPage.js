@@ -4,7 +4,8 @@ import { fetchByProId } from "./fetch.js";
 
 export const loginPage = function () {
 
-    let professional = fetchByProId(1);
+    const professional = fetchByProId(1);
+    console.log(professional);
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);
@@ -100,7 +101,7 @@ export const loginPage = function () {
     //     const salonTab = window.open('#', '_self');
     // });
     artistSubmitBtn.addEventListener("click", () => {
-        editProfile(professional);
+        professional.then(pro => editProfile(pro)); 
     });
 
     // const vl = document.createElement("div");
