@@ -64,22 +64,22 @@
     <div class="w-layout-grid">
       <div class="hair-filter-box">
           <h4 class="heading">Hair Filters</h4>
-          <button class="btn" onclick="filterSelection('all')"> Barbers</button>
-        <button class="btn" onclick="filterSelection('Scheduling')">Hair Stylist</button>
+          <button class="btn" onclick="filterSelection('all')">Salons</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Barbers</button>
         <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
         <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
       </div>
       
       <div class="nail-filter-box">
       <h4 class="heading-2">Nail Filters</h4>
-      <button class="btn" onclick="filterSelection('all')">Manicure</button>
-      <button class="btn" onclick="filterSelection('Scheduling')">Pedicure</button>
+      <button class="btn" onclick="filterSelection('all')">Manicures</button>
+      <button class="btn" onclick="filterSelection('Scheduling')">Pedicures</button>
       <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
       <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
       </div>
       <div class="tattoo-filter-box">
       <h4 class="heading-3">Tattoo Filters</h4>
-      <button class="btn" onclick="filterSelection('all')">Black Ink</button>
+      <button class="btn" onclick="filterSelection('all')">Black Tattoos</button>
       <button class="btn" onclick="filterSelection('Scheduling')">Colored Tattoos</button>
       <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
       <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
@@ -91,13 +91,22 @@
       <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
       <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button>
       </div> -->
-      <!-- <div class="sortByFilterBox">
-        <h4 class="heading-4">Tattoo Filters</h4>
-        <button class="btn" onclick="filterSelection('all')"> Barbers</button>
-          <button class="btn" onclick="filterSelection('Scheduling')">Hair Stylist</button>
-          <button class="btn" onclick="filterSelection('all')"> Barbers</button>
-          <button class="btn" onclick="filterSelection('Scheduling')">Hair Stylist</button>
-      </div> -->
+      <div class="sort-by-filter-box">
+        <div class="box">
+        <h4 class="heading-5">Sort by: </h4>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Rating</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Rating</button>
+        </div>
+      </div>
+      <!-- <div class="tattoo-filter-box">
+        <h4 class="heading-3">Sort by: </h4>
+        <button class="btn" onclick="filterSelection('all')">Black Tattoos</button>
+        <button class="btn" onclick="filterSelection('Scheduling')">Colored Tattoos</button>
+        <!-- <button class="btn" onclick="filterSelection('Scheduling')">Open on weekdays</button>
+        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+        </div> -->
     </div>
 
     <!-- <div class="sortByFilter">
@@ -113,12 +122,15 @@
 
     <br>
 
-    <div class="sortByFilterBox">
-      <button class="btn" onclick="filterSelection('all')"> Barbers</button>
-        <button class="btn" onclick="filterSelection('Scheduling')">Hair Stylist</button>
-        <button class="btn" onclick="filterSelection('all')"> Barbers</button>
-        <button class="btn" onclick="filterSelection('Scheduling')">Hair Stylist</button>
-    </div>
+    <!-- <div class="sort-by-filter-box">
+      <div class="box">
+      <h4 class="heading5">Sort by: </h4>
+      <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Lowest Rating</button>
+      <button class="btn" onclick="filterSelection('Pricing')">Highest Rating</button>
+      </div>
+    </div> -->
 
     <div class="filter-box">
       <div id="myBtnContainer">
@@ -129,10 +141,8 @@
         <button class="btn" onclick="filterSelection('Payment')">Accepts Cashapp</button>
         <button class="btn" onclick="filterSelection('Payment')">Accepts Cash</button>
         <button class="btn" onclick="filterSelection('Payment')">Accepts Debit/Credit</button>
-        <!-- <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
-        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button> -->
-        <!-- <button class="btn" onclick="filterSelection('Extra Filter')">Extra Filters</button>
-        <button class="btn" onclick="filterSelection('Extra Filter')">Extra</button> -->
+        <button class="btn" onclick="filterSelection('Pricing')">Lowest Price</button>
+        <button class="btn" onclick="filterSelection('Pricing')">Highest Price</button>
       </div>
     </div>
     <br>
