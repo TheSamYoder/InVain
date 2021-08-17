@@ -378,6 +378,7 @@ header {
     flex-direction: row;
     /* border-style: dashed; */
     padding-bottom: 15px;
+    
   }
 
   .heading{
@@ -395,6 +396,32 @@ header {
   .heading-4{
     padding-left: 90px;
   }
+  .heading-5{
+    padding-left: 90px;
+  }
+
+  .box{
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 500px;
+    height: 400px;
+    align-content: space-between;
+    border-style: dotted;
+    position: absolute;
+    right: 0; */
+    display: -ms-inline-flexbox;
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    /* border-style: dashed; */
+    padding-bottom: 15px;
+  }
+
+
+
 /* Main content */
 .main-content {
   display: flex;
