@@ -26,6 +26,9 @@ export const createNavbar = function () {
   const navbar = buildElement("nav", "nav-bar");
   const logo = buildElement("img", "logo");
   logo.src = "images/Logo1-2.png";
+  logo.addEventListener("click", () => {
+    location.reload();
+  });
   navbar.appendChild(logo);
 
   //-----------------Hair------------------
