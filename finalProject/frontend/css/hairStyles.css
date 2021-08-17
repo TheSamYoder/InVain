@@ -398,6 +398,7 @@ header {
   }
   .heading-5{
     padding-left: 90px;
+    background-color: pink;
   }
 
   .box{
@@ -429,12 +430,12 @@ header {
   align-items: center;
   justify-content: space-around;
   margin: 2rem;
-  border-style: groove;
   border-color: rgb(245, 239, 239);
   padding:10px;  
   padding-bottom: 50px;
   border-radius: 40px;
   flex-direction: column;
+ 
 }
 
 
