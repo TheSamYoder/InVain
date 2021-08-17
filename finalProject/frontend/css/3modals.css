@@ -11,23 +11,27 @@
   margin: 0;
 } */
 
-.modal {
-  background-color: rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  opacity: 0;
-  pointer-events: none;
-  top: 0;
+.openModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-.modal.show {
+/* .modal.show {
   pointer-events: auto;
   opacity: 1;
-}
+} */
+
+/* .modal.none{
+  pointer-events: none;
+  opacity: 0;
+} */
 
 .modal-content {
   background-color: white;
