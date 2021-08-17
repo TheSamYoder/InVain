@@ -35,6 +35,11 @@ export const displayAllPros = function (professionals) {
   const hairDiv = buildElement("div");
   const hairTitle = buildElement("h1", undefined, "Professionals Near You");
   const filterElement = buildElement("div", "filter-h2", "Filters");
+
+  // What the buildElement fuction does
+  // const filterElement = document.createElement("div");
+  // filterElement.classList.add(filter-h2);
+  // filterElement.innerText = "Filters"
   const filterBox = buildElement("div", "filter-box");
   const filterButtonContainer = buildElement("div", "mnBtnContainer");
   filterBox.appendChild(filterButtonContainer);
@@ -43,6 +48,14 @@ export const displayAllPros = function (professionals) {
   const contentCardContainer = buildElement("div", "cards-container");
   hairDiv.append(contentCardContainer);
   mainElement.append(hairDiv);
+
+  const sortByFilterBox = buildElement("div", "sort-by-filter-box");
+  const box = buildElement("div", "box");
+  const heading5 = buildElement("h4", "heading-5", "Sort By: ");
+  const lPriceBtn = buildElement("button", ["btn", "Lowest Price]", "");
+  const hPriceBtn = buildElement("button", "btn", "Highest Price");
+  const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
+  const hRatingBtn = buildElement("button", "btn", "Highest Rating");
 
   const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
   const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");
