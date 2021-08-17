@@ -63,6 +63,80 @@ export const artistProfile = function (professional) {
         const lastTab = window.open('http://google.com', '_self');
     })
 
+// ------------------Working Modal----------------------------
+     scheduleModals = document.getElementsByClassName("modal");
+     scheduleBtns = document.getElementsById("id01");
+     span = document.getElementsByClassName("")[0];
+    
+    scheduleBtns.onclick = function () {
+        modal.style.display = "block";
+    }
+    scheduleBtns.onclick = function () {
+        modal.style.display = "none";
+    }
+    
+    scheduleBtns.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+        
+    }
+
+     modal = document.getElementById("");
+     reviewBtns = document.getElementById("");
+     span = document.getElementsByClassName("")[0];
+
+
+    reviewBtn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    reviewBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    reviewBtn.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+     modal = document.getElementById("");
+     messageBtns = document.getElementById("");
+     span = document.getElementsByClassName("")[0];
+
+    messageBtn.onclick = function () {
+        modal.style.display = "block";
+    }
+
+    messageBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    messageBtn.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+     modal = document.getElementById("");
+     lastBtns = document.getElementById("");
+     span = document.getElementsByClassName("")[0];
+
+    lastBtn.onclick = function () {
+        modal.style.display = "block";
+    }
+    
+    lastBtn.onclick = function () {
+        modal.style.display = "none";
+    }
+
+    lastBtn.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
 
     // ------------------Map----------------------------
 
