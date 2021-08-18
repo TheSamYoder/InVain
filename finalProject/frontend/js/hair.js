@@ -34,12 +34,8 @@ export const displayAllPros = function (professionals) {
 
   const hairDiv = buildElement("div");
   const hairTitle = buildElement("h1", undefined, "Professionals Near You");
-  const filterElement = buildElement("div", "filter-h2", "Filters");
+  const filterElement = buildElement("div", "filter-h2");
 
-  // What the buildElement fuction does
-  // const filterElement = document.createElement("div");
-  // filterElement.classList.add(filter-h2);
-  // filterElement.innerText = "Filters"
   const filterBox = buildElement("div", "filter-box");
   const filterButtonContainer = buildElement("div", "w-layout-grid");
   const hairFilterBox = buildElement("div", "hair-filter-box");
@@ -50,20 +46,13 @@ export const displayAllPros = function (professionals) {
   const nailHeading = buildElement("h4", "heading-2", "Nail Filters");
   const tattooHeading = buildElement("h4", "heading-3", "Tattoo Filters");
   const sortingHeading = buildElement("h4", "heading-5", "Sort By:");
+  const filterHeading = buildElement("h4", "heading-6", "Filters:")
   filterBox.appendChild(filterButtonContainer);
   hairDiv.append(hairTitle, filterElement, filterBox);
 
   const contentCardContainer = buildElement("div", "cards-container");
   hairDiv.append(contentCardContainer);
   mainElement.append(hairDiv);
-
-  // const sortByFilterBox = buildElement("div", "sort-by-filter-box");
-  // const box = buildElement("div", "box");
-  // const heading5 = buildElement("h4", "heading-5", "Sort By: ");
-  // const lPriceBtn = buildElement("button", ["btn", "Lowest Price"]);
-  // const hPriceBtn = buildElement("button", "btn", "Highest Price");
-  // const lRatingBtn = buildElement("button", "btn", "Lowest Rating");
-  // const hRatingBtn = buildElement("button", "btn", "Highest Rating");
 
   const showAllButton = buildElement("button", ["btn", "show-all-button"], "Show all");
   const barberButton = buildElement("button", ["btn", "barber-button", "hair-pros"], "Barber");
@@ -82,12 +71,29 @@ export const displayAllPros = function (professionals) {
   const highestRatingBtn = buildElement("button", ["btn", "highest-rating-button","sort-options"], "Highest Rating");
   const mostExperienceButton = buildElement("button", ["btn", "experience-button","sort-options"], "Most Experienced");
 
-  hairFilterBox.append(hairHeading, stylistButton, barberButton);
-  nailFilterBox.append(nailHeading, maniButton, pediButton);
-  tattooFilterBox.append(tattooHeading, blackInkButton, coloredInkButton);
-  sortByFilterBox.append(sortingHeading, lowestRatingBtn, highestRatingBtn, mostExperienceButton);
-  filterButtonContainer.append(hairFilterBox, nailFilterBox, tattooFilterBox, sortByFilterBox, showAllButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton, acceptsCashAppBtn, acceptsCashbtn,
-    acceptsDebitOrCreditBtn);
+  const proButtDiv = buildElement("div", "pro-butts");
+  const hairButtDiv = buildElement("div", "hair-buttons");
+  const nailButtDiv = buildElement("div", "nail-buttons");
+  const inkButtDiv = buildElement("div", "ink-buttons");
+  const sortButtDiv = buildElement("div", "sort-butts");
+  const filterButtDiv1 = buildElement("div", "filter-butts");
+  const filterButtDiv2 = buildElement("div", "filter-butts2");
+
+  const filterFilterBox = buildElement("div", "filter-filter-box")
+  hairButtDiv.append(barberButton,stylistButton);
+  hairFilterBox.append(hairHeading, hairButtDiv);
+  nailButtDiv.append(maniButton, pediButton);
+  nailFilterBox.append(nailHeading, nailButtDiv);
+  inkButtDiv.append(blackInkButton, coloredInkButton)
+  tattooFilterBox.append(tattooHeading, inkButtDiv);
+  proButtDiv.append(hairFilterBox, nailFilterBox, tattooFilterBox);
+  sortButtDiv.append(lowestRatingBtn, highestRatingBtn, mostExperienceButton)
+  sortByFilterBox.append(sortingHeading, sortButtDiv);
+  filterButtDiv1.append(showAllButton, onlineSchButton, openOnWeekButton, openOnWeekendsButton);
+  filterButtDiv2.append(acceptsCashAppBtn, acceptsCashbtn, acceptsDebitOrCreditBtn);
+  filterFilterBox.append(filterHeading, filterButtDiv1, filterButtDiv2);
+  filterButtonContainer.append(proButtDiv,sortByFilterBox,filterFilterBox);
+
 
   showAllButton.addEventListener("click", () => handleClick(showAllButtonLogic));
   barberButton.addEventListener("click", () => handleClick(barberLogic));
