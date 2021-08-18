@@ -10,36 +10,57 @@
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
 }
+
+
+.openModal .modal-content h1{
+  padding-bottom: 2rem;
+}
+
+/* scheduling */
+.openModal .modal-content p{
+  font-size: 2vw;
+  margin-bottom: 1rem;
+}
+
+/* contact */
 .social-image{
-  height: 10vh;
-  width: 15vw;
+  height: 100%;
+  max-height: 100px;
+  width: auto;
+  margin-left: -3rem;
 }
 .social-image1{
-  height: 10vh;
-  width: 8vw;
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+
+.contact-me{
+  margin-top: .5rem;
+  margin-bottom: 1rem;
 }
 
 .modal-content {
-  margin-top: 50vh;
-  margin-left: 50vw;
- 
-  background-color: whitesmoke;
-  padding: 30px 50px;
-  border-radius: 5px;
+  margin-top: 25vh;
+  margin-left: 32vw; 
+  background-color: white;
+  padding: 3rem 1rem;
+  border-radius: .8rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  width: 600px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 675px;
+  height: auto;
   text-align: center;
 }
 .modal-content h1 {
   margin: 0;
 }
-.modal-content p {
+/* .modal-content p {
   font-size: 14px;
   opacity: 0.7;
-}
+} */
 
 #close,
 #close2,
