@@ -13,7 +13,10 @@ public class Professional {
     private long id;
 
     private String name;
+
+    @Lob
     private String description;
+    
     private Double rating;
     private int experienceYears;
     private String location;
