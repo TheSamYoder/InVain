@@ -116,23 +116,10 @@ export const createNavbar = function () {
   const loginDropDown = document.createElement("div");
   loginDropDown.classList.add("dropdown");
   const loginDropBtn = document.createElement("button");
-  loginDropBtn.innerText = "Login / Join";
-  loginDropBtn.classList.add("dropbtn");
-  const loginDropDownContent = document.createElement("div");
-  loginDropDownContent.classList.add("dropdown-content");
-  const login = buildElement("a", undefined, "Login");
-  // login.addEventListener("click", () => {
-  //     const loginTab = window.open('http://google.com', '_self');
-  // });
-  login.addEventListener("click", loginPage);
-
-  const join = buildElement("a", undefined, "Delete this button");
-  join.addEventListener("click", () => {
-    const join = window.open('http://google.com', '_self');
-  });
-
-  loginDropDownContent.append(login, join);
-  loginDropDown.append(loginDropBtn, loginDropDownContent);
+  loginDropBtn.innerText = "Login";
+  loginDropBtn.classList.add("loginBtn");
+  loginDropBtn.addEventListener("click", loginPage);
+  loginDropDown.append(loginDropBtn);
   navbar.append(loginDropDown);
 
   return navbar;

@@ -117,12 +117,12 @@
   cursor: pointer;
   color: rgb(0, 0, 0);
   font-size: 1vw;
-  position: absolute;
+  
 }
 
 .dropdown:hover .loginBtn {
   color: rgb(255, 255, 255);
-  /* background-color: inherit; */
+  background-color: inherit;
   text-decoration: underline;
   transition-duration: .55s;
 }
