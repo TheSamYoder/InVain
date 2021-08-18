@@ -1,7 +1,11 @@
 import { editProfile } from "./editProfile.js";
+import { fetchByProId } from "./fetch.js";
 
 
-export const loginPage = function (professional) {
+export const loginPage = function () {
+
+    const professional = fetchByProId(1);
+
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);
@@ -97,7 +101,7 @@ export const loginPage = function (professional) {
     //     const salonTab = window.open('#', '_self');
     // });
     artistSubmitBtn.addEventListener("click", () => {
-        editProfile(professional)
+        professional.then(pro => editProfile(pro)); 
     });
 
     // const vl = document.createElement("div");

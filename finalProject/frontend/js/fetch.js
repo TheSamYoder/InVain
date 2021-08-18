@@ -16,4 +16,9 @@ export const fetchProBySpecialties = async (specialty1, specialty2) => {
 export const fetchServeByProId = async (id) => {
     return fetch(`http://localhost:8080/api/professionals/${id}/serves`)
         .then((response) => response.json());
+        
+}
+export const fetchByProId = async (id) =>{
+    return fetch(`http://localhost:8080/api/professionals/${id}`)
+    .then((response)=>response.json());
 }

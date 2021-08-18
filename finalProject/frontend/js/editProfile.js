@@ -1,96 +1,78 @@
-export const editProfile = function (professional) {
+import { fetchByProId } from "./fetch.js";
 
-    const mainContent = document.querySelector(".main-content");
-    clearChildren(mainContent);
+export const editProfile = (professional) =>{   
     
-    const editPageBody = buildElement("body", "editPage-body");
-   
-    const mainElement = buildElement("div", "editPage-container");
 
-    const editArtistName = buildElement("h1","edit-artist-name", professional.name);
-    const editBtnArtistName = document.createElement("button");    
-    editBtnArtistName.classList.add("editBtn-artist-name");
-    editBtnArtistName.innerText = "Edit Your Name";
+const mainContent = document.querySelector(".main-content");
+clearChildren(mainContent);
+console.log(professional);
 
-    const contentCards = buildElement("div","content-cards");
-    const editContentCardImg = buildElement("div", "edit-content-cards_img");
-    const editArtistImg = document.createElement("img");
-    editArtistImg.src = professional.profilePhoto;
-    editArtistImg.alt = ""
-    const editBtnArtistPhoto = document.createElement("button");
-    editBtnArtistPhoto.classList.add("editBtn-Artist-Photo");
-    editBtnArtistPhoto.innerText= "Replace Photo";
+const mainElement = buildElement("div", "editPage-container");
+const editArtistName = buildElement("h1", "edit-artist-name", professional.name);
+const editBtnArtistName = buildElement("button", "editBtn-artist-name", "Edit Your Name");
 
-    const editContentCardInfo = buildElement("div", "edit-content-cards_info");
-    const editContentCardsTitle = buildElement("div", "edit-content-cards_title");
-    const editOccupation = buildElement("span", "edit-occupation", "Occupation: " + professional.specialty);
-    const editBtnOccupation = document.createElement("button");
-    editBtnOccupation.classList.add("editBtn-occupation");
-    editBtnOccupation.innerText = "Edit Occupation";
+const contentCards = buildElement("div", "content-cards");
+const editContentCardImg = buildElement("div", "edit-content-cards_img");
+const editArtistImg = buildElementImg("img", professional.profilePhoto, "");
+const editBtnArtistPhoto = buildElement("button", "editBtn-artist-photo", "Replace Photo");
 
-    const editExperience = buildElement("span", "years", "Years");
-    const editBtnExperience = document.createElement("button");
-    editBtnExperience.classList.add("editBtn-years");
-    editBtnExperience.innerText = "Edit Years";
+const editContentCardInfo = buildElement("div", "edit-content-cards_info");
+const editContentCardsTitle = buildElement("div", "edit-content-cards_title");
+const editOccupation = buildElement("span", "occupation", "Occupation: " + professional.specialty);
+const editBtnOccupation = buildElement("button", "editBtn-occupation", "Edit Occupation");
+const editExperience = buildElement("span", "years", "Years: " + professional.experienceYears);
+const editBtnExperience = buildElement("button", "editBtn-experience", "Edit Years");
+const overallRating = buildElement("span", "overall-rating", "Rating: " + professional.rating + "/10");
+const editLocation = buildElement("span", "edit-location", "Location: " + professional.location);
+const editBtnLocation = buildElement("button", "editBtn-location", "Edit Location");
+const aboutArtist = buildElement("span", "about-artist", "About Artist");
+const editArtistInfo = buildElement("p", "edit-artist-info", professional.description);
+const editBtnArtistInfo = buildElement("button", "editBtn-experience", "Edit About Artist");
+  // ------------------Modal Container----------------------------
 
+  const editModalContainer = document.createElement("div");
+  editModalContainer.classList.add("edit-modal-container");
+  const scheduleModal = document.createElement("div");
+  scheduleModal.classList.add("modals");
 
-    const overallRating = buildElement("span", "overall-rating","Rating: " + professional.rating + "/10");
-    const editLocation = buildElement("span","edit-location", "Location: " + professional.location);
-    const editBtnLocation = document.createElement("button");
-    editBtnLocation.classList.add("editBtn-location");
-    editBtnLocation.innerText = "Edit Location";
+  const scheduleBtn = document.createElement("button");
+  scheduleBtn.innerText = "Scheduling / Hours of Opp";
+  scheduleBtn.classList.add("content-cards_cta");
+  scheduleBtn.addEventListener("click", () => {
+      const scheduleTab = window.open('http://google.com', '_self');
+  })
 
-    const aboutArtist = buildElement("span", "about-artist", "About Artist");   
-    const editArtistInfo = buildElement("p", "edit-artist-info", + professional.description);
-    const editBtnArtistInfo = document.createElement("button");
-    editBtnArtistInfo.classList.add("editBtn-artist-info")
-    editBtnArtistInfo.innerText = "Edit About Me";
+  const reviewModal = document.createElement("div");
+  reviewModal.classList.add("modals");
+  const reviewBtn = document.createElement("button");
+  reviewBtn.innerText = "Review & Rating";
+  reviewBtn.classList.add("content-cards_cta");
+  reviewBtn.addEventListener("click", () => {
+      const reviewTab = window.open('http://google.com', '_self');
+  })
 
-    // ------------------Modal Container----------------------------
+  const messageModal = document.createElement("div");
+  messageModal.classList.add("modals");
+  const messageBtn = document.createElement("button");
+  messageBtn.innerText = "Message Me";
+  messageBtn.classList.add("content-cards_cta");
+  messageBtn.addEventListener("click", () => {
+      const messageTab = window.open('http://google.com', '_self');
+  })
 
-    const editModalContainer = document.createElement("div");
-    editModalContainer.classList.add("edit-modal-container");
-    const scheduleModal = document.createElement("div");
-    scheduleModal.classList.add("modals");
-
-    const scheduleBtn = document.createElement("button");
-    scheduleBtn.innerText = "Scheduling / Hours of Opp";
-    scheduleBtn.classList.add("content-cards_cta");
-    scheduleBtn.addEventListener("click", () => {
-        const scheduleTab = window.open('http://google.com', '_self');
-    })
-
-    const reviewModal = document.createElement("div");
-    reviewModal.classList.add("modals");
-    const reviewBtn = document.createElement("button");
-    reviewBtn.innerText = "Review & Rating";
-    reviewBtn.classList.add("content-cards_cta");
-    reviewBtn.addEventListener("click", () => {
-        const reviewTab = window.open('http://google.com', '_self');
-    })
-
-    const messageModal = document.createElement("div");
-    messageModal.classList.add("modals");
-    const messageBtn = document.createElement("button");
-    messageBtn.innerText = "Message Me";
-    messageBtn.classList.add("content-cards_cta");
-    messageBtn.addEventListener("click", () => {
-        const messageTab = window.open('http://google.com', '_self');
-    })
-
-    const lastModal = document.createElement("div");
-    lastModal.classList.add("modals");
-    const lastBtn = document.createElement("button");
-    lastBtn.innerText = "Last Modal";
-    lastBtn.classList.add("content-cards_cta");
-    lastBtn.addEventListener("click", () => {
-        const lastTab = window.open('http://google.com', '_self');
-    })
+  const lastModal = document.createElement("div");
+  lastModal.classList.add("modals");
+  const lastBtn = document.createElement("button");
+  lastBtn.innerText = "Last Modal";
+  lastBtn.classList.add("content-cards_cta");
+  lastBtn.addEventListener("click", () => {
+      const lastTab = window.open('http://google.com', '_self');
+  })
 
 
-    // ------------------Map----------------------------
+  // ------------------Map----------------------------
 
-    const mapContainer = buildElement("div","map-container");
+  const mapContainer = buildElement("div","map-container");
     const locationTitle = buildElement("h3",undefined,"Location: ");
     const map = buildElement("div", "map");
     let iframe = document.createElement("iframe");
@@ -98,47 +80,41 @@ export const editProfile = function (professional) {
     iframe.setAttribute("loading", "lazy");
     iframe.setAttribute("allowfullscreen", "");
 
-    // ------------------Services---------------------------- 
+    // ------------------Services----------------------------
 
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
-    const serviceContainer = buildElement("div","edit-service-container");
-    const editServiceContent = buildElement("div","edit-service-content");
-    const editBtnService = document.createElement("button");
-    editBtnService.classList.add("editBtn-services");
-    editBtnService.innerText = "Edit Service";
+    const serviceContainer = buildElement("div","service-container");
+    const services = buildElement("div", "services");
 
-    const removeBtnService = document.createElement("button")
-    removeBtnService.classList.add("removeBtn-services")
-    removeBtnService.innerText= "Revmove Service";
+    professional.serves.forEach((serve) => {
+        const editServiceContent = buildElement("div", "edit-service-content");
+        const editServiceName = buildElement("h5", undefined, serve.serveName);
+        const editServiceDescription = buildElement("p", undefined, serve.serveDescription);
+        const editServicePrice = buildElement("h5", undefined, serve.price);
+        const editBtnServices = buildElement("button", "editBtn-services", "Edit Service");
+        const removeBtnServices = buildElement("button", "removeBtn-services", "Remove Service");
+        
 
-    const editServiceName = buildElement("h5", undefined,"Razor Shave (complete)");
-    const editServiceDescription = buildElement("p",undefined,"Razor shave on head & facial hair");
-    const editServicePrice = buildElement("h5",undefined,"$$");
+        editServiceContent.append(editServiceName, editServiceDescription, editServicePrice,editBtnServices,removeBtnServices);
+        services.appendChild(editServiceContent);
+        
+});
 
-    const services = buildElement("div","services");
-    const breakPoint1 = document.createElement("br");
-    const breakPoint2 = document.createElement("br");
-    const breakPoint3 = document.createElement("br");
-    const breakPoint4 = document.createElement("br");
-    const breakPoint5 = document.createElement("br");
+serviceContainer.appendChild(services);
+editContentCardImg.appendChild(editArtistImg, editBtnArtistPhoto);
+editContentCardsTitle.append(editOccupation, editBtnOccupation, editExperience, editBtnExperience, overallRating, editLocation, editBtnLocation, aboutArtist, editArtistInfo, editBtnArtistInfo);
+scheduleModal.appendChild(scheduleBtn);
+reviewModal.appendChild(reviewBtn);
+messageModal.appendChild(messageBtn);
+lastModal.appendChild(lastBtn);
+editModalContainer.append(scheduleModal, reviewModal, messageModal, lastModal);
+editContentCardInfo.append(editContentCardsTitle, editModalContainer);
+map.appendChild(iframe);
+mapContainer.append(locationTitle, map);
+contentCards.append(editContentCardImg, editContentCardInfo, mapContainer);
 
-    // ------------------The Appends---------------------------
 
-    editContentCardImg.appendChild(editArtistImg, editBtnArtistPhoto);
-    editContentCardsTitle.append(editOccupation, editBtnOccupation, editExperience, editBtnExperience, overallRating, editLocation, editBtnLocation, aboutArtist, editArtistInfo, editBtnArtistInfo);
-    scheduleModal.appendChild(scheduleBtn);
-    reviewModal.appendChild(reviewBtn);
-    messageModal.appendChild(messageBtn);
-    lastModal.appendChild(lastBtn);
-    editModalContainer.append(scheduleModal, reviewModal, messageModal, lastModal);
-    editContentCardInfo.append(editContentCardsTitle, editModalContainer);
-    map.appendChild(iframe);
-    mapContainer.append(locationTitle, map);
-    contentCards.append(editContentCardImg, editContentCardInfo, mapContainer);
-    editServiceContent.append(editServiceName, editServiceDescription, editServicePrice);
-    services.appendChild(editServiceContent, editBtnService, removeBtnService);
-    serviceContainer.appendChild(services);
-    mainElement.append(editArtistName, editBtnArtistName, contentCards, serviceTitle, serviceContainer);
-    mainContent.appendChild(mainElement);
+mainElement.append(editArtistName,editBtnArtistName, contentCards, serviceTitle, serviceContainer);
+mainContent.appendChild(mainElement);
 
 }
