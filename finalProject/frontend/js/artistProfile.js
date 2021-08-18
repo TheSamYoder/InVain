@@ -166,35 +166,6 @@ export const artistProfile = function (pro) {
   reviewModal.append(reviewsModalContent);
   modalContainer.append(reviewsBtn, reviewModal);
 
-  //   const portfolioBtn = buildElement("button", undefined, "Portfolio");
-  //   portfolioBtn.id = "open4";
-  //   portfolioBtn.onclick = function () {
-  //     modal4.style.display = "block";
-  //   };
-  //   const portfolioModal = buildElement("div", "openModal");
-  //   portfolioModal.id = "modal4";
-  //   const portfolioModalContent = ("div", "modal-content");
-  //   const portfolioTitle = buildElement("h1", undefined, "Portfolio");
-  //   const portfolioImagesBox = buildElement("div", "portfolio-images-box");
-  //   // pro.photos.forEach((photo) => {
-  //   //   const pic = buildElement("img", "photo");
-  //     pic.src = pro.photo;
-  //   //   portfolioImagesBox.append(pic);
-  //   // });
-  //   const portfolioBtnClose = buildElement("button", undefined, "X");
-  //   portfolioBtnClose.id = "close4";
-  //   portfolioBtnClose.onclick = function () {
-  //     modal4.style.display = "none";
-  //   };
-
-  //   portfolioModalContent.append(
-  //     portfolioTitle,
-  //     portfolioImagesBox,
-  //     portfolioBtnClose
-  //   );
-  //   portfolioModal.append(portfolioModalContent);
-  //   modalContainer.append(portfolioBtn, portfolioModal);
-
   // ------------------Map----------------------------
 
   const mapContainer = buildElement("div", "map-container");
@@ -230,6 +201,8 @@ export const artistProfile = function (pro) {
     const breakPoint5 = document.createElement("br");
 
     // ------------------The Appends---------------------------
+    contentCardImg.appendChild(artistImg);
+    contentCardsTitle.append(occupation, breakPoint1, experience, breakPoint2, overallRating, breakPoint3, location, breakPoint4, aboutArtist, breakPoint5, artistInfo);
     contentCardInfo.append(contentCardsTitle, modalContainer);
     map.appendChild(iframe);
     mapContainer.append(locationTitle, map);
