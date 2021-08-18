@@ -71,13 +71,14 @@ h1 {
   border-radius: .8rem;
 } */
 
-.content-cards_ratingAndLocation {
-  display: block;
-  color: (0, 0, 0, .5);
+.content-cards_ratingAndLocation{
+  display: flex;
+  flex-direction: column;
+  /* color: (0, 0, 0, .5); */
   font-size: 1.6rem;
   font-weight: 600;
   margin: .5rem 0;
-  background-color: pink;
+  /* background-color: pink; */
 
 }
 
