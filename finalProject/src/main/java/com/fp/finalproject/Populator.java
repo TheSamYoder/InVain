@@ -29,7 +29,7 @@ public class Populator implements CommandLineRunner {
         christian.addPhoto("https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/biz_photo/5e3c5381175a4f04be166cb3e17151-psychobilly-barbershop-biz-photo-ce7105224717450c8ff517d82ac390-booksy.jpeg?size=640x427");
         christian.addPhoto("https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/biz_photo/8505ebf86a11465fb368371d16a0df-psychobilly-barbershop-biz-photo-2e28a3dbe5c14562812a5c49da0d1a-booksy.jpeg?size=640x427");
         christian.addPhoto("https://bit.ly/3Az6lZ5");
-        Professional heather = new Professional("Heather Kathrine", "Really great tattoos", 5.4, 5,
+        Professional heather = new Professional("Heather Kathrine", "Really great tattoos", 9.4, 5,
                 "J. Carney's Tattoo's", true, "ColorTattoo","https://bit.ly/2VNFSru","1234836262"
                 ,true,true,true, true, true);
         heather.addReview("She is a great artist!");
