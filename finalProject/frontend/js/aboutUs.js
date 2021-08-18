@@ -11,6 +11,7 @@ export const displayAboutUs = function () {
     const profile1 = buildElement("div", "profile");
     const pro1a = buildElement("a");
     pro1a.href = "https://www.linkedin.com/in/dasmine-wright/";
+    pro1a.setAttribute('target', '_blank');
     const pro1aImg = buildElementImg("img","images/Dasmine Wright.jpg");
     const pro1name = buildElement("span", "name", "Dasmine");
 
@@ -21,6 +22,7 @@ export const displayAboutUs = function () {
     const profile2 = buildElement("div", "profile");
     const pro2a = buildElement("a");
     pro2a.href = "https://www.linkedin.com/in/mohamed-a-abdulkadir/";
+    pro2a.setAttribute('target', '_blank');
     const pro2aImg = buildElementImg("img","images/Mohamed Abdulkadir 2.jpg");
     const pro2name = buildElement("span", "name", "Mohamed");
 
@@ -31,6 +33,7 @@ export const displayAboutUs = function () {
     const profile3 = buildElement("div", "profile");
     const pro3a = buildElement("a");
     pro3a.href = "https://www.linkedin.com/in/david-j-patterson/";
+    pro3a.setAttribute('target', '_blank');
     const pro3aImg = buildElementImg("img","images/David.jpg");
     const pro3name = buildElement("span", "name", "David");
 
@@ -41,6 +44,7 @@ export const displayAboutUs = function () {
     const profile4 = buildElement("div", "profile");
     const pro4a = buildElement("a");
     pro4a.href = "https://www.linkedin.com/in/samuelyoder/";
+    pro4a.setAttribute('target', '_blank');
     const pro4aImg = buildElementImg("img","images/Sam Yoder.jpg");
     const pro4name = buildElement("span", "name", "Sam");
 
@@ -51,6 +55,7 @@ export const displayAboutUs = function () {
     const profile5 = buildElement("div", "profile");
     const pro5a = buildElement("a");
     pro5a.href = "https://www.linkedin.com/in/harrisonwiggins/";
+    pro5a.setAttribute('target', '_blank');
     const pro5aImg = buildElementImg("img","images/Dasmine Wright.jpg");
     const pro5name = buildElement("span", "name", "Harrison");
 
