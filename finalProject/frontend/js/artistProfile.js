@@ -207,52 +207,35 @@ export const artistProfile = function (pro) {
 
   // ------------------Services----------------------------
 
-  const serviceTitle = buildElement("h2", "service-title", "Services & Prices");
-  const serviceContainer = buildElement("div", "service-container");
-
-  pro.serves.forEach((serve) => {
-    const serviceContent = buildElement("div", "service-content");
-    const serviceName = buildElement("h5", undefined, serve.serveName);
-    const serviceDescription = buildElement(
-      "p",
-      undefined,
-      serve.serveDescription
-    );
-    const servicePrice = buildElement("h5", undefined, serve.price);
+    const serviceTitle = buildElement("h2","service-title","Services & Prices");
+    const serviceContainer = buildElement("div","service-container");
     const services = buildElement("div", "services");
+    pro.serves.forEach((serve) => {
+            const serviceContent = buildElement("div", "service-content");
+            const serviceName = buildElement("h5", undefined, serve.serveName);
+            const serviceDescription = buildElement("p", undefined, serve.serveDescription);
+            const servicePrice = buildElement("h5", undefined, serve.price);
+            
 
-    serviceContent.append(serviceName, serviceDescription, servicePrice);
-    services.appendChild(serviceContent);
+            serviceContent.append(serviceName, serviceDescription, servicePrice);
+            services.appendChild(serviceContent);
+            
+    });
+
     serviceContainer.appendChild(services);
-  });
+    const breakPoint1 = document.createElement("br");
+    const breakPoint2 = document.createElement("br");
+    const breakPoint3 = document.createElement("br");
+    const breakPoint4 = document.createElement("br");
+    const breakPoint5 = document.createElement("br");
 
-  const breakPoint1 = document.createElement("br");
-  const breakPoint2 = document.createElement("br");
-  const breakPoint3 = document.createElement("br");
-  const breakPoint4 = document.createElement("br");
-  const breakPoint5 = document.createElement("br");
+    // ------------------The Appends---------------------------
+    contentCardInfo.append(contentCardsTitle, modalContainer);
+    map.appendChild(iframe);
+    mapContainer.append(locationTitle, map);
+    contentCards.append(contentCardImg, contentCardInfo, mapContainer);
+  
+    mainElement.append(artistName, contentCards, serviceTitle, serviceContainer);
+    mainContent.appendChild(mainElement);
 
-  // ------------------The Appends---------------------------
-
-  contentCardImg.appendChild(artistImg);
-  contentCardsTitle.append(
-    occupation,
-    breakPoint1,
-    experience,
-    breakPoint2,
-    overallRating,
-    breakPoint3,
-    location,
-    breakPoint4,
-    aboutArtist,
-    breakPoint5,
-    artistInfo
-  );
-  contentCardInfo.append(contentCardsTitle, modalContainer);
-  map.appendChild(iframe);
-  mapContainer.append(locationTitle, map);
-  contentCards.append(contentCardImg, contentCardInfo, mapContainer);
-
-  mainElement.append(artistName, contentCards, serviceTitle, serviceContainer);
-  mainContent.appendChild(mainElement);
-};
+}
