@@ -1,35 +1,48 @@
 
 
-const open = document.getElementById('open')
-const open2 = document.getElementById('open2');
-const open3 = document.getElementById('open3');
-const modal = document.getElementById('modal');
-const modal2 = document.getElementById('modal2');
-const modal3 = document.getElementById('modal3');
-const close = document.getElementById('close');
-const close2 = document.getElementById('close2');
-const close3 = document.getElementById('close3');
+const scheduleOpen = document.getElementById('open')
+const socialOpen = document.getElementById('open2');
+const reviewsOpen = document.getElementById('open3');
+const portfolioOpen = document.getElementById('open4');
+const scheduleModal = document.getElementById('modal');
+const socialModal = document.getElementById('modal2');
+const reviewModal = document.getElementById('modal3');
+const portfolioModal = document.getElementById('modal4');
+const scheduleClose = document.getElementById('close');
+const socialClose = document.getElementById('close2');
+const reviewsClose = document.getElementById('close3');
+const portfolioClose = document.getElementById('close4');
 
-open.onclick = function() {
+scheduleOpen.onclick = function() {
     modal.style.display = "block";
 }
 
-open2.onclick = function () {
+socialOpen.onclick = function () {
     modal2.style.display = "block";
 }
 
-open3.onclick = function() {
+reviewsOpen.onclick = function() {
     modal3.style.display = "block";
 }
+portfolioOpen.onclick = function() {
+    modal4.style.display = "block";
+}
 
-close.onclick = function () {
+
+scheduleClose.onclick = function () {
     modal.style.display = "none";
 }
 
-close2.onclick = function () {
+socialClose.onclick = function () {
     modal2.style.display = "none";
 }
 
-close3.onclick = function () {
+reviewsClose.onclick = function () {
     modal3.style.display = "none";
 }
+
+portfolioClose.onclick = function () {
+    modal4.style.display = "none";
+}
+
+
