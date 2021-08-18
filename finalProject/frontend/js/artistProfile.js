@@ -46,6 +46,7 @@ export const artistProfile = function (pro) {
 
   const scheduleModalContent = buildElement("div", "modal-content");
   const scheduleTitle = document.createElement("h1");
+  scheduleTitle.innerText = "Schedule";
   const scheduleModalText = document.createElement("p");
   const mondayWord = document.createElement("small");
   mondayWord.innerText = "Monday - 9am-6pm";
@@ -100,6 +101,7 @@ export const artistProfile = function (pro) {
   };
   const socialsModalContent = buildElement("div", "modal-content");
   const socialsTitle = document.createElement("h1");
+  socialsTitle.innerText = "Contact Me"
   const twitterLink = document.createElement("a");
   twitterLink.href = "https://twitter.com";
   twitterLink.alt = "Twitter Link";
@@ -117,7 +119,7 @@ export const artistProfile = function (pro) {
   instagramImage.src = "https://bit.ly/2UvY6xy";
   instagramImage.alt = "Instagram logo";
   instagramImage.setAttribute("width", "50");
-  const contactInfo = buildElement("div", "contact-me", pro.phoneNumber);
+  const contactInfo = buildElement("div", "contact-me", "Call Me: " + pro.phoneNumber);
   const socialsBtnClose = buildElement("button", undefined, "Close Me");
   socialsBtnClose.id = "close2";
   socialsBtnClose.onclick = function () {

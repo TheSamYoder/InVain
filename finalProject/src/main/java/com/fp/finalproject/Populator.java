@@ -20,7 +20,7 @@ public class Populator implements CommandLineRunner {
 
     @Override public void run(String...args) throws Exception{
 
-        Professional christian = new Professional("Christian Slatery","Cool dude!", 5.3, 10,
+        Professional christian = new Professional("Christian Slatery","Cool dude!", 9.8, 10,
                 "Psychobilly Barbershop", true, "Barber","https://d2zdpiztbgorvt.cloudfront.net/region1/us/483413/resource_photos/3958041c30b34faf8bc4c2c9866a4204.jpeg?size=250x250&size=250x250","123456789",
                 true,true,true, true, false);
         christian.addReview("He's Great at hair cut!");
