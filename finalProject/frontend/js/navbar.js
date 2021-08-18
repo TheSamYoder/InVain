@@ -8,12 +8,12 @@ import {
 } from "./specialtyPage/eventListeners.js";
 
 import {
-  fetchPros
-} from "./fetch.js";
-
-import {
   loginPage
 } from "./loginPage.js"
+
+import {
+  displayLandingPage
+} from "./landPage.js"
 
 import {
   displayProsBySpecialty,
@@ -26,6 +26,9 @@ export const createNavbar = function () {
   const navbar = buildElement("nav", "nav-bar");
   const logo = buildElement("img", "logo");
   logo.src = "images/Logo1-2.png";
+  logo.addEventListener("click", () => {
+    location.reload();
+  });
   navbar.appendChild(logo);
 
   //-----------------Hair------------------

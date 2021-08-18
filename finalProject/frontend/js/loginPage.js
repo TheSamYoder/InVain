@@ -5,7 +5,7 @@ import { fetchByProId } from "./fetch.js";
 export const loginPage = function () {
 
     const professional = fetchByProId(1);
-    console.log(professional);
+
 
     const mainContent = document.querySelector(".main-content");
     clearChildren(mainContent);

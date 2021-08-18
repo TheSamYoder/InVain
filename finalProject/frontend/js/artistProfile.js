@@ -2,8 +2,17 @@ import { fetchServeByProId } from "./fetch.js";
 
 export const artistProfile = function (pro) {
   const mainContent = document.querySelector(".main-content");
-
   clearChildren(mainContent);
+
+  let proSpecialty;
+  if (pro.specialty === "BlackInk" || pro.specialty === "ColorTattoo") {
+    proSpecialty = "Tattoo Artist";
+  } else if (pro.specialty === "Stylist") {
+    proSpecialty = "Hair Stylist";
+  } else {
+    proSpecialty = pro.specialty;
+  }
+
 
   const mainElement = buildElement("div", "pro-container");
   const artistName = buildElement("h1", "artist-name", pro.name);
@@ -12,26 +21,10 @@ export const artistProfile = function (pro) {
   const artistImg = buildElementImg("img", pro.profilePhoto, "");
   const contentCardInfo = buildElement("div", "content-cards_info");
   const contentCardsTitle = buildElement("div", "content-cards_title");
-  const occupation = buildElement(
-    "span",
-    "occupation",
-    "Occupation: " + pro.specialty
-  );
-  const experience = buildElement(
-    "span",
-    "years",
-    "Years: " + pro.experienceYears
-  );
-  const overallRating = buildElement(
-    "span",
-    "overall-rating",
-    "Rating: " + pro.rating + "/10"
-  );
-  const location = buildElement(
-    "span",
-    "location",
-    "Location: " + pro.location
-  );
+  const occupation = buildElement("span", "occupation", "Occupation: " + proSpecialty);
+  const experience = buildElement("span", "years", "Years: " + pro.experienceYears);
+  const overallRating = buildElement("span", "overall-rating", "Rating: " + pro.rating + "/10");
+  const location = buildElement("span", "location", "Location: " + pro.location);
   const aboutArtist = buildElement("span", "about-artist", "About Artist");
   const artistInfo = buildElement("p", "artist-info", pro.description);
 
