@@ -83,19 +83,20 @@ export const artistProfile = function (pro) {
 
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
     const serviceContainer = buildElement("div","service-container");
-
+    const services = buildElement("div", "services");
     pro.serves.forEach((serve) => {
             const serviceContent = buildElement("div", "service-content");
             const serviceName = buildElement("h5", undefined, serve.serveName);
             const serviceDescription = buildElement("p", undefined, serve.serveDescription);
             const servicePrice = buildElement("h5", undefined, serve.price);
-            const services = buildElement("div", "services");
+            
 
             serviceContent.append(serviceName, serviceDescription, servicePrice);
             services.appendChild(serviceContent);
-            serviceContainer.appendChild(services);
+            
     });
-    
+
+    serviceContainer.appendChild(services);
     const breakPoint1 = document.createElement("br");
     const breakPoint2 = document.createElement("br");
     const breakPoint3 = document.createElement("br");

@@ -84,20 +84,23 @@ const editBtnArtistInfo = buildElement("button", "editBtn-experience", "Edit Abo
 
     const serviceTitle = buildElement("h2","service-title","Services & Prices");
     const serviceContainer = buildElement("div","service-container");
+    const services = buildElement("div", "services");
 
     professional.serves.forEach((serve) => {
-        const serviceContent = buildElement("div", "service-content");
-        const serviceName = buildElement("h5", undefined, serve.serveName);
-        const serviceDescription = buildElement("p", undefined, serve.serveDescription);
-        const servicePrice = buildElement("h5", undefined, serve.price);
-        const services = buildElement("div", "services");
+        const editServiceContent = buildElement("div", "edit-service-content");
+        const editServiceName = buildElement("h5", undefined, serve.serveName);
+        const editServiceDescription = buildElement("p", undefined, serve.serveDescription);
+        const editServicePrice = buildElement("h5", undefined, serve.price);
+        const editBtnServices = buildElement("button", "editBtn-services", "Edit Service");
+        const removeBtnServices = buildElement("button", "removeBtn-services", "Remove Service");
+        
 
-        serviceContent.append(serviceName, serviceDescription, servicePrice);
-        services.appendChild(serviceContent);
-        serviceContainer.appendChild(services);
+        editServiceContent.append(editServiceName, editServiceDescription, editServicePrice,editBtnServices,removeBtnServices);
+        services.appendChild(editServiceContent);
+        
 });
 
-
+serviceContainer.appendChild(services);
 editContentCardImg.appendChild(editArtistImg, editBtnArtistPhoto);
 editContentCardsTitle.append(editOccupation, editBtnOccupation, editExperience, editBtnExperience, overallRating, editLocation, editBtnLocation, aboutArtist, editArtistInfo, editBtnArtistInfo);
 scheduleModal.appendChild(scheduleBtn);
@@ -109,6 +112,7 @@ editContentCardInfo.append(editContentCardsTitle, editModalContainer);
 map.appendChild(iframe);
 mapContainer.append(locationTitle, map);
 contentCards.append(editContentCardImg, editContentCardInfo, mapContainer);
+
 
 mainElement.append(editArtistName,editBtnArtistName, contentCards, serviceTitle, serviceContainer);
 mainContent.appendChild(mainElement);
