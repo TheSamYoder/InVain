@@ -36,7 +36,7 @@ public class Populator implements CommandLineRunner {
         heather.addReview("My tattoo is looking great!");
         heather.addPhoto("https://lh3.googleusercontent.com/p/AF1QipOhV2KXNZJPH3SlHQSfGtWCV1KmCBUTVOT51GKk=w573-h573-p-no");
         heather.addPhoto("https://lh3.googleusercontent.com/p/AF1QipO0Emqr9J7qMte2ImG4Z5uGh-nxlaKokGK3C0YP=w573-h573-p-no");
-        Professional bri = new Professional("Bri Phillips", "Good stylist", 5.6, 7,
+        Professional bri = new Professional("Bri Phillips", "Good stylist", 8.7, 7,
                 "Filler", true, "Stylist","https://bit.ly/3yKPCkZ","1234566643"
                 ,true,true,true,true,false);
         bri.addReview("Great style!");
@@ -45,14 +45,14 @@ public class Populator implements CommandLineRunner {
         bri.addPhoto("https://bit.ly/3lPFnIl");
         bri.addPhoto("https://bit.ly/2VzcTYR");
         bri.addPhoto("https://bit.ly/2VAzGUc");
-        Professional mandy = new Professional("Mandy Moore", "Good nails", 5.1, 2,
+        Professional mandy = new Professional("Mandy Moore", "Good nails", 8.9, 2,
                 "Filler", true, "Manicurist","https://bit.ly/3yLJF7o","32487641314"
                 ,true,true,true,true, false);
         mandy.addReview("She did my nails!");
         mandy.addReview("My nails look amazing!");
         mandy.addPhoto("https://bit.ly/3iAi3wn");
         mandy.addPhoto("https://bit.ly/3yATwwA");
-        Professional eli = new Professional("Eli Wagner", "Great hair cuts!", 5.0, 6,
+        Professional eli = new Professional("Eli Wagner", "Great hair cuts!", 9.6, 6,
                 "Filler", false, "Barber","https://bit.ly/3CIAbvX","1112223333"
                 ,true,true,true,true,false);
         eli.addReview("He is a great dude and I love his hair cuts!");
@@ -88,17 +88,29 @@ public class Populator implements CommandLineRunner {
         Serve cFaceMask = new Serve(christian,"Face Mask","Face Mask feel good.","$");
         Serve cKidsCuts = new Serve(christian,"Kids Hair Cut","Show up with good grades and it will be half off.","$");
         Serve cKidsBeards = new Serve(christian,"Kids Beard Trims","This is fun.","$");
+        
         Serve eCutHair = new Serve(eli,"Hair-cut", "Hair-Cut", "$");
         Serve eBeardTrim = new Serve(eli,"Beard-Trim","Beard-trim","$");
         Serve eRazorShave = new Serve(eli,"Razor-Shave", "Close shave with a razor", "$$");
+        Serve eEyeBrows = new Serve(eli,"Eye Brows Trim","Eye Brow Shaping.","$");
+        Serve eHotTowel = new Serve(eli,"Hot Towel","Hot Towel Treatment.","$");
+        Serve eFaceMask = new Serve(eli,"Face Mask","Face Mask feel good.","$");
+        Serve eKidsCuts = new Serve(eli,"Kids Hair Cut","Show up with good grades and it will be half off.","$");
+        Serve eKidsBeards = new Serve(eli,"Kids Beard Trims","This is fun.","$");
+        
         Serve hTwoToneTattoo = new Serve(heather,"Black and White Tattoo", "Black and white tattoo", "$$$");
         Serve hColorTattoo = new Serve(heather,"Colored Tattoo", "Colored Tattoo", "$$$");
+        
         Serve mAcrylicNails = new Serve(mandy,"Acrylic Nails", "My nails are acrylic!", "$$");
         Serve mGelNails = new Serve(mandy,"Gel nails", "I have gel nails now!", "$$");
+        
         Serve bHairHighlight = new Serve(bri,"Hair-Highlight", "Trendy and stylish, highlights are a great option for spicing up you look!.", "$$");
         Serve bHairColor = new Serve(bri,"Color Hair", "We offer a variety of color options.", "$$");
         Serve bHairStyle = new Serve(bri,"Hair-Style", "Hair-styling", "$$");
+        
         Serve jTTT = new Serve(julie, "Black Ink Tattoo", "High quality black ink tattoo", "$$$");
+        Serve jColored = new Serve(julie, "Colored Tatto", "High quality colored tattoo", "$$$");
+        
         Serve rPedi = new Serve(ruby, "Pedicure", "High quality pedicure", "$$");
 
         serveStorage.saveServe(cCutHair);
@@ -109,17 +121,29 @@ public class Populator implements CommandLineRunner {
         serveStorage.saveServe(cFaceMask);
         serveStorage.saveServe(cKidsCuts);
         serveStorage.saveServe(cKidsBeards);
-        serveStorage.saveServe(eCutHair);
+        
+        serveStorage.saveServe(eCutHair);        
         serveStorage.saveServe(eBeardTrim);
         serveStorage.saveServe(eRazorShave);
+        serveStorage.saveServe(eEyeBrows);
+        serveStorage.saveServe(eHotTowel);
+        serveStorage.saveServe(eKidsCuts);
+        serveStorage.saveServe(eKidsBeards);
+        
+
         serveStorage.saveServe(hTwoToneTattoo);
         serveStorage.saveServe(hColorTattoo);
+        
         serveStorage.saveServe(mAcrylicNails);
         serveStorage.saveServe(mGelNails);
+        
         serveStorage.saveServe(bHairHighlight);
         serveStorage.saveServe(bHairColor);
         serveStorage.saveServe(bHairStyle);
+        
         serveStorage.saveServe(jTTT);
+        serveStorage.saveServe(jColored);
+        
         serveStorage.saveServe(rPedi);
     }
 
