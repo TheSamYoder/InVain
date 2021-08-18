@@ -6,7 +6,7 @@
     align-items: center;
   }
   
-  .heading {
+  .the-body .heading {
     font-family: 'Poppins', sans-serif;
     text-align: center;
     font-size: 64px;
@@ -33,7 +33,7 @@
     transform: translateY(25px);
   }
   
-  .profile img {
+  .the-body .profile img {
     max-width: 100%;
     border-radius: 50%;
     border: 5px solid #4facfe;
