@@ -38,8 +38,8 @@ h1 {
   display: flex;
   align-items: center;
   border-radius: .8rem;
-  /* padding-bottom: 1rem; */
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  transition: 3s; 
 }
 
 .content-cards_img {

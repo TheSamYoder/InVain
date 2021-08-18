@@ -70,6 +70,7 @@ html{
   background-color: inherit;
   font-size: 1vw;
   z-index: 5;
+  
 }
 
 .dropdown {
@@ -77,6 +78,8 @@ html{
   display: inline-block;
   filter: drop-shadow(2px 2px 2px black);
   z-index: 4;
+  border-radius: .8rem;
+  transition-duration: 1s;
 }
 
 .dropdown-content {
@@ -86,6 +89,8 @@ html{
   min-width: 160px;
   filter: drop-shadow(1px 1px 2px gray);
   z-index: 2;
+  border-radius: .8rem;
+  transition-duration: 1s;
 }
 
 .dropdown-content a {
@@ -96,11 +101,13 @@ html{
   background-color: #ddd;
   z-index: 2;
   cursor: pointer;
+  transition-duration: 1s; 
+  
 }
 
 .dropdown-content a:hover {
   background-color: whitesmoke;
-  z-index: 2;
+  z-index: 2;  
 }
 
 .dropdown:hover .dropdown-content {
@@ -160,6 +167,7 @@ html{
   border-radius: .8rem;
   margin-left: -2rem;
   filter: drop-shadow(4px 4px 8px gray);
+  transition-duration: 3s; 
 }
 
 .land-container section {
