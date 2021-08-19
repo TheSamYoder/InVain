@@ -54,10 +54,10 @@ html{
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 150px;
-  height: 5rem;
-  background-color: gray;
-  border-radius: 10px;
+  width: 200px;
+  height: auto;
+  /* background-color: gray; */
+  /* border-radius: 10px; */
 }
 
 .dropbtn {
@@ -387,7 +387,7 @@ section {
 
 .footer_center {
   width: 50vw;
-  margin-left: -12vw;
+  margin-left: -6vw;
   float: left;
   text-align: center;
 

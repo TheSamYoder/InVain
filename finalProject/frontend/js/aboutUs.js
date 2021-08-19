@@ -32,10 +32,10 @@ export const displayAboutUs = function () {
 
     const profile3 = buildElement("div", "profile");
     const pro3a = buildElement("a");
-    pro3a.href = "https://www.linkedin.com/in/david-j-patterson/";
+    pro3a.href = "https://www.linkedin.com/in/harrisonwiggins/";
     pro3a.setAttribute('target', '_blank');
-    const pro3aImg = buildElementImg("img","images/David.jpg");
-    const pro3name = buildElement("span", "name", "David");
+    const pro3aImg = buildElementImg("img","images/harrisonwiggins.jpg");
+    const pro3name = buildElement("span", "name", "Harrison");
 
     pro3a.append(pro3aImg, pro3name);
     profile3.append(pro3a);
@@ -54,10 +54,10 @@ export const displayAboutUs = function () {
 
     const profile5 = buildElement("div", "profile");
     const pro5a = buildElement("a");
-    pro5a.href = "https://www.linkedin.com/in/harrisonwiggins/";
+    pro5a.href = "https://www.linkedin.com/in/david-j-patterson/";
     pro5a.setAttribute('target', '_blank');
-    const pro5aImg = buildElementImg("img","images/Dasmine Wright.jpg");
-    const pro5name = buildElement("span", "name", "Harrison");
+    const pro5aImg = buildElementImg("img","images/David.jpg");
+    const pro5name = buildElement("span", "name", "David");
 
     pro5a.append(pro5aImg, pro5name);
     profile5.append(pro5a);
